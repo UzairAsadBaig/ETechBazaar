@@ -82,10 +82,14 @@ input:focus {
   height: 60px;
 }
 
-.carousel_img {
+/* .carousel_img {
   width: 100%;
   height: 750px;
   object-fit: cover;
+}
+
+*/ .carousel-inner {
+  max-height: 35rem;
 }
 
 /********* Section Heading with tilt gradient *********/
