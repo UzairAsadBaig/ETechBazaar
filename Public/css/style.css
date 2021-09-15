@@ -10,7 +10,6 @@
 .navbar {
   font-weight: 400;
   box-shadow: none;
-  margin-top: 0.6rem;
 }
 .logo {
   width: 8.5rem;
@@ -61,7 +60,8 @@ input {
   margin-left: 4.8rem;
   opacity: 50%;
 }
-*/ .search_bar .svg-inline--fa {
+*/
+.search_bar .svg-inline--fa {
   /* margin-left: auto; */
   opacity: 50%;
   position: absolute;
@@ -89,7 +89,111 @@ input:focus {
   object-fit: cover;
 }
 
+/********* Section Heading with tilt gradient *********/
+.section-start {
+  margin: 7rem 0 7rem 0;
+}
+.side_lines_L {
+  padding: 1rem 0 0 5%;
+}
+.side_lines_R {
+  padding: 1rem 5% 0 0;
+}
+.side_lines_L hr,
+.side_lines_R hr {
+  border-top: 1.3px solid gray;
+}
+.text_grad {
+  background: -webkit-linear-gradient(#55c6e6, #1eeaad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section_heading {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+}
+.tilt_grad {
+  position: relative;
+  margin-left: 1rem;
+  padding: 0.1rem 0.5rem;
+}
+.tilt_grad::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background: linear-gradient(
+    31deg,
+    rgba(85, 198, 230, 1) 00%,
+    rgba(30, 234, 173, 1) 50%
+  );
+}
 
+/********* Section Heading with tilt gradient *********/
+.card_tile {
+  border-width: 1.5px;
+  background-color: #fff;
+  background: linear-gradient(
+    31deg,
+    rgba(85, 198, 230, 1) 00%,
+    rgba(30, 234, 173, 1) 30%
+  );
+  color: whitesmoke;
+  width: 250px;
+  height: 330px;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+.card_picture {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 98%);
+  clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+  height: 140px;
+}
+.card_picture img {
+  width: 250px;
+}
+.card_description {
+  margin: 0.5rem 0.7rem;
+}
+.card_item_name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.card_price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: right;
+  color: rgb(71, 71, 71);
+}
+.model_version {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.card_btn {
+  width: 6.5rem;
+  padding: 0.4rem 0 !important;
+  outline: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+  font-weight: 700;
+  border: 1px solid white !important;
+  border-radius: 5px;
+  text-transform: initial;
+  color: white !important;
+  box-shadow: none !important;
+}
+.card_btn:hover {
+  background-color: white !important;
+  color: black !important;
+}
 
 /************************ Footer *********************/
 .footer_icon {
@@ -100,40 +204,36 @@ input:focus {
   margin-top: 4rem;
 }
 
-
-
-
 #social {
   margin-top: 1.6rem;
 }
 
 #social .svg-inline--fa {
   margin-right: 1.2rem;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 #social .svg-inline--fa.fa-youtube:hover {
-  color: #FF0000
+  color: #ff0000;
 }
 
 #social .svg-inline--fa.fa-instagram:hover {
-  color: #C13584
+  color: #c13584;
 }
 
 #social .svg-inline--fa.fa-facebook:hover {
-  color: #4267B2
+  color: #4267b2;
 }
 
 #social .svg-inline--fa.fa-twitter:hover {
-  color: #1DA1F2
+  color: #1da1f2;
 }
-
-
 
 .footer_text {
   margin-top: 1.6rem;
   margin-bottom: 1rem;
   font-size: 18px;
+  word-spacing: 0.6rem;
 }
 
 .lines {
@@ -174,5 +274,5 @@ footer .container-fluid {
 .footer_links,
 .footer_simple_links,
 .footer_simple_links:hover {
-  color: rgb(223, 215, 215)
+  color: rgb(223, 215, 215);
 }
