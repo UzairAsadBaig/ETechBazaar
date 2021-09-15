@@ -222,6 +222,11 @@ input:focus {
   margin-left: 80% !important;
   border-radius: 50% !important;
 } */
+/* -----------------------contact-sect----------------------- */
+.about-title-issue {
+  margin-right: 20px;
+}
+
 /************************ Footer *********************/
 .footer_icon {
   width: 60px;
