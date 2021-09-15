@@ -8,10 +8,20 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!--TODO:----- Google Fonts(Optional) Roboto -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!--TODO:----- Bootstrap core CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--TODO:----- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
       rel="stylesheet"
     />
 
@@ -27,10 +37,26 @@
 
     <title></title>
     <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
-    <link rel="shortcut icon" href="" />
+    <link rel="shortcut icon" href="./img/favicon.png" />
   </head>
 
   <body>
+    <!-- NAVBAR------------------------------- -->
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-light">
+        <img class="logo" src="img/logo.png" alt="image not found" />
+
+        <a href="" class="nav_link nav_home active_link">Home</a>
+        <a href="" class="nav_link nav_category faded">Categories</a>
+        <a href="" class="nav_link nav_contact faded">Contact us</a>
+        <span class="search_bar">
+          <input class="search_input" type="text" placeholder="Search" />
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+      </nav>
+    </div>
+
     <!--TODO:----- JQuery -->
     <script
       type="text/javascript"
@@ -41,6 +67,9 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
     ></script>
+    <!--TODO:------------ Font awesome icons link  -------------->
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
     <!--TODO:----- Bootstrap core JavaScript -->
     <script
       type="text/javascript"
