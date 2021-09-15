@@ -174,8 +174,9 @@ input:focus {
   color: rgb(71, 71, 71);
 }
 .model_version {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
+  text-shadow: rgb(158, 158, 158);
 }
 .card_btn {
   width: 6.5rem;
@@ -194,7 +195,34 @@ input:focus {
   background-color: white !important;
   color: black !important;
 }
-
+/* ------------------------------------Slider of cards------------------------------------- */
+.title-slider h4 {
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 27px;
+  margin-top: 0px;
+  width: fit-content;
+  margin-bottom: 40px;
+}
+/* .owl-nav .owl-prev {
+  font-size: 50px !important;
+  font-weight: bold !important;
+  background-color: #1eeaad !important;
+  color: white !important;
+  height: 100px;
+  width: 100px;
+  border-radius: 50% !important;
+}
+.owl-nav .owl-next {
+  font-size: 50px !important;
+  font-weight: bold !important;
+  background-color: #1eeaad !important;
+  color: white !important;
+  height: 100px;
+  width: 100px;
+  margin-left: 80% !important;
+  border-radius: 50% !important;
+} */
 /************************ Footer *********************/
 .footer_icon {
   width: 60px;
