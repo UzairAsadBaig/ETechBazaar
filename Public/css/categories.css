@@ -17,34 +17,27 @@
 /* NAVBAR----------------------*/
 
 .navbar {
+  font-weight: 400;
   box-shadow: none;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 .logo {
-  width: 9rem;
+  width: 8.5rem;
 }
 .logo:hover {
   cursor: pointer;
 }
 .search_bar {
-  margin-left: 4rem;
   padding: 0.3rem 1rem;
-  border: 1px solid rgb(155, 155, 155);
+  border: 1px solid rgb(167, 163, 163);
   border-radius: 3rem;
-  width: 96%;
+  width: 25%;
+  position: relative;
 }
 .nav_home {
-  margin-left: 20rem;
+  margin-left: 17rem;
 
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
-}
-.nav_category {
-  margin-left: 2rem;
-}
-.nav_contact {
-  margin-left: 2rem;
 }
 .nav_home,
 .nav_category,
@@ -55,17 +48,17 @@
   color: black;
   opacity: 100%;
 }
-.nav_link {
-  padding: 0.3rem 1.1rem !important;
-}
+
 .active_link {
   color: white;
-  background: linear-gradient(
+  /* background: linear-gradient(
     31deg,
     rgba(85, 198, 230, 1) 00%,
     rgba(30, 234, 173, 1) 50%
-  );
+  ); */
+  background: var(--var-gradient);
   border-radius: 3rem;
+  padding: 0.3rem 1.5rem;
 }
 .faded {
   opacity: 50%;
@@ -73,30 +66,24 @@
 input {
   border: none;
 }
-.svg-inline--fa {
-  opacity: 30%;
+.search_bar .svg-inline--fa {
+  opacity: 50%;
+  position: absolute;
+  right: 16px;
+  top: 8px;
 }
+
 input:focus {
   border: none;
   outline: none;
 }
+
 .dropdown-menu {
-  width: 16rem;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 18rem;
 }
-
-.dropdown-item:hover {
-  background: var(--var-gradient);
-  color: white !important;
-  font-weight: 700;
-}
-.dropdown-menu::-webkit-scrollbar {
-  display: none;
-}
-
-/* ------------------------------------------------------------------------ */
+/* ----------------------------------------------------- */
 
 /********************* Carousel *********************/
 .carousel .carousel-control-prev-icon,
@@ -339,4 +326,25 @@ footer .container-fluid {
 .footer_simple_links,
 .footer_simple_links:hover {
   color: rgb(223, 215, 215);
+}
+.main-title {
+  width: 3rem;
+  max-width: fit-content;
+  min-width: fit-content;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #fff !important;
+}
+.heading-main {
+  display: flex;
+  margin-bottom: 3rem;
+  margin-left: 1.8rem;
+}
+.full-wid {
+  width: 100%;
+  margin-top: 3.7rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: black;
 }
