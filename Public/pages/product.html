@@ -16,8 +16,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
 
     <!--TODO:------------- Custom Personalize css  -------------->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/product.css" />
+    <link rel="stylesheet" href="./../css/style.css" />
+    <link rel="stylesheet" href="./../css/product.css" />
 
     <!--TODO:-------------- Animation.css links(Please Include anim folder)  -------------->
     <link rel="stylesheet" href="anim/css/libs/animate.css" />
@@ -25,7 +25,7 @@
 
     <title></title>
     <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
-    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link rel="shortcut icon" href="./../img/favicon.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
         integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,43 +34,58 @@
         integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script defer src="./js/script.js"></script>
+    <script defer src="./../js/script.js"></script>
 </head>
 
 <body>
     <!--!----------------- NAVBAR------------------------------- -->
 
     <div class="container-fluid">
-        <nav class="navbar navbar-light">
-            <img class="logo" src="img/logo.png" alt="image not found" />
+        <nav class="navbar navbar-expand-md">
+            <!-- Brand -->
+            <img class="logo navbar-brand" src="./../img/logo.png" alt="image not found" />
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fas fa-bars"></i>
+            </button>
 
-            <a href="" class="nav_link nav_home active_link">Home</a>
-            <!-- <a href="" class="nav_link nav_category faded">Categories</a> -->
-
-            <div class="dropdown">
-                <a class="dropdown-toggle faded" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Categories
-                </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                    <a class="dropdown-item" href="#">Contact</a>
-                    <a class="dropdown-item" href="#">About</a>
-                    <a class="dropdown-item" href="#">Phone</a>
-                    <a class="dropdown-item" href="#">Adress</a>
-                    <a class="dropdown-item" href="#">Home</a>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="navbar-nav">
+                    <span class="nav-item">
+                        <a class="nav-link nav_link active_link nav_home" href="#">Home</a>
+                    </span>
+                    <span class="nav-item">
+                        <div class="nav_link nav_category faded dropdown">
+                            <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                Categories
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                                <a class="dropdown-item" href="#">Contact</a>
+                                <a class="dropdown-item" href="#">About</a>
+                                <a class="dropdown-item" href="#">Phone</a>
+                                <a class="dropdown-item" href="#">Adress</a>
+                                <a class="dropdown-item" href="#">Home</a>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="nav-item">
+                        <a class="nav-link nav_link nav_contact faded" href="#">Contact us</a>
+                    </span>
+                    <span>
+                        <span class="search_bar navbar-text mr-auto">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input class="search_input faded" type="text" placeholder="Search" />
+                        </span>
+                    </span>
                 </div>
             </div>
-            <a href="" class="nav_link nav_contact faded">Contact us</a>
-            <span class="search_bar">
-                <input class="search_input" type="text" placeholder="Search" />
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </span>
         </nav>
     </div>
-
 
 
 
@@ -82,7 +97,7 @@
 
             <!--!---------------------------- Product Image ----------------------------------->
             <div class="image_box col-md-7">
-                <img src="./img/carousel_img4.jpg" alt="" srcset="" class="product_img w-100 img-fluid">
+                <img src="./../img/carousel_img4.jpg" alt="" srcset="" class="product_img w-100 img-fluid">
             </div>
             <!--!---------------------------- Product Info Box ----------------------------------->
             <div class=" col-md-5 product_info_box">
@@ -197,7 +212,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -218,7 +233,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -239,7 +254,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -260,7 +275,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -281,7 +296,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -302,7 +317,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -332,7 +347,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -353,7 +368,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -374,7 +389,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -395,7 +410,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -416,7 +431,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -437,7 +452,7 @@
                     <div class="card card_tile">
                         <div class="card_header">
                             <div class="card_picture">
-                                <img src="./img/products/img2.jpg" />
+                                <img src="./../img/products/img2.jpg" />
                             </div>
                             <div class="card_description">
                                 <h3 class="card_item_name">Mac Book</h3>
@@ -465,7 +480,7 @@
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-md-4 column">
-                    <img src="./img/favIcon_white.png" alt="logo" class="footer_icon" />
+                    <img src="./../img/favIcon_white.png" alt="logo" class="footer_icon" />
                     <p class="footer_text">Powered by eTechBazaar</p>
                     <div id="social">
                         <i class="fab fa-facebook" aria-hidden="true"></i>
@@ -498,7 +513,7 @@
         <hr class="lines" />
         <div class="text-center py-2">
             <span class="copy_rights">&copy; Design & Develop by </span>
-            <img src="./img/fumn_white2.png" class="fumn_logo" alt="" />
+            <img src="./../img/fumn_white2.png" class="fumn_logo" alt="Fumn logo" />
         </div>
     </footer>
 

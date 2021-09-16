@@ -73,7 +73,7 @@
 input {
   border: none;
 }
-.svg-inline--fa {
+.navbar .svg-inline--fa {
   opacity: 30%;
 }
 input:focus {
