@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "lato", "sans-serif";
+}
+:root {
+  --var-gradient: linear-gradient(
+    29deg,
+    rgba(85, 198, 230, 1) 00%,
+    rgba(24, 217, 133, 1) 46%
+  );
+}
+.logo {
+  width: 30%;
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
+}
+.logo_div {
+  text-align: center;
+}
+
+.polygon {
+  clip-path: polygon(0 0, 100% 0, 100% 42%, 0 71%);
+  background: var(--var-gradient);
+  color: white;
+  height: 19rem;
+}
+.login_text {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-top: 4.7rem;
+  padding-left: 2.3rem;
+  letter-spacing: 2px;
+}
+.login_card {
+  justify-content: center;
+  height: 43rem;
+  border: 1px solid rgb(186, 186, 186);
+  width: 42%;
+  margin-top: 4rem;
+  margin-bottom: 6rem;
+}
+
+.login_username {
+  color: rgb(155, 155, 155);
+}
+.login_password {
+  margin-top: 1.2rem;
+  color: rgb(155, 155, 155);
+}
+.username_input {
+  border-radius: 8px;
+  border: none;
+  border: 1px solid rgb(155, 155, 155);
+  width: 80%;
+  height: 2.5rem;
+  padding-left: 0.8rem;
+}
+.password_input {
+  border: none;
+  border: 1px solid rgb(155, 155, 155);
+  width: 80%;
+  height: 2.5rem;
+  border-radius: 8px;
+  padding-left: 0.8rem;
+}
+.username_input:focus {
+  padding-left: 0.8rem;
+  outline: none;
+}
+.password_input:focus {
+  padding-left: 0.8rem;
+  outline: none;
+}
+
+.login_btn {
+  color: white;
+  background: var(--var-gradient);
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  height: 2.5rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.login_info {
+  margin-left: 5.2rem;
+}
+.login_btn:focus {
+  outline: none;
+  border: none;
+}
+.login_btn:hover {
+  font-weight: 700;
+}
+
+/* Footer    ------------------------ */
+.footer_icon {
+  width: 60px;
+}
+
+.column {
+  margin-top: 4rem;
+}
+
+#social {
+  margin-top: 1.6rem;
+}
+
+#social .svg-inline--fa {
+  margin-right: 1.2rem;
+  font-size: 1.3rem;
+}
+
+#social .svg-inline--fa.fa-youtube:hover {
+  color: #ff0000;
+}
+
+#social .svg-inline--fa.fa-instagram:hover {
+  color: #c13584;
+}
+
+#social .svg-inline--fa.fa-facebook:hover {
+  color: #4267b2;
+}
+
+#social .svg-inline--fa.fa-twitter:hover {
+  color: #1da1f2;
+}
+
+.footer_text {
+  margin-top: 1.6rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  word-spacing: 0.6rem;
+}
+
+.lines {
+  border: 0.5px solid rgb(223, 215, 215);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer_links,
+.footer_simple_links {
+  display: block;
+  margin-top: 1rem;
+}
+
+.footer_simple_links:hover {
+  cursor: default;
+}
+
+.footer_links:hover {
+  color: #1eeaad;
+}
+
+.fumn_logo {
+  width: 80px;
+  margin-left: 10px;
+}
+
+.copy_rights {
+  font-size: 12px;
+}
+
+footer .container-fluid {
+  padding-bottom: 4.5rem;
+}
+
+#social .svg-inline--fa,
+.footer_text,
+.footer_links,
+.footer_simple_links,
+.footer_simple_links:hover {
+  color: rgb(223, 215, 215);
+}
