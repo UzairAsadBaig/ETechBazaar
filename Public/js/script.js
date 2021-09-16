@@ -11,7 +11,7 @@ const adminBody = document.querySelectorAll(".tabbed-body");
 buttons.addEventListener("click", function (event) {
   event.preventDefault();
   const btn = event.target;
-  if (btn.classList.contains("btns")) {
+  if ( btn.classList.contains( "btns" ) ) {
     Array.from(btn.parentElement.children).forEach((element) =>
       element.classList.remove("activeBtn")
     );

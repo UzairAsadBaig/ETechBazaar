@@ -18,7 +18,7 @@
 .product_img {
     border-radius: 5px;
     object-fit: cover;
-    height: 55.4vh;
+    height: 490px;
 }
 
 
@@ -26,7 +26,8 @@
 
     padding-left: 60px;
     padding-right: 0;
-    max-height: 55.4vh;
+    /* max-height: 55.4vh; */
+    height: 490px;
 
 }
 
@@ -95,12 +96,15 @@
 
 
 .product_description {
-    margin-top: 10rem;
     padding: 2rem 2rem 1rem 2rem;
     color: rgb(95, 91, 91);
     font-weight: 700;
     border: 1px solid rgb(238, 231, 231);
     position: relative;
+}
+
+.description_area {
+    margin-top: 10rem;
 }
 
 .description_head {
