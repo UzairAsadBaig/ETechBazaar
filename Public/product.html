@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- TODO: ------------------- Required meta tags ------------------>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--TODO:----- Google Fonts(Optional) Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
+    <!--TODO:----- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+        rel="stylesheet" />
+    <!--TODO:----- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+
+    <!--TODO:------------- Custom Personalize css  -------------->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+
+    <!--TODO:-------------- Animation.css links(Please Include anim folder)  -------------->
+    <link rel="stylesheet" href="anim/css/libs/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+
+    <title></title>
+    <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+    <!--!----------------- NAVBAR------------------------------- -->
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-light">
+            <img class="logo" src="img/logo.png" alt="image not found" />
+
+            <a href="" class="nav_link nav_home active_link">Home</a>
+            <!-- <a href="" class="nav_link nav_category faded">Categories</a> -->
+
+            <div class="dropdown">
+                <a class="dropdown-toggle faded" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">Contact</a>
+                    <a class="dropdown-item" href="#">About</a>
+                    <a class="dropdown-item" href="#">Phone</a>
+                    <a class="dropdown-item" href="#">Adress</a>
+                    <a class="dropdown-item" href="#">Home</a>
+                </div>
+            </div>
+            <a href="" class="nav_link nav_contact faded">Contact us</a>
+            <span class="search_bar">
+                <input class="search_input" type="text" placeholder="Search" />
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </span>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+    <div class="container-fluid product_section">
+        <div class="row">
+
+            <!--!---------------------------- Product Image ----------------------------------->
+            <div class="image_box col-md-7">
+                <img src="./img/carousel_img4.jpg" alt="" srcset="" class="product_img w-100 img-fluid">
+            </div>
+            <!--!---------------------------- Product Info Box ----------------------------------->
+            <div class=" col-md-5 product_info_box">
+
+                <div class="product_info">
+                    <h3 class="text-center pt-4  product_heading">
+                        Splash Drone
+                    </h3>
+                    <div class="row">
+                        <!--!---------------------------- Product Specs headings ----------------------------------->
+                        <div class="col-6 product_specs">
+
+                            <p class="product_spec"><i class="fas fa-money-bill-wave mr-2 "></i>Price</p>
+                            <p class="product_spec"><i class="fas fa-award mr-2 "></i>Model</p>
+                            <p class="product_spec"><i class="fab fa-buffer mr-2 "></i>Brand</p>
+                            <p class="product_spec"><i class="fas fa-fill mr-2 "></i>Color</p>
+                            <p class="product_spec"><i class="fas fa-exclamation-circle mr-2 "></i>Warranty
+                            </p>
+                            <p class="product_spec"><i class="fas fa-archive mr-2 "></i>Availibilty</p>
+
+                        </div>
+
+                        <!--!---------------------------- Product Specs values ----------------------------------->
+                        <div class="product_specs_values col-6">
+                            <p class="product_spec_val product_price">15000 Rs</p>
+                            <p class="product_spec_val product_model">DJI Inspire 2</p>
+                            <p class="product_spec_val product_brand">Autel Robotics</p>
+                            <p class="product_spec_val product_color">Black, White</p>
+                            <p class="product_spec_val product_warrenty">1 month</p>
+                            <p class="product_spec_val product_availibilty text-danger">Out of stock</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="product_footer">
+                        <div class="text-center pt-3 ">
+                            <span class="product_reduce mr-4">-</span>
+                            <span class="text-white font-weight-bold  quantity_val">1</span>
+                            <span class="product_increase ml-4">+</span>
+                        </div>
+
+                        <div class="text-center pt-3  ">
+                            <button type="button" class="btn btn-outline-light card_btn add_to_card">
+                                Buy now
+                            </button>
+                            <button type="button" class="btn btn-outline-light card_btn add_to_card">
+                                Add to cart
+                            </button>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <!--************************ Description Box  **************************  -->
+
+        <div class="description_area">
+
+            <div class="col-10 product_description mx-auto">
+                <div class="title-slider ">
+                    <h4 class="tilt_grad description_head">Description</h4>
+                </div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita dicta molestias officia
+                distinctio.
+                Dolor, nostrum! Id at voluptates tempora odit asperiores totam quasi maxime, neque veritatis ipsa iure
+                nesciunt
+                alias animi consequuntur velit dolor? Id reprehenderit officia accusamus tenetur?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita dicta molestias officia
+                distinctio.
+                Dolor, nostrum! Id at voluptates tempora odit asperiores totam quasi maxime, neque veritatis ipsa iure
+                nesciunt
+                alias animi consequuntur velit dolor? Id reprehenderit officia accusamus tenetur?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure expedita dicta molestias officia
+                distinctio.
+                Dolor, nostrum! Id at voluptates tempora odit asperiores totam quasi maxime, neque veritatis ipsa iure
+                nesciunt
+                alias animi consequuntur velit dolor? Id reprehenderit officia accusamus tenetur?
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!--!------------------------------- Related items ---------------------------->
+    <!----------------- Section Heading with tilt gradient -------------------->
+    <div class="title-slider ml-5 mt-5">
+        <h4 class="tilt_grad">Related Items</h4>
+    </div>
+
+    <section class="slider">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ------------------------------------------------second-slider------------------------------------------ -->
+    <section class="slider">
+
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="col-3">
+                    <div class="card card_tile">
+                        <div class="card_header">
+                            <div class="card_picture">
+                                <img src="./img/products/img2.jpg" />
+                            </div>
+                            <div class="card_description">
+                                <h3 class="card_item_name">Mac Book</h3>
+                                <p class="model_version">
+                                    -50 to 110°C W1209 Digital Thermostat Temperature
+                                </p>
+                                <button type="button" class="btn btn-outline-light card_btn">
+                                    Add to cart
+                                </button>
+                                <p class="card_price">122,000Rs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- !----------------- footer -------------------- -->
+
+    <footer class="bg-dark text-white">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-4 column">
+                    <img src="./img/favIcon_white.png" alt="logo" class="footer_icon" />
+                    <p class="footer_text">Powered by eTechBazaar</p>
+                    <div id="social">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-md-4 column">
+                    <hr class="lines w-75" />
+                    <h3 class="footer_header">Helpful Links</h3>
+                    <hr class="lines w-75" />
+                    <a href="" class="footer_links">Computer Accessories</a>
+                    <a href="" class="footer_links">Security Cameras</a>
+                    <a href="" class="footer_links">Top Picks</a>
+                    <a href="" class="footer_links">New Arrivals</a>
+                </div>
+
+                <div class="col-md-4 column">
+                    <hr class="lines w-75" />
+                    <h3 class="footer_header">Contact Us</h3>
+                    <hr class="lines w-75" />
+                    <a href="tel:+923320032005" class="footer_links">+923320032005</a>
+                    <a href="mailto:webmaster@example.com" class="footer_links">Mail Us</a>
+                    <a href="" class="footer_simple_links">100 Street Name</a>
+                    <a href="" class="footer_simple_links">City, State, 000000</a>
+                </div>
+            </div>
+        </div>
+        <hr class="lines" />
+        <div class="text-center py-2">
+            <span class="copy_rights">&copy; Design & Develop by </span>
+            <img src="./img/fumn_white2.png" class="fumn_logo" alt="" />
+        </div>
+    </footer>
+
+    <!--TODO:----- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--TODO:----- Bootstrap tooltips -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!--TODO:------------ Font awesome icons link  -------------->
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+
+    <!--TODO:----- Bootstrap core JavaScript -->
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- slider -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        $( ".owl-carousel" ).owlCarousel( {
+            stagePadding: 100,
+            loop: true,
+            margin: 15,
+            autoplay: true,
+            autoplayTimeout: 3500,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                500: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                800: {
+                    items: 3,
+                },
+                1000: {
+                    items: 4,
+                },
+                1400: {
+                    items: 5,
+                },
+            },
+        } );
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <div class="product_info">
+    <h3 class="text-center pt-4 text-black product_heading">
+        Splash Drone
+    </h3>
+    <div class="row">
+        <div class="col-6 product_specs">
+
+            <p class="product_spec"><i class="fas fa-money-bill-wave mr-2 "></i>Price</p>
+            <p class="product_spec"><i class="fas fa-award mr-2 "></i>Model</p>
+            <p class="product_spec"><i class="fab fa-buffer mr-2 "></i>Brand</p>
+            <p class="product_spec"><i class="fas fa-fill mr-2 "></i>Color</p>
+            <p class="product_spec"><i class="fas fa-exclamation-circle mr-2 "></i>Warranty
+            </p>
+            <p class="product_spec"><i class="fas fa-archive mr-2 "></i>Availibilty</p>
+
+        </div>
+        <div class="product_specs_values col-6">
+            <p class="product_spec_val product_price">15000 Rs</p>
+            <p class="product_spec_val product_model">DJI Inspire 2</p>
+            <p class="product_spec_val product_brand">Autel Robotics</p>
+            <p class="product_spec_val product_color">Black, White</p>
+            <p class="product_spec_val product_warrenty">1 month</p>
+            <p class="product_spec_val product_availibilty text-danger">Out of stock</p>
+        </div>
+
+    </div>
+
+    <div class="text-center pt-3 product_footer">
+        <span class="product_reduce">-</span>
+        <span class="product_spec_val px-3">1</span>
+        <span class="product_increase">+</span>
+    </div>
+
+    <div class="text-center pt-4 product_footer">
+        <button type="button" class="btn btn-outline-light card_btn add_to_card">
+            Buy now
+        </button>
+        <button type="button" class="btn btn-outline-light card_btn add_to_card">
+            Add to cart
+        </button>
+    </div>
+</div> -->

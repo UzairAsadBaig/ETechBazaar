@@ -1,0 +1,117 @@
+/* Color Variables--------------------*/
+:root {
+    --gradient: linear-gradient(29deg,
+            rgba(85, 198, 230, 1) 00%,
+            rgba(24, 217, 133, 1) 46%);
+}
+
+.product_section {
+    padding: 6rem 5rem;
+}
+
+.image_box {
+    /* border: px solid rgba(85, 198, 230, 1); */
+    padding: 0;
+    max-height: 55.4vh;
+}
+
+.product_img {
+    border-radius: 5px;
+    object-fit: cover;
+    height: 55.4vh;
+}
+
+
+.product_info_box {
+
+    padding-left: 60px;
+    padding-right: 0;
+    max-height: 55.4vh;
+
+}
+
+.product_info {
+    border: 1px solid rgba(37, 162, 108, 0.989233193277311);
+    border-radius: 10px
+}
+
+
+.product_heading {
+    font-weight: 700;
+    border-radius: 10px 10px 0 0;
+    background: rgb(85, 198, 230);
+    background: linear-gradient(45deg, rgba(85, 198, 230, 1) 0%, rgba(19, 179, 109, 0.989233193277311) 33%);
+    padding-bottom: 2rem;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.7rem;
+    margin: 0;
+    color: whitesmoke;
+
+}
+
+.product_spec,
+.product_spec_val {
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+
+.product_spec_val {
+    color: rgba(37, 162, 108, 0.989233193277311);
+}
+
+.product_specs {
+    padding-top: 2rem;
+    padding-left: 3rem;
+    /* border-right: 1px solid rgba(37, 162, 108, 0.989233193277311); */
+}
+
+.product_specs_values {
+    margin-top: 2rem;
+}
+
+.product_reduce,
+.product_increase {
+    border: 1px solid white;
+    padding: 0 10px;
+    background-color: white;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.product_reduce:hover,
+.product_increase:hover {
+    cursor: pointer;
+}
+
+.product_footer {
+    background: rgb(85, 198, 230);
+    background: linear-gradient(45deg, rgba(85, 198, 230, 1) 5%, rgba(37, 162, 108, 0.989233193277311) 85%);
+    border-radius: 0 0 10px 10px;
+
+
+}
+
+
+.product_description {
+    margin-top: 10rem;
+    padding: 2rem 2rem 1rem 2rem;
+    color: rgb(95, 91, 91);
+    font-weight: 700;
+    border: 1px solid rgb(238, 231, 231);
+    position: relative;
+}
+
+.description_head {
+    z-index: 111;
+    opacity: 1;
+    padding: 15px 3rem;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    position: absolute;
+    top: -2.2rem;
+    left: -3.5rem;
+
+
+}
