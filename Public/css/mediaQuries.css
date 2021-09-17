@@ -97,7 +97,7 @@
     border-radius: 3px;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: 375px) {
   .section_heading {
     font-size: 1rem;
   }
