@@ -784,7 +784,7 @@
         </div>
       </div>
     </section>
-    <!---------------------------contact-section------------------------------>
+    <!---------------------------About-section------------------------------>
     <!-- heading -->
     <div class="row section-start">
       <div class="col-4 side_lines_L">
@@ -810,6 +810,8 @@
           allowfullscreen=""
           loading="lazy"
           class="map-gg"
+          onclick="parent.location='product.html'"
+          ;
         ></iframe>
       </a>
     </div>
@@ -890,6 +892,10 @@
       referrerpolicy="no-referrer"
     ></script>
     <script type="text/javascript">
+      let map = document.getElementsByClassName(".map-gg");
+      map.addEventListener("click", () => {
+        window.open(www.youtube.com);
+      });
       $(".owl-carousel").owlCarousel({
         stagePadding: 100,
         loop: true,
@@ -906,10 +912,10 @@
             items: 1,
           },
           600: {
-            items: 2,
+            items: 1,
           },
           800: {
-            items: 3,
+            items: 2,
           },
           1000: {
             items: 4,

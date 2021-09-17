@@ -245,15 +245,31 @@ input:focus {
   clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
   background: var(--var-gradient);
   height: 100vh;
-  z-index: 2;
+  /* z-index: 2; */
 }
 .map-gg {
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(
+    100% 3%,
+    84% 7%,
+    54% 15%,
+    23% 23%,
+    0% 31%,
+    0% 84%,
+    0% 100%,
+    23% 100%,
+    44% 100%,
+    66% 100%,
+    100% 100%,
+    100% 49%,
+    100% 32%,
+    100% 25%
+  );
+
   height: 100vh !important;
   width: 100%;
   position: absolute;
   bottom: 8.5rem;
-  z-index: -100;
+  /* z-index: -100; */
 }
 .map-point {
   cursor: pointer !important;
