@@ -240,6 +240,7 @@ input:focus {
   height: 190vh;
   width: 100%;
   position: relative;
+  z-index: -2;
 }
 .about-clip {
   clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
@@ -362,6 +363,15 @@ footer .container-fluid {
     bottom: 11rem;
     /* z-index: -100; */
   }
+  .title-slider h4 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 36px;
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 28px;
+    color: white;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>>>>Small Devices */
@@ -386,6 +396,15 @@ footer .container-fluid {
     bottom: 11rem;
     /* z-index: -100; */
   }
+  .title-slider h4 {
+    font-weight: bold;
+    font-size: 29px;
+    margin-left: 40px;
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 28px;
+    color: white;
+  }
 }
 
 /* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
@@ -409,5 +428,14 @@ footer .container-fluid {
     position: absolute;
     bottom: 9.4rem;
     /* z-index: -100; */
+  }
+  .title-slider h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 20px;
+    color: white;
   }
 }

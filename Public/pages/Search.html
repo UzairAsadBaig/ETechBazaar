@@ -835,27 +835,43 @@
     ></script>
     <script type="text/javascript">
       $(".owl-carousel").owlCarousel({
-        stagePadding: 100,
+        stagePadding: 0,
         loop: true,
-        margin: 15,
+        margin: 12,
         autoplay: true,
         autoplayTimeout: 3500,
         nav: false,
         dots: false,
         responsive: {
           0: {
-            items: 1,
+            items: 0.5,
+          },
+          278: {
+            items: 0.5,
+          },
+          376: {
+            items: 1.8,
+          },
+          400: {
+            items: 2,
           },
           500: {
-            items: 1,
+            items: 2,
           },
           600: {
-            items: 2,
+            items: 2.5,
           },
           800: {
             items: 3,
           },
+
+          900: {
+            items: 2.6,
+          },
           1000: {
+            items: 3.3,
+          },
+          1200: {
             items: 4,
           },
           1400: {
