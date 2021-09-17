@@ -512,14 +512,14 @@
 /* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
 @media (min-width: 100px) and (max-width: 575px) {
   .about {
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     position: relative;
   }
   .about-clip {
     clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
     background: var(--var-gradient);
-    height: 30vh;
+    height: 45vh;
     /* z-index: 2; */
   }
   .map-gg {
@@ -533,11 +533,11 @@
   }
   .title-slider h4 {
     font-weight: bold;
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 18px;
+    margin-left: 17px;
     margin-top: 0px;
     width: fit-content;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     color: white;
   }
 }
