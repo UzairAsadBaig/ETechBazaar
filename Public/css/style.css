@@ -235,6 +235,29 @@ input:focus {
   margin-bottom: 40px;
   color: white;
 }
+/* search page and other */
+.main-title {
+  width: 3rem;
+  max-width: fit-content;
+  min-width: fit-content;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #fff !important;
+}
+.heading-main {
+  display: flex;
+  margin-bottom: 3rem;
+  margin-left: 1.8rem;
+}
+.full-wid {
+  width: 100%;
+  margin-top: 3.7rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: black;
+}
+
 /* -----------------------About-sect----------------------- */
 .about {
   height: 190vh;
@@ -337,105 +360,4 @@ footer .container-fluid {
 .footer_simple_links,
 .footer_simple_links:hover {
   color: rgb(223, 215, 215);
-}
-/*------------------------media-queries for slider and about------------------- */
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-
-/* -------------------------------medium devices----------------------- */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .about {
-    height: 160vh;
-    width: 100%;
-    position: relative;
-  }
-  .about-clip {
-    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
-    background: var(--var-gradient);
-    height: 100vh;
-    /* z-index: 2; */
-  }
-  .map-gg {
-    clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
-
-    height: 80vh !important;
-    width: 100%;
-    position: absolute;
-    bottom: 11rem;
-    /* z-index: -100; */
-  }
-  .title-slider h4 {
-    font-weight: bold;
-    font-size: 30px;
-    margin-left: 36px;
-    margin-top: 0px;
-    width: fit-content;
-    margin-bottom: 28px;
-    color: white;
-  }
-}
-
-/* >>>>>>>>>>>>>>>>>>>>Small Devices */
-@media (min-width: 576px) and (max-width: 767px) {
-  .about {
-    height: 150vh;
-    width: 100%;
-    position: relative;
-  }
-  .about-clip {
-    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
-    background: var(--var-gradient);
-    height: 70vh;
-    /* z-index: 2; */
-  }
-  .map-gg {
-    clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
-
-    height: 70vh !important;
-    width: 100%;
-    position: absolute;
-    bottom: 11rem;
-    /* z-index: -100; */
-  }
-  .title-slider h4 {
-    font-weight: bold;
-    font-size: 29px;
-    margin-left: 40px;
-    margin-top: 0px;
-    width: fit-content;
-    margin-bottom: 28px;
-    color: white;
-  }
-}
-
-/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
-@media (max-width: 575px) {
-  .about {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-  }
-  .about-clip {
-    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
-    background: var(--var-gradient);
-    height: 50vh;
-    /* z-index: 2; */
-  }
-  .map-gg {
-    clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
-
-    height: 50vh !important;
-    width: 100%;
-    position: absolute;
-    bottom: 9.4rem;
-    /* z-index: -100; */
-  }
-  .title-slider h4 {
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 20px;
-    margin-top: 0px;
-    width: fit-content;
-    margin-bottom: 20px;
-    color: white;
-  }
 }

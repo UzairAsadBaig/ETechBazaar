@@ -26,7 +26,8 @@
     />
 
     <!--TODO:------------- Custom Personalize css  -------------->
-    <link rel="stylesheet" href="../css/categories.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mediaQuries.css" />
 
     <!--TODO:-------------- Animation.css links(Please Include anim folder)  -------------->
     <link rel="stylesheet" href="anim/css/libs/animate.css" />
@@ -57,39 +58,72 @@
     <!--!----------------- NAVBAR------------------------------- -->
 
     <div class="container-fluid">
-      <nav class="navbar navbar-light">
-        <img class="logo" src="../img/logo.png" alt="image not found" />
+      <nav class="navbar navbar-expand-md">
+        <!-- Brand -->
+        <img
+          class="logo navbar-brand"
+          src="../img/logo.png"
+          alt="image not found"
+        />
+        <!-- Toggler/collapsibe Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
 
-        <a href="" class="nav_link nav_home active_link">Home</a>
-        <!-- <a href="" class="nav_link nav_category faded">Categories</a> -->
-
-        <div class="dropdown">
-          <a
-            class="dropdown-toggle faded"
-            type="button"
-            id="dropdownMenuButton"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Categories
-          </a>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <a class="dropdown-item" href="#">Contact</a>
-            <a class="dropdown-item" href="#">About</a>
-            <a class="dropdown-item" href="#">Phone</a>
-            <a class="dropdown-item" href="#">Adress</a>
-            <a class="dropdown-item" href="#">Home</a>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <div class="navbar-nav">
+            <span class="nav-item">
+              <a class="nav-link nav_link active_link nav_home" href="#"
+                >Home</a
+              >
+            </span>
+            <span class="nav-item">
+              <div class="nav_link nav_category faded dropdown">
+                <a
+                  class="dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                  <a class="dropdown-item" href="#">About</a>
+                  <a class="dropdown-item" href="#">Phone</a>
+                  <a class="dropdown-item" href="#">Adress</a>
+                  <a class="dropdown-item" href="#">Home</a>
+                </div>
+              </div>
+            </span>
+            <span class="nav-item">
+              <a class="nav-link nav_link nav_contact faded" href="#"
+                >Contact us</a
+              >
+            </span>
+            <span>
+              <span class="search_bar navbar-text mr-auto">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input
+                  class="search_input faded"
+                  type="text"
+                  placeholder="Search"
+                />
+              </span>
+            </span>
           </div>
         </div>
-        <a href="" class="nav_link nav_contact faded">Contact us</a>
-        <span class="search_bar">
-          <input class="search_input" type="text" placeholder="Search" />
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </span>
       </nav>
     </div>
 
@@ -835,25 +869,34 @@
     ></script>
     <script type="text/javascript">
       $(".owl-carousel").owlCarousel({
-        stagePadding: 100,
+        stagePadding: 0,
         loop: true,
-        margin: 15,
+        margin: 12,
         autoplay: true,
         autoplayTimeout: 3500,
         nav: false,
         dots: false,
         responsive: {
           0: {
-            items: 1,
-          },
-          400: {
             items: 1.3,
           },
+          289: {
+            items: 2,
+          },
+          376: {
+            items: 1.8,
+          },
+          400: {
+            items: 2,
+          },
+          500: {
+            items: 2,
+          },
           600: {
-            items: 1.7,
+            items: 2.5,
           },
           800: {
-            items: 2,
+            items: 3,
           },
 
           900: {

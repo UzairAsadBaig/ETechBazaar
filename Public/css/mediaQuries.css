@@ -115,13 +115,11 @@
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
 /* >>>>>>>>>>>>>>>>>>>>Large Devices */
-@media(min-width:1200px) {}
-
-
+@media (min-width: 1200px) {
+}
 
 /* >>>>>>>>>>>>>>>>>>>>Medium Devices */
-@media(min-width:992px) and (max-width:1199px) {
-
+@media (min-width: 992px) and (max-width: 1199px) {
   .product_spec,
   .product_spec_val {
     font-weight: 700;
@@ -141,13 +139,8 @@
   }
 
   .product_img {
-
     height: 450px;
   }
-
-
-
-
 
   .description_area {
     margin-top: 8rem;
@@ -162,19 +155,15 @@
   .description_text {
     font-size: 15px;
   }
-
-
 }
 
-
 /* >>>>>>>>>>>>>>>>>>>>Small Devices */
-@media(min-width:768px) and (max-width:991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .product_info_box {
     margin-top: 4rem;
     padding-left: 0px;
     padding-right: 0px;
     height: 490px;
-
   }
 
   .product_img {
@@ -194,7 +183,6 @@
   .product_specs {
     padding-top: 2rem;
     padding-left: 4rem;
-
   }
 
   .product_specs_values {
@@ -208,7 +196,6 @@
   .product_heading {
     font-weight: 700;
     border-radius: 0px 0px 0 0;
-
   }
 
   .product_info .row {
@@ -223,7 +210,6 @@
     font-size: 1rem;
   }
 
-
   .product_description {
     padding: 2rem 1rem 1rem 1rem;
   }
@@ -231,8 +217,6 @@
   .description_area {
     margin-top: 8rem;
   }
-
-
 
   #descHead {
     font-size: 20px;
@@ -245,17 +229,14 @@
   }
 }
 
-
 /* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
-@media(min-width:576px) and (max-width:767px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .product_info_box {
     margin-top: 4rem;
     padding-left: 0px;
     padding-right: 0px;
 
     height: 400px;
-
-
   }
 
   .product_img {
@@ -279,7 +260,6 @@
   .product_specs {
     padding-top: 2rem;
     padding-left: 4rem;
-
   }
 
   .product_specs_values {
@@ -293,7 +273,6 @@
   .product_heading {
     font-weight: 700;
     border-radius: 0px 0px 0 0;
-
   }
 
   .product_spec,
@@ -314,21 +293,17 @@
     font-size: 0.7rem;
   }
 
-
   .product_description {
     padding: 2rem 2rem 1rem 2rem;
     color: rgb(95, 91, 91);
     font-weight: 700;
     border: 1px solid rgb(238, 231, 231);
     position: relative;
-
   }
-
 
   .description_area {
     margin-top: 8rem;
   }
-
 
   #descHead {
     font-size: 18px;
@@ -341,11 +316,8 @@
   }
 }
 
-
-
 /* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
-@media(max-width:575px) {
-
+@media (max-width: 575px) {
   .product_section {
     padding: 5rem 3.5rem;
   }
@@ -355,16 +327,11 @@
     padding-left: 0px;
     padding-right: 0px;
     height: 400px;
-
-
   }
-
-
 
   .product_specs {
     padding-top: 2rem;
     padding-left: 2rem;
-
   }
 
   .product_specs_values {
@@ -384,7 +351,6 @@
     font-weight: 700;
     border-radius: 0px 0px 0 0;
     font-size: 22px;
-
   }
 
   .product_spec,
@@ -431,9 +397,7 @@
   }
 }
 
-
-
-@media(min-width:370px) and (max-width:445px) {
+@media (min-width: 370px) and (max-width: 445px) {
   .product_section {
     padding: 5rem 3rem;
   }
@@ -445,9 +409,7 @@
   }
 
   .product_img {
-
     height: 300px;
-
   }
 
   .card_btn {
@@ -475,5 +437,138 @@
   .product_description {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+/*------------------------media-queries for slider and about------------------- */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* -------------------------------medium devices----------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    height: 160vh;
+    width: 100%;
+    position: relative;
+  }
+  .about-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background: var(--var-gradient);
+    height: 100vh;
+    /* z-index: 2; */
+  }
+  .map-gg {
+    clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
+
+    height: 80vh !important;
+    width: 100%;
+    position: absolute;
+    bottom: 11rem;
+    /* z-index: -100; */
+  }
+  .title-slider h4 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 36px;
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 28px;
+    color: white;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Small Devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .about {
+    height: 150vh;
+    width: 100%;
+    position: relative;
+  }
+  .about-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background: var(--var-gradient);
+    height: 70vh;
+    /* z-index: 2; */
+  }
+  .map-gg {
+    clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
+
+    height: 70vh !important;
+    width: 100%;
+    position: absolute;
+    bottom: 11rem;
+    /* z-index: -100; */
+  }
+  .title-slider h4 {
+    font-weight: bold;
+    font-size: 29px;
+    margin-left: 40px;
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 28px;
+    color: white;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+@media (min-width: 376px) and(max-width: 575px) {
+  .about {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  .about-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background: var(--var-gradient);
+    height: 50vh;
+    /* z-index: 2; */
+  }
+  .map-gg {
+    clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
+
+    height: 50vh !important;
+    width: 100%;
+    position: absolute;
+    bottom: 9.4rem;
+    /* z-index: -100; */
+  }
+  .title-slider h4 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+    width: fit-content;
+    margin-bottom: 20px;
+    color: white;
+  }
+  @media (max-width: 375px) {
+    .about {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+    .about-clip {
+      clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+      background: var(--var-gradient);
+      height: 50vh;
+      /* z-index: 2; */
+    }
+    .map-gg {
+      clip-path: polygon(100% 3%, 0% 32%, 0% 100%, 100% 100%);
+
+      height: 50vh !important;
+      width: 100%;
+      position: absolute;
+      bottom: 9.4rem;
+      /* z-index: -100; */
+    }
+    .title-slider h4 {
+      font-weight: bold;
+      font-size: 16px;
+      margin-left: 18px;
+      margin-top: 0px;
+      width: fit-content;
+      margin-bottom: 17px;
+      color: white;
+    }
   }
 }
