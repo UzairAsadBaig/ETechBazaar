@@ -271,10 +271,6 @@ input:focus {
   bottom: 8.5rem;
   /* z-index: -100; */
 }
-.map-point {
-  cursor: pointer !important;
-}
-
 /************************ Footer *********************/
 .footer_icon {
   width: 60px;
@@ -355,4 +351,123 @@ footer .container-fluid {
 .footer_simple_links,
 .footer_simple_links:hover {
   color: rgb(223, 215, 215);
+}
+/*------------------------media-queries for slider and about------------------- */
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* -------------------------------medium devices----------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    height: 160vh;
+    width: 100%;
+    position: relative;
+  }
+  .about-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background: var(--var-gradient);
+    height: 100vh;
+    /* z-index: 2; */
+  }
+  .map-gg {
+    clip-path: polygon(
+      100% 3%,
+      84% 7%,
+      54% 15%,
+      23% 23%,
+      0% 31%,
+      0% 84%,
+      0% 100%,
+      23% 100%,
+      44% 100%,
+      66% 100%,
+      100% 100%,
+      100% 49%,
+      100% 32%,
+      100% 25%
+    );
+
+    height: 80vh !important;
+    width: 100%;
+    position: absolute;
+    bottom: 11rem;
+    /* z-index: -100; */
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Small Devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .about {
+    height: 150vh;
+    width: 100%;
+    position: relative;
+  }
+  .about-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background: var(--var-gradient);
+    height: 70vh;
+    /* z-index: 2; */
+  }
+  .map-gg {
+    clip-path: polygon(
+      100% 3%,
+      84% 7%,
+      54% 15%,
+      23% 23%,
+      0% 31%,
+      0% 84%,
+      0% 100%,
+      23% 100%,
+      44% 100%,
+      66% 100%,
+      100% 100%,
+      100% 49%,
+      100% 32%,
+      100% 25%
+    );
+
+    height: 70vh !important;
+    width: 100%;
+    position: absolute;
+    bottom: 11rem;
+    /* z-index: -100; */
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+@media (max-width: 575px) {
+  .about {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  .about-clip {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 0% 100%);
+    background: var(--var-gradient);
+    height: 50vh;
+    /* z-index: 2; */
+  }
+  .map-gg {
+    clip-path: polygon(
+      100% 3%,
+      82% 7%,
+      54% 15%,
+      23% 23%,
+      0% 31%,
+      0% 84%,
+      0% 100%,
+      23% 100%,
+      44% 100%,
+      66% 100%,
+      100% 100%,
+      100% 49%,
+      100% 32%,
+      100% 25%
+    );
+
+    height: 50vh !important;
+    width: 100%;
+    position: absolute;
+    bottom: 9.4rem;
+    /* z-index: -100; */
+  }
 }
