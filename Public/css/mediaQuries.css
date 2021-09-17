@@ -60,6 +60,13 @@
     height: 190px;
     margin-bottom: 3rem;
   }
+
+  .row .col-6 .card_tile {
+    box-shadow: 6px 6px 5px 0px rgba(140, 140, 140, 0.75);
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(140, 140, 140, 0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(140, 140, 140, 0.75);
+  }
+
   .card_picture {
     height: 80px;
   }
