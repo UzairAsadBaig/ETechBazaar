@@ -15,11 +15,8 @@
 }
 
 /* NAVBAR----------------------*/
-
 .navbar {
   box-shadow: none;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 .logo {
   width: 9rem;
@@ -28,15 +25,20 @@
   cursor: pointer;
 }
 .search_bar {
-  margin-left: 4rem;
+  margin-left: 3rem;
   padding: 0.3rem 1rem;
   border: 1px solid rgb(155, 155, 155);
   border-radius: 3rem;
-  width: 96%;
+  width: 19rem;
+}
+.search_bar_small {
+  display: none;
+  padding: 0.3rem 1rem;
+  border: 1px solid rgb(155, 155, 155);
+  border-radius: 3rem;
+  width: 19rem;
 }
 .nav_home {
-  margin-left: 20rem;
-
   border-radius: 3rem;
   padding: 0.5rem 1.5rem;
 }
@@ -66,6 +68,7 @@
     rgba(30, 234, 173, 1) 50%
   );
   border-radius: 3rem;
+  padding-top: 0.4rem !important;
 }
 .faded {
   opacity: 50%;
@@ -81,7 +84,7 @@ input:focus {
   outline: none;
 }
 .dropdown-menu {
-  width: 16rem;
+  width: 20rem;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 18rem;
@@ -90,7 +93,6 @@ input:focus {
 .dropdown-item:hover {
   background: var(--var-gradient);
   color: white !important;
-  font-weight: 700;
 }
 .dropdown-menu::-webkit-scrollbar {
   display: none;

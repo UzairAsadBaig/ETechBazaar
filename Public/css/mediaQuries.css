@@ -52,12 +52,18 @@
   .tilt_grad {
     margin-left: 0.2rem;
   }
+  .carousel_img {
+    height: 70vh;
+  }
+  .carousel-inner {
+    max-height: 70vh;
+  }
   /********* CARD *********/
 
   .card_tile {
     border-width: 1.5px;
     width: 150px;
-    height: 190px;
+    height: 196px;
     margin-bottom: 3rem;
   }
 
@@ -84,7 +90,7 @@
     font-size: 0.8rem;
     font-weight: 700;
     text-align: right;
-    color: rgb(104, 104, 104);
+    color: rgb(41, 41, 41);
   }
   .model_version {
     font-size: 0.6rem;
@@ -544,3 +550,205 @@
 /* ------------very small----------------- */
 
 /* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+
+/* NAVBAR MEDIA QUERIES----------------------------------------------- */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+/* >>>>>>>>>>>>>>>>>>>>Large Devices */
+@media (min-width: 1200px) {
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Medium Devices */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .logo {
+    width: 7rem;
+  }
+  .nav_link,
+  .search_bar {
+    font-size: 12px;
+  }
+  .search_bar {
+    padding: 0.1rem 0.5rem;
+    width: 16rem;
+  }
+  .dropdown-menu {
+    width: 14rem;
+    height: 13rem;
+  }
+  .dropdown-item {
+    font-size: 12px !important;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Small Devices */
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    width: 7rem !important;
+  }
+  .nav_link,
+  .search_bar {
+    font-size: 11px;
+  }
+  .search_bar {
+    padding: 0.1rem 0.5rem;
+    width: 13rem;
+  }
+  .dropdown-menu {
+    width: 13rem;
+    height: 12rem;
+  }
+  .dropdown-item {
+    font-size: 11px !important;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
+@media (min-width: 576px) and (max-width: 767px) {
+  .search_bar_small {
+    display: block;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .search_bar_small .svg-inline--fa {
+    opacity: 30%;
+  }
+  .logo {
+    width: 7rem;
+  }
+  .nav_link {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .nav_home {
+    border-radius: 0.5px;
+    margin-left: 0;
+    padding: 0.5rem 0 !important;
+  }
+  .nav_category,
+  .nav_contact {
+    border-radius: 1px;
+    font-size: 15px;
+    margin-left: 0;
+    padding: 0.5rem 0 !important;
+    text-align: center;
+  }
+  .nav_home {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav_category {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav_contact {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search_bar {
+    display: none;
+  }
+  .dropdown-menu {
+    width: 12rem;
+    height: 11rem;
+    margin-left: 14.5rem;
+    margin-top: 0.05rem !important;
+  }
+  .dropdown-item {
+    font-size: 14px !important;
+  }
+}
+
+/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+@media (max-width: 575px) {
+  .logo {
+    width: 7rem !important;
+  }
+  .search_bar_small {
+    display: block;
+    margin-top: 2rem;
+    width: 18rem;
+    margin-bottom: 2rem;
+  }
+  .search_bar_small .svg-inline--fa {
+    opacity: 30%;
+  }
+  .logo {
+    width: 5rem;
+  }
+  .nav_link {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .nav_home {
+    border-radius: 0.5px;
+    margin-left: 0;
+    padding: 0.5rem 0 !important;
+  }
+  .nav_category,
+  .nav_contact {
+    border-radius: 1px;
+    font-size: 15px;
+    margin-left: 0;
+    padding: 0.5rem 0 !important;
+    text-align: center;
+  }
+  .nav_home {
+    width: 100%;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav_category {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav_contact {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .search_bar {
+    display: none;
+  }
+  .dropdown-menu {
+    width: 12rem;
+    height: 11rem;
+    margin-left: 6rem;
+    margin-top: 0.05rem !important;
+  }
+  .dropdown-item {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 280px) {
+  .logo {
+    width: 7rem !important;
+  }
+  .search_bar_small {
+    display: block;
+    margin-top: 2rem;
+    width: 15rem;
+  }
+}
