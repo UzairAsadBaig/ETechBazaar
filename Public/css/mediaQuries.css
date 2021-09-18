@@ -397,7 +397,7 @@
   }
 }
 
-@media (min-width: 370px) and (max-width: 445px) {
+@media (min-width: 360px) and (max-width: 445px) {
   .product_section {
     padding: 5rem 3rem;
   }
