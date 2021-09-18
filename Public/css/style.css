@@ -169,6 +169,7 @@ input:focus {
 .card_tile {
   border-width: 1.5px;
   background-color: #fff;
+  display: block;
   /* background: linear-gradient(
     31deg,
     rgba(85, 198, 230, 1) 00%,
@@ -183,6 +184,12 @@ input:focus {
   margin: auto;
   margin-bottom: 5rem;
 }
+.card_tile:hover,
+.card_tile:focus,
+.card_tile:active {
+  color: whitesmoke;
+}
+
 .card_picture {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 98%);
   clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);

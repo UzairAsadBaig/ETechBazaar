@@ -620,6 +620,8 @@
     text-align: center;
     font-weight: 500;
     letter-spacing: 0.5px;
+    margin: 0;
+    padding: 0 !important;
   }
   .nav_home {
     border-radius: 0.5px;
@@ -633,6 +635,7 @@
     margin-left: 0;
     padding: 0.5rem 0 !important;
     text-align: center;
+    /* margin-left: 0rem !important; */
   }
   .nav_home {
     width: 100%;
