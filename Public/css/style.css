@@ -13,6 +13,7 @@
     rgba(85, 198, 230, 1) 00%,
     rgba(24, 217, 133, 1) 46%
   );
+  --section-rotate: 9vw;
 }
 
 /* NAVBAR----------------------*/
@@ -153,7 +154,7 @@ nav {
 .downdown-menu:before {
   content: " ";
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 5rem;
   border: 10px solid transparent;
   border-bottom-color: #fff;
@@ -194,7 +195,9 @@ nav {
   width: 60px;
   height: 60px;
 }
-
+#my-carousel {
+  margin-top: 2.5rem;
+}
 .carousel_img {
   width: 100%;
   object-fit: cover;
@@ -483,4 +486,171 @@ footer .container-fluid {
 .footer_simple_links,
 .footer_simple_links:hover {
   color: rgb(223, 215, 215);
+}
+
+/********************* Modal window/Map /Admin info  **********************/
+.submit_form {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(31deg, rgba(85, 198, 230, 1) 00%, rgba(30, 234, 173, 1) 50%);
+  border-radius: 50px;
+  color: white;
+}
+
+
+.user_info_input_headings {
+  font-weight: 500;
+  /* font-size: 20rem; */
+
+}
+
+.checkout_btn {
+  padding: 0.7rem 2rem;
+  background: linear-gradient(31deg, rgba(85, 198, 230, 1) 00%, rgba(30, 234, 173, 1) 50%);
+  border-radius: 50px;
+  color: white;
+}
+
+.tilt_grad--modal {
+  z-index: 100;
+}
+
+.section_heading--modal {
+  font-size: 1.5rem;
+}
+
+
+/*********  map **********/
+.section-map {
+  position: relative;
+  height: 40rem;
+  margin-top: calc(0px - var(--section-rotate));
+  /* margin-bottom: 20rem; */
+}
+
+.marker {
+  background-image: url('../img/pin.png');
+  background-size: cover;
+  width: 32px;
+  height: 40px;
+  cursor: pointer;
+}
+
+
+
+.about_admin {
+  /* margin-top: 0rem; */
+  margin-top: calc(60px - var(--section-rotate));
+  padding: 25px 0;
+  position: relative;
+  z-index: 1000;
+  height: 40rem;
+  background: linear-gradient(29deg,
+      rgba(85, 198, 230, 1) 00%,
+      rgba(24, 217, 133, 1) 46%);
+  background: linear-gradient(29deg,
+      rgba(85, 198, 230, 1) 00%,
+      rgba(24, 217, 133, 1) 46%);
+  clip-path: polygon(0 var(--section-rotate),
+      100% 0,
+      100% calc(100% - var(--section-rotate)),
+      0 100%);
+  -webkit-clip-path: polygon(0 var(--section-rotate),
+      100% 0,
+      100% calc(100% - var(--section-rotate)),
+      0 100%);
+}
+
+.reviews {
+  padding: 5rem 0;
+  display: grid;
+  grid-column-gap: 6rem;
+  grid-auto-flow: column;
+  /* overflow-x: scroll; */
+  /* -ms-scroll-snap-type: x mandatory; */
+  /* scroll-snap-type: x mandatory; */
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+.mapboxgl-popup {
+  max-width: 20rem;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  padding: 1rem 0.6rem 0.1rem 0.6rem !important;
+  font-size: 0.8rem;
+  -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.owner_img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 10px black;
+}
+
+.owner_name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  padding-top: 12px;
+  color: white;
+  font-family: 'Petemoss', cursive;
+
+}
+
+
+.rotate {
+  -ms-transform: skewY(-8deg);
+  transform: skewY(-8deg);
+}
+
+.rotate--text {
+  -ms-transform: skewY(-6deg);
+  transform: skewY(-6deg);
+}
+
+.description_sec {
+  padding: calc(-2rem + var(--section-rotate)) 16px;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+  max-height: 30rem;
+
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+
+.description_sec::-webkit-scrollbar,
+.all_products::-webkit-scrollbar {
+  display: none;
+
+}
+
+.price {
+  color: rgba(24, 217, 133, 1);
+}
+
+.all_products {
+  max-height: 20rem;
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+
 }

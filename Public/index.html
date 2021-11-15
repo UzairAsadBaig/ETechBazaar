@@ -14,6 +14,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Petemoss&display=swap" rel="stylesheet">
     <!--TODO:----- Bootstrap core CSS -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
@@ -37,7 +40,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
     />
-
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet'>
     <title></title>
     <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
     <link rel="shortcut icon" href="./img/favicon.png" />
@@ -182,7 +186,48 @@
                     <span class="badge badge-pill badge-danger">3</span>
                   </div>
                   <div class="col-8 total-section text-right">
-                    <p>Total: <span class="text-info">$2,978.24</span></p>
+                    <p>Total: <span class="price">$2,978.24</span></p>
+                    </div>
+                    </div>
+                    <div class="all_products">
+                      <div class="row cart-detail">
+                        <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                          <img src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg" />
+                        </div>
+                        <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                          <p>Sony DSC-RX100M..</p>
+                          <span class="price "> $250.22</span>
+                          <span class="count"> Quantity:01</span>
+                        </div>
+                      </div>
+                      <div class="row cart-detail">
+                        <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                          <img src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg" />
+                        </div>
+                        <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                          <p>Sony DSC-RX100M..</p>
+                          <span class="price "> $250.22</span>
+                          <span class="count"> Quantity:01</span>
+                        </div>
+                      </div>
+                      <div class="row cart-detail">
+                        <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                          <img src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg" />
+                        </div>
+                        <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                          <p>Sony DSC-RX100M..</p>
+                          <span class="price "> $250.22</span>
+                          <span class="count"> Quantity:01</span>
+                        </div>
+                      </div>
+                      <div class="row cart-detail">
+                        <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                          <img src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg" />
+                        </div>
+                        <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                          <p>Sony DSC-RX100M..</p>
+                          <span class="price "> $250.22</span>
+                          <span class="count"> Quantity:01</span>
                   </div>
                 </div>
                 <div class="row cart-detail">
@@ -193,7 +238,7 @@
                   </div>
                   <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
                     <p>Sony DSC-RX100M..</p>
-                    <span class="price text-info"> $250.22</span>
+                    <span class="price "> $250.22</span>
                     <span class="count"> Quantity:01</span>
                   </div>
                 </div>
@@ -205,7 +250,7 @@
                   </div>
                   <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
                     <p>Vivo DSC-RX100M..</p>
-                    <span class="price text-info"> $500.40</span>
+                    <span class="price "> $500.40</span>
                     <span class="count"> Quantity:01</span>
                   </div>
                 </div>
@@ -217,13 +262,16 @@
                   </div>
                   <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
                     <p>Lenovo DSC-RX10M.</p>
-                    <span class="price text-info"> $445.78</span>
+                    <span class="price "> $445.78</span>
                     <span class="count"> Quantity:01</span>
                   </div>
                 </div>
+</div>
                 <div class="row">
                   <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
-                    <button class="btn btn-primary btn-block">Checkout</button>
+                    <button class="btn btn-primary btn-block checkout_btn" data-toggle="modal"
+                      data-target="#staticBackdrop">Checkout</button>
+                    <!-- <button type="button" class="btn checkout_btn" data-toggle="modal" data-target="#staticBackdrop">Checkout</button> -->
                   </div>
                 </div>
               </div>
@@ -911,46 +959,108 @@
         <hr />
       </div>
     </div>
-    <!---------------------------main-about---------------------------------->
-    <div class="about">
-      <div class="about-clip"></div>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3399.020237471893!2d74.38177329999999!3d31.578492899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191bac2a9da4bf%3A0xe67b4d53bd68864d!2sCCTV%20Cameras%20Sale%20Point!5e0!3m2!1sen!2s!4v1631725197989!5m2!1sen!2s"
-        width="800"
-        height="600"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        class="map-gg"
-        ;
-      ></iframe>
-    </div>
-    <a href="https://goo.gl/maps/zHR54oZRmrjj3pif9" target="_blank">
-      <div
-        class="map-go"
-        style="
-          width: 100%;
-          background-color: rgba(131, 131, 131, 0.746);
-          height: 3rem;
-          margin-top: -8rem;
-          margin-bottom: 3rem;
-          z-index: 100;
-        "
-      >
-        <h3
-          style="
-            color: rgb(255, 255, 255);
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 1.1rem 0px;
-            cursor: pointer;
-          "
-        >
-          Goto location
-        </h3>
+    <!-- !-------------------main-about---------------------------------->
+    
+    <section class="about_admin">
+    
+      <div class="container">
+        <div class="row ">
+          <div class="col-md-9 col-12 description_sec">
+    
+            <p class="description_text rotate--text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis ut, esse accusamus alias sit error illo
+              aut
+              sunt recusandae repellat? Sit, iste labore magni voluptates, illum cupiditate aspernatur non explicabo
+              reprehenderit est nam error reiciendis ipsam placeat, distinctio sint eaque omnis autem voluptatum fugiat
+              voluptate corrupti. A, delectus! Accusantium minus fuga odit dicta dolores odio distinctio, quos molestias
+              a!
+              Blanditiis minima deleniti officiis porro possimus velit itaque eveniet quidem repellat accu A, delectus!
+              Accusantium minus fuga odit dicta dolores odio distinctio, quos molestias a!
+              Blanditiis minima deleniti officiis porro possimus velit itaque eveniet quidem repellat accureprehenderit est
+              nam error reiciendis ipsam placeat, distinctio sint eaque omnis autem voluptatum fugiat
+              voluptate corrupti. A, delectus! Accusantium minus fuga odit dicta dolores odio distinctio, quos molestias
+              a!
+              Blanditiis minima deleniti officiis porro possimus velit itaque eveniet quidem repellat accu A, delectus!
+              Accusantium minus fuga odit dicta dolores odio distinctio, quos molestias a!
+              Blanditiis minima deleniti officiis porro possimus velit itaque eveniet quidem repellat accu
+              nam error reiciendis ipsam placeat, distinctio sint eaque omnis autem voluptatum fugiat
+              voluptate corrupti. A, delectus! Accusantium minus fuga odit dicta dolores odio distinctio, quos molestias
+              a!
+              Blanditiis minima deleniti officiis porro possimus velit itaque eveniet quidem repellat accu A, delectus!
+              Accusantium minus fuga odit dicta dolores odio distinctio, quos molestias a!
+              Blanditiis minima deleniti officiis porro possimus velit itaque eveniet quidem repellat accu
+            </p>
+          </div>
+          <div class="col-md-3 col-12">
+            <div class="row">
+              <div class=" ml-auto col-md-12 col-6 text-center text-md-right o1">
+                <img src="./img/user-5.jpg" alt="" class="img-fluid owner_img ">
+                <p class="owner_name rotate">Ahmad Hassan</p>
+              </div>
+              <div class="ml-auto col-md-12 col-6 text-center text-md-right o2">
+                <img src="./img/user-14.jpg" alt="" class="img-fluid owner_img">
+                <p class="owner_name rotate">Ahmad Hassan</p>
+              </div>
+            </div>
+    
+    
+          </div>
+        </div>
       </div>
-    </a>
+    
+    </section>
+    
+    
+    <section class="section-map">
+      <div id="map"></div>
+    
+    
+    </section>
+    
+    
+    
+    
+    <!-- !----------------- Modal Window -------------------- -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="section_heading section_heading--modal">
+              <span class="text_grad">To</span><span class="tilt_grad tilt_grad--modal">Proceed</span>
+            </div>
+    
+    
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+    
+    
+            <form action="">
+              <div class="form-group">
+                <label for="user-name" class="col-form-label user_name user_info_input_headings">Name:</label>
+                <input type="text" class="form-control modal_input_field" id="user-name">
+              </div>
+              <div class="form-group">
+                <label for="user-phoneNo" class="col-form-label user_phoneNo user_info_input_headings">Phone No:</label>
+                <input type="tel" class="form-control modal_input_field" id="user-phoneNo">
+    
+              </div>
+              <div class="form-group">
+                <label for="user-address" class="col-form-label user_address user_info_input_headings">Address:</label>
+                <input type="text" class="form-control modal_input_field" id="user-address">
+              </div>
+              <div class="text-center"><button type="submit" class="btn submit_form">Submit</button></div>
+    
+            </form>
+          </div>
+        </div>
+      </div>
+              </div>
 
     <!-- !----------------- footer -------------------- -->
 
@@ -1080,5 +1190,6 @@
         },
       });
     </script>
+    <script src="./js/mapBox.js"></script>
   </body>
 </html>
