@@ -12,9 +12,9 @@
   margin-bottom: 3rem;
   margin-left: 1.8rem;
 }
-.full-wid {
+.full-widow {
   width: 100%;
-  margin-top: 3.7rem;
+  margin-top: 6.7rem !important;
   font-weight: bold;
   margin-left: 1rem;
   color: black;
