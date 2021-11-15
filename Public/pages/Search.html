@@ -1,769 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- TODO: ------------------- Required meta tags ------------------>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!--TODO:----- Google Fonts(Optional) Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <!--TODO:----- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--TODO:----- Material Design Bootstrap -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css"
+      rel="stylesheet"
+    />
 
-<head>
-  <!-- TODO: ------------------- Required meta tags ------------------>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!--TODO:----- Google Fonts(Optional) Roboto -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
-  <!--TODO:----- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
-  <!--TODO:----- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet" />
+    <!--TODO:------------- Custom Personalize css  -------------->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/mediaQuries.css" />
 
-  <!--TODO:------------- Custom Personalize css  -------------->
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/mediaQuries.css" />
+    <!--TODO:-------------- Animation.css links(Please Include anim folder)  -------------->
+    <link rel="stylesheet" href="anim/css/libs/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+    />
 
-  <!--TODO:-------------- Animation.css links(Please Include anim folder)  -------------->
-  <link rel="stylesheet" href="anim/css/libs/animate.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <title></title>
+    <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
+    <link rel="shortcut icon" href="./img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-  <title></title>
-  <!--TODO:------ Adding icon of Max size of (100 X 100) in Tab bar -->
-  <link rel="shortcut icon" href="./img/favicon.png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <body>
+    <!--!----------------- NAVBAR------------------------------- -->
+    <div class="container-fluid">
+      <nav class="fixed-top navbar-top">
+        <!-- <nav class="navbar"> -->
+        <div class="row">
+          <!-- Navbar Brand Start -->
+          <div class="col-2">
+            <!-- Brand -->
+            <a href="index.html"
+              ><img
+                class="logo navbar-brand"
+                src="../img/logo.png"
+                alt="image not found"
+            /></a>
+          </div>
+          <!-- Navbar Brand End -->
 
-<body>
-  <!--!----------------- NAVBAR------------------------------- -->
+          <!-- Search Bar Start-->
+          <div class="col-6">
+            <!-- Navbar links -->
 
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-md">
-      <!-- Brand -->
-      <a href="../index.html"><img class="logo navbar-brand" src="./../img/logo.png" alt="image not found" /></a>
-      
-      <!-- Toggler/collapsibe Button -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <!-- <span class="navbar-toggler-icon"></span> -->
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <!-- Navbar links -->
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <div class="navbar-nav ml-auto">
-          <span class="nav-item">
-            <a class="nav-link nav_link active_link nav_home" href="#">Home</a>
-          </span>
-          <span class="nav-item">
-            <div class="nav_link nav_category faded dropdown">
-              <a class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                aria-expanded="false">
+            <div class="navbar-nav">
+              <span class="nav-item">
+                <span class="search_bar navbar-text">
+                  <input
+                    class="search_input"
+                    type="text"
+                    placeholder="Search in EtechBazaar"
+                  />
+                </span>
+                <button class="search_btn">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </span>
+            </div>
+          </div>
+          <!-- Search Bar End-->
+
+          <!-- Categories Start -->
+          <div class="col-1 nav-left-col">
+            <div class="nav_link nav_category dropdown">
+              <a
+                class="dropdown-toggle dropdown_toggle-btn"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 Categories
               </a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <a class="dropdown-item" href="#">Contact</a>
-                <a class="dropdown-item" href="#">About</a>
-                <a class="dropdown-item" href="#">Phone</a>
-                <a class="dropdown-item" href="#">Adress</a>
-                <a class="dropdown-item" href="#">Home</a>
+              <div
+                class="dropdown-menu dropdown-menu-right category_dropdown_menu"
+                aria-labelledby="dropdownMenuButton"
+              >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Action</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Another action</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Something else here</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Contact</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >About</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Phone</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Adress</a
+                >
+                <a
+                  class="dropdown-item category_dropdown_item"
+                  target="_blank"
+                  href="./pages/categories.html"
+                  >Home</a
+                >
               </div>
-              </div>
-              </span>
-              <span class="nav-item">
-            <a class="nav-link nav_link nav_contact faded" href="#">Contact us</a>
-            </span>
-            <span>
-              <span class="search_bar navbar-text mr-auto">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              <input class="search_input faded" type="text" placeholder="Search" />
-              </span>
-              </span>
-              </div>
-              </div>
-              </nav>
-              <span class="search_bar_small navbar-text mx-auto">
-                <i class="fa fa-search" aria-hidden="true"></i>
-      <input class="search_input faded" type="text" placeholder="Search" />
-      </div>
+            </div>
+          </div>
+          <!-- Categories End -->
 
-  <!-- --------------------------------heading --------------------------------->
-  <section class="main-container">
-    <div class="heading-main">
-      <div class="main-title tilt_grad">Mac Books</div>
-      <hr class="full-wid" />
+          <!-- Cart Start -->
+          <div class="col-2 nav-left-col">
+            <div class="dropdown downdown">
+              <button type="button" class="btn-cart" data-toggle="dropdown">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart
+                <span class="badge badge-pill badge-danger">3</span>
+              </button>
+
+              <div class="dropdown-menu downdown-menu">
+                <div class="row total-header-section">
+                  <div class="col-4">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                    <span class="badge badge-pill badge-danger">3</span>
+                  </div>
+                  <div class="col-8 total-section text-right">
+                    <p>Total: <span class="price">$2,978.24</span></p>
+                  </div>
+                </div>
+                <div class="all_products">
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Sony DSC-RX100M..</p>
+                      <span class="price"> $250.22</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Sony DSC-RX100M..</p>
+                      <span class="price"> $250.22</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Sony DSC-RX100M..</p>
+                      <span class="price"> $250.22</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Sony DSC-RX100M..</p>
+                      <span class="price"> $250.22</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://images-na.ssl-images-amazon.com/images/I/811OyrCd5hL._SX425_.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Sony DSC-RX100M..</p>
+                      <span class="price"> $250.22</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://cdn2.gsmarena.com/vv/pics/blu/blu-vivo-48-1.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Vivo DSC-RX100M..</p>
+                      <span class="price"> $500.40</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                  <div class="row cart-detail">
+                    <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                      <img
+                        src="https://static.toiimg.com/thumb/msid-55980052,width-640,resizemode-4/55980052.jpg"
+                      />
+                    </div>
+                    <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                      <p>Lenovo DSC-RX10M.</p>
+                      <span class="price"> $445.78</span>
+                      <span class="count"> Quantity:01</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                    <button
+                      class="btn btn-primary btn-block checkout_btn"
+                      data-toggle="modal"
+                      data-target="#staticBackdrop"
+                    >
+                      Checkout
+                    </button>
+                    <!-- <button type="button" class="btn checkout_btn" data-toggle="modal" data-target="#staticBackdrop">Checkout</button> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Cart End -->
+
+          <!-- Call us now start -->
+          <div class="col-1 call-us nav-left-col">
+            <a href="tel:+923045937445">
+              <img src="../img/phone1.png" alt="Call us" />
+            </a>
+          </div>
+          <!-- Call us now end-->
+        </div>
+      </nav>
     </div>
-  </section>
-  <!-----------------------------------1s slider------------------------------->
-  <section class="slider">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
+
+    <!-- --------------------------------heading --------------------------------->
+    <section class="main-container">
+      <div class="heading-main">
+        <div class="main-title tilt_grad" style="margin-top: 5rem">
+          Mac Books
         </div>
+        <hr class="full-widow" />
       </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
+    </section>
+    <!-----------------------------------1s slider------------------------------->
+    <div class="item">
+      <div class="col-3">
+        <div class="card card_tile">
+          <div class="card_header">
+            <div class="card_picture">
+              <img src="../img/products/img2.jpg" />
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-----------------------------------2nd slider------------------------------->
-  <section class="slider">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
+            <div class="card_description">
+              <h3 class="card_item_name">Mac Book</h3>
+              <p class="model_version">
+                -50 to 110°C W1209 Digital Thermostat Temperature
+              </p>
+              <button type="button" class="btn btn-outline-light card_btn">
+                Add to cart
+              </button>
+              <p class="card_price">122,000Rs</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-----------------------------------3rd slider------------------------------->
-  <section class="slider">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
+    <!------------------------------------<footer>||</footer>----------------------------------->
+    <footer class="bg-dark text-white">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-4 column">
+            <img
+              src="../img/favIcon_white.png"
+              alt="logo"
+              class="footer_icon"
+            />
+            <p class="footer_text">Powered by eTechBazaar</p>
+            <div id="social">
+              <i class="fab fa-facebook" aria-hidden="true"></i>
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-youtube" aria-hidden="true"></i>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-----------------------------------4h slider------------------------------->
-  <section class="slider">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-----------------------------------5h slider------------------------------->
-  <section class="slider">
-    <div class="owl-carousel owl-theme">
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="col-3">
-          <div class="card card_tile">
-            <div class="card_header">
-              <div class="card_picture">
-                <img src="../img/products/img2.jpg" />
-              </div>
-              <div class="card_description">
-                <h3 class="card_item_name">Mac Book</h3>
-                <p class="model_version">
-                  -50 to 110°C W1209 Digital Thermostat Temperature
-                </p>
-                <button type="button" class="btn btn-outline-light card_btn">
-                  Add to cart
-                </button>
-                <p class="card_price">122,000Rs</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!------------------------------------<footer>||</footer>----------------------------------->
-  <footer class="bg-dark text-white">
-    <div class="container-fluid">
-      <div class="row text-center">
-        <div class="col-md-4 column">
-          <img src="../img/favIcon_white.png" alt="logo" class="footer_icon" />
-          <p class="footer_text">Powered by eTechBazaar</p>
-          <div id="social">
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-youtube" aria-hidden="true"></i>
-          </div>
           </div>
           <div class="col-md-4 column">
             <hr class="lines w-75" />
@@ -775,42 +355,58 @@
             <a href="" class="footer_links">New Arrivals</a>
           </div>
 
-        <div class="col-md-4 column">
-          <hr class="lines w-75" />
-          <h3 class="footer_header">Contact Us</h3>
-          <hr class="lines w-75" />
-          <a href="tel:+923320032005" class="footer_links">+923320032005</a>
-          <a href="mailto:webmaster@example.com" class="footer_links">Mail Us</a>
-          <a href="" class="footer_simple_links">100 Street Name</a>
-          <a href="" class="footer_simple_links">City, State, 000000</a>
+          <div class="col-md-4 column">
+            <hr class="lines w-75" />
+            <h3 class="footer_header">Contact Us</h3>
+            <hr class="lines w-75" />
+            <a href="tel:+923320032005" class="footer_links">+923320032005</a>
+            <a href="mailto:webmaster@example.com" class="footer_links"
+              >Mail Us</a
+            >
+            <a href="" class="footer_simple_links">100 Street Name</a>
+            <a href="" class="footer_simple_links">City, State, 000000</a>
           </div>
-          </div>
-          </div>
-          <hr class="lines" />
-          <div class="text-center py-2">
-            <span class="copy_rights">&copy; Design & Develop by </span>
-            <img src="../img/fumn_white2.png" class="fumn_logo" alt="" />
-          </div>
-          </footer>
-          <!--TODO:----- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!--TODO:----- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <!--TODO:------------ Font awesome icons link  -------------->
-  <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+        </div>
+      </div>
+      <hr class="lines" />
+      <div class="text-center py-2">
+        <span class="copy_rights">&copy; Design & Develop by </span>
+        <img src="../img/fumn_white2.png" class="fumn_logo" alt="" />
+      </div>
+    </footer>
+    <!--TODO:----- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <!--TODO:----- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!--TODO:------------ Font awesome icons link  -------------->
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 
-  <!--TODO:----- Bootstrap core JavaScript -->
-  <script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <!-- slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script type="text/javascript">
-        $( ".owl-carousel" ).owlCarousel( {
+    <!--TODO:----- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"
+    ></script>
+    <!-- slider -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      $(".owl-carousel").owlCarousel({
         stagePadding: 0,
         loop: true,
         margin: 12,
@@ -854,8 +450,7 @@
             items: 5,
           },
         },
-      } );
+      });
     </script>
   </body>
-
 </html>
