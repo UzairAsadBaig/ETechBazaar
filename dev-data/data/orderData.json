@@ -1,0 +1,133 @@
+[
+
+{
+  "name":"Muzamil Ahmad",
+  "phone":"03123302329",
+  "address":"Shadbagh Lahore",
+  "date":"2021-06-19T09:00:00.000Z",
+  "products":[
+    {
+      "name":"MacBook",
+      "price": 250000,
+      "model":"xyz",
+      "category":"laptop & accessories",
+      "color":"white",
+      "images":["img3.jpg"],
+      "condition":"used"
+    }
+  ]
+},
+
+{
+  "name":"Uzair Baig",
+  "phone":"03123302329",
+  "address":"Shalimar link road Lahore",
+  "date":"2021-06-19T09:00:00.000Z",
+  "products":[
+    {
+      "name":"Drone",
+      "price": 11000,
+      "model":"xyz",
+      "category":"drone accessories",
+      "color":"orange",
+      "images":["img1.jpg"],
+      "condition":"used"
+    }
+  ]
+},
+
+
+
+{
+  "name":"Fasih Ur Rehman",
+  "phone":"03164246008",
+  "address":"Samnabad Lahore",
+  "date":"2021-06-19T09:00:00.000Z",
+  "products":[
+    {
+      "name":"Drone",
+      "price": 11000,
+      "model":"xyz",
+      "category":"drone accessories",
+      "color":"orange",
+      "images":["img1.jpg"],
+      "condition":"new"
+    },
+    {
+      "name":"MacBook",
+      "price": 200000,
+      "model":"xyz",
+      "category":"laptop and accessories",
+      "color":"white",
+      "images":["img3.jpg"],
+      "condition":"used"
+    }
+  ]
+},
+
+
+{
+  "name":"Numan Anees",
+  "phone":"03222222222",
+  "address":"Samnabad Lahore",
+  "date":"2021-06-19T09:00:00.000Z",
+  "products":[
+    {
+      "name":"Drone",
+      "price": 11000,
+      "model":"xyz",
+      "category":"drone accessories",
+      "color":"orange",
+      "images":["img1.jpg"],
+      "condition":"new"
+    },
+    {
+      "name":"MacBook",
+      "price": 250000,
+      "model":"xyz",
+      "category":"laptop and accessories",
+      "color":"white",
+      "images":["img3.jpg"],
+      "condition":"new"
+    },
+    {
+      "name":"IC chip",
+      "price": 250,
+      "model":"xyz",
+      "category":"electronics and components",
+      "color":"none",
+      "images":["img2.jpg"],
+      "condition":"used"
+    }
+  ]
+},
+{
+  "name":"Mudassir Ahmad",
+  "phone":"03222222222",
+  "address":"Samnabad Lahore",
+  "date":"2021-06-19T09:00:00.000Z",
+  "products":[
+    
+    {
+      "name":"Del laptop charger",
+      "price": 7000,
+      "model":"xyz",
+      "category":"chargers and power adapter",
+      "color":"black",
+      "images":["img3.jpg"],
+      "condition":"used"
+    },
+    {
+      "name":"IC chip",
+      "price": 250,
+      "model":"xyz",
+      "category":"electronics and components",
+      "color":"none",
+      "images":["img2.jpg"],
+      "condition":"used"
+    }
+  ]
+}
+
+
+]
