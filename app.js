@@ -35,7 +35,7 @@ const limiter = rateLimit({
   message: "Too many request sent! Please try again after 1 hour",
 });
 app.use("/api", limiter);
-//Adding sanitization  fro Nosql injection
+//Adding sanitization  for Nosql injection
 app.use(mongoSanitize());
 //Adding XSS security(JS or HTML code)
 app.use(xssClean());
