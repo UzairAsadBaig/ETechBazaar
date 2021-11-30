@@ -10,7 +10,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xssClean = require("xss-clean");
 const hpp = require("hpp");
-const cookieParser = require("cookie-parser");
+
 
 //Providing a static path
 // app.use(express.static(path.join(__dirname, "public")));
@@ -22,7 +22,7 @@ app.use(helmet());
 if (process.env.NODE_ENV == "development") app.use(morgan("dev"));
 //In order to access req.body
 app.use(express.json({ limit: "10kb" }));
-app.use(cookieParser());
+
 //Attach request time
 app.use(function(req, res, next) {
   req.requestTime = new Date();
