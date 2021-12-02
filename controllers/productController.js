@@ -1,5 +1,9 @@
 const Product = require("../models/productModel");
-const catchAsync = require("../utils/catchAysnc");
+const AppError=require( "../utils/appError" );
+const catchAsync=require( "../utils/catchAsync" )
+
+
+// ******************** Search Product
 exports.searchProduct = function(req, res) {
   console.log(req.params.name);
   Product.search(req.params.name).then((data) =>
@@ -9,6 +13,9 @@ exports.searchProduct = function(req, res) {
     })
   );
 };
+
+
+// ******************** Create Product
 exports.createOne = catchAsync(async function(req, res) {
   const newDoc = await Product.create(req.body);
   res.status(200).json({
@@ -16,3 +23,66 @@ exports.createOne = catchAsync(async function(req, res) {
     data: newDoc,
   });
 });
+
+
+
+// ******************** Get All Products 
+exports.getAllPorducts=catchAsync( async ( req, res, next ) => {
+  const products=await Product.find();
+
+  if ( !products ) {
+    return next( new AppError( "No Product Found!", 404 ) );
+  }
+
+  res.status( 200 ).json( {
+    status: "success",
+    results: products.length,
+    data: products
+  } )
+
+
+} )
+
+
+
+
+// ******************** Get Single Product
+exports.getProduct=catchAsync( async ( req, res, next ) => {
+
+  // console.log( req.params );
+  const id=req.params.id;
+  const prod=await Product.findById( id );
+
+  if ( !prod ) {
+    return next( new AppError( "No Product Found!", 404 ) );
+  }
+
+  res.status( 200 ).json( {
+    status: "success",
+    product: prod,
+  } )
+
+
+} )
+
+
+
+// ******************** Get All Products of specific category
+exports.getCategoryProducts=catchAsync( async ( req, res, next ) => {
+
+  console.log( req.params );
+  const { category }=req.params;
+  const prods=await Product.find( { category } );
+
+  if ( !prods ) {
+    return next( new AppError( "No Product Found!", 404 ) );
+  }
+  res.status( 200 ).json( {
+    status: "success",
+    results: prods.length,
+    data: prods,
+  } )
+
+
+} )
+

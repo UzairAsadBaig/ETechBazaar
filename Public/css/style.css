@@ -642,8 +642,7 @@ footer .container-fluid {
   overflow-y: scroll;
 }
 
-.description_sec::-webkit-scrollbar,
-.all_products::-webkit-scrollbar {
+.description_sec::-webkit-scrollbar {
   display: none;
 }
 
@@ -653,9 +652,34 @@ footer .container-fluid {
 
 .all_products {
   max-height: 20rem;
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none; */
   /* for Internet Explorer, Edge */
-  scrollbar-width: none;
+  /* scrollbar-width:block; */
   /* for Firefox */
   overflow-y: scroll;
-}
+  overflow-x:hidden;
+  }
+
+  .all_products::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  .all_products::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  .all_products::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+  }
+
+  .all_products::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+  }
+
+  .all_products::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+  }
