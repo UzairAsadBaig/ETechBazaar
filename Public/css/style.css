@@ -683,3 +683,36 @@ footer .container-fluid {
     border: 6px solid transparent;
     background-clip: content-box;
   }
+/* ------------------------------------------------------------------------------------ */
+.New{
+  font-weight: bold;
+  display: flex;
+  font-size: 14px;
+  margin-left: 14px;
+  margin-top: 2px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  height: auto;
+  width: auto;
+  background-color: #2fb2ffe0;
+  color: white;
+  border-radius: 5px;
+  /* box-shadow: rgb(28, 247, 255) 0px 0px 0px 3px, rgb(30, 253, 134) 0px 0px 0px 6px; */
+}
+.Used{
+  font-weight: bold;
+  display: flex;
+  font-size: 14px;
+  margin-left: 14px;
+  margin-top: 2px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+  height: auto;
+  width: auto;
+  background-color: #ff00fcc2;
+  color: white;
+  border-radius: 5px;
+  /* box-shadow: rgb(28, 247, 255) 0px 0px 0px 3px, rgb(30, 253, 134) 0px 0px 0px 6px; */
+}
