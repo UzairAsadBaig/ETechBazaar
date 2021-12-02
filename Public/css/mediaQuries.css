@@ -3,14 +3,17 @@
   .owner_img {
     width: 120px;
     height: 120px;
+
   }
 
   .description_sec {
     padding: calc(2rem + var(--section-rotate)) 0;
+
   }
 
   .owner_name {
     font-size: 1.8rem;
+
   }
 
   .o1,
@@ -18,6 +21,7 @@
     margin-top: 3rem;
   }
 }
+
 
 /* >>>>>>>>>>>>>>>>>>>>Small Devices */
 
@@ -38,10 +42,12 @@
   .owner_img {
     width: 120px;
     height: 120px;
+
   }
 
   .owner_name {
     font-size: 1.8rem;
+
   }
 
   .o1,
@@ -51,12 +57,14 @@
 
   .description_sec {
     padding: calc(1rem + var(--section-rotate)) 0;
+
   }
 
   .description_text {
     font-size: 17px !important;
     /* font-weight: none; */
   }
+
 }
 
 /* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
@@ -75,74 +83,77 @@
   .tilt_grad {
     margin-left: 0.5rem;
   }
-  /*********** Modal window ***************/
-  .submit_form {
-    padding: 0.5rem 1.5rem;
-    background: linear-gradient(
-      31deg,
-      rgba(85, 198, 230, 1) 00%,
-      rgba(30, 234, 173, 1) 50%
-    );
-    border-radius: 50px;
-    color: white;
-  }
+/*********** Modal window ***************/
+.submit_form {
+  padding: 0.5rem 1.5rem;
+  background: linear-gradient(31deg, rgba(85, 198, 230, 1) 00%, rgba(30, 234, 173, 1) 50%);
+  border-radius: 50px;
+  color: white;
+}
 
-  .user_info_input_headings {
-    font-weight: 500;
-    /* font-size: 20rem; */
-  }
 
-  .checkout_btn {
-    padding: 0.7rem 2rem;
-    background: linear-gradient(
-      31deg,
-      rgba(85, 198, 230, 1) 00%,
-      rgba(30, 234, 173, 1) 50%
-    );
-    border-radius: 50px;
-    color: white;
-  }
+.user_info_input_headings {
+  font-weight: 500;
+  /* font-size: 20rem; */
 
-  .tilt_grad--modal {
-    margin-left: 16px;
-  }
+}
 
-  .section_heading--modal {
-    font-size: 1.5rem;
-  }
+.checkout_btn {
+  padding: 0.7rem 2rem;
+  background: linear-gradient(31deg, rgba(85, 198, 230, 1) 00%, rgba(30, 234, 173, 1) 50%);
+  border-radius: 50px;
+  color: white;
+}
 
-  .about_admin,
-  .section-map {
-    height: 30rem;
-  }
+.tilt_grad--modal {
+  margin-left: 16px;
+}
 
-  .owner_img {
-    width: 80px;
-    height: 80px;
-  }
+.section_heading--modal {
+  font-size: 1.5rem;
+}
 
-  .owner_name {
-    font-size: 1.5rem;
-  }
 
-  .o1,
-  .o2 {
-    margin-top: 1rem;
-  }
+.about_admin,
+.section-map {
+  height: 30rem;
+}
 
-  .o1 {
-    margin-top: 2.3rem;
-  }
 
-  .description_sec {
-    padding: calc(0rem + var(--section-rotate)) 0;
 
-    max-height: 15rem;
-  }
+.owner_img {
+  width: 80px;
+  height: 80px;
 
-  .description_text {
-    font-size: 16px !important;
-  }
+}
+
+.owner_name {
+  font-size: 1.5rem;
+}
+
+.o1,
+.o2 {
+  margin-top: 1rem;
+}
+
+.o1 {
+  margin-top: 2.3rem;
+}
+
+
+
+.description_sec {
+  padding: calc(0rem + var(--section-rotate)) 0;
+
+  max-height: 15rem;
+
+
+}
+
+.description_text {
+  font-size: 16px !important;
+}
+
 }
 
 /* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
@@ -218,112 +229,123 @@
     border: 1px solid white !important;
     border-radius: 3px;
   }
-  .tilt_grad--modal {
-    margin-left: 16px;
-  }
+.tilt_grad--modal {
+  margin-left: 16px;
+}
 
-  .section_heading--modal {
-    font-size: 1.5rem;
-  }
+.section_heading--modal {
+  font-size: 1.5rem;
+}
 
-  .modal_input_field {
-    height: 30px;
-  }
+.modal_input_field {
+  height: 30px;
 
-  .about_admin,
-  .section-map {
-    height: 30rem;
-  }
+}
 
-  .owner_img {
-    width: 80px;
-    height: 80px;
-  }
+.about_admin,
+.section-map {
+  height: 30rem;
+}
 
-  .owner_name {
-    font-size: 1.5rem;
-  }
 
-  .o1,
-  .o2 {
-    margin-top: 1rem;
-  }
+.owner_img {
+  width: 80px;
+  height: 80px;
 
-  .o1 {
-    margin-top: 2.3rem;
-  }
+}
 
-  .description_sec {
-    padding: calc(0rem + var(--section-rotate)) 0;
+.owner_name {
+  font-size: 1.5rem;
+}
 
-    max-height: 15rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.o1,
+.o2 {
+  margin-top: 1rem;
+}
 
-    /* color: black; */
-  }
+.o1 {
+  margin-top: 2.3rem;
+}
 
-  .description_text {
-    font-size: 14px !important;
-    font-weight: normal;
-  }
+.description_sec {
+  padding: calc(0rem + var(--section-rotate)) 0;
+
+  max-height: 15rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* color: black; */
+
+}
+
+.description_text {
+  font-size: 14px !important;
+  font-weight: normal;
+}
+
 }
 
 @media (max-width: 375px) {
   .section_heading {
     font-size: 1rem;
   }
-  .user_info_input_headings {
-    font-weight: 500;
-    font-size: 14px;
-  }
+.user_info_input_headings {
+  font-weight: 500;
+  font-size: 14px;
 
-  .modal_input_field {
-    height: 30px;
-  }
+}
 
-  .submit_form {
-    padding: 0.3rem 1.2rem;
-  }
+.modal_input_field {
+  height: 30px;
 
-  .about_admin,
-  .section-map {
-    height: 25rem;
-  }
+}
 
-  .owner_img {
-    width: 60px;
-    height: 60px;
-  }
+.submit_form {
+  padding: 0.3rem 1.2rem;
+}
 
-  .owner_name {
-    font-size: 1.2rem;
-    padding-top: 6px;
-  }
+.about_admin,
+.section-map {
+  height: 25rem;
+}
 
-  .o1,
-  .o2 {
-    margin-top: 1rem;
-  }
 
-  .o1 {
-    margin-top: 1.8rem;
-  }
+.owner_img {
+  width: 60px;
+  height: 60px;
 
-  .description_sec {
-    padding: calc(0rem + var(--section-rotate)) 0;
+}
 
-    max-height: 14rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+.owner_name {
+  font-size: 1.2rem;
+  padding-top: 6px;
+}
 
-    /* color: black; */
-  }
+.o1,
+.o2 {
+  margin-top: 1rem;
+}
 
-  .description_text {
-    font-size: 14px !important;
-    font-weight: normal;
-  }
+.o1 {
+  margin-top: 1.8rem;
+}
+
+.description_sec {
+  padding: calc(0rem + var(--section-rotate)) 0;
+
+  max-height: 14rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  /* color: black; */
+
+}
+
+.description_text {
+  font-size: 14px !important;
+  font-weight: normal;
+}
+
 }
 
 /********************* Product.css  MEDIA QUERRIES  ********************/
@@ -912,12 +934,12 @@
 
 /* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .navbar-top {
     padding-top: 0.5rem;
   }
   .logo {
-    width: 4.5rem;
+    width: 3rem;
   }
   .search_bar {
     font-size: 7px;
@@ -925,14 +947,14 @@
   .search_bar input,
   .search_bar input:focus {
     padding: 0.1rem 0.5rem;
-    margin-top: 0.1rem;
+    margin-top: 0px;
     margin-left: 10px;
-    height: 1.2rem;
-    width: 14rem;
+    height: 0.9rem;
+    width: 7.5rem;
   }
   .search_btn {
-    padding: 0.1rem 0.3rem 0rem 0.3rem;
-    height: 1.2rem;
+    padding: 0rem 0.2rem 0rem 0.2rem;
+    height: 0.9rem;
     margin-left: -0.5rem;
     font-size: 7px;
   }
@@ -940,17 +962,17 @@
   .nav_category {
     padding-left: 0;
     margin-left: -0.7rem;
-    font-size: 11px;
+    font-size: 7px;
     margin-top: 0.6rem;
   }
 
   .downdown {
-    padding-left: 1.2rem;
+    padding-left: 0.55rem;
     padding-top: 0.6rem;
-    font-size: 11px;
+    font-size: 7px;
   }
   .call-us img {
-    width: 2.2rem;
+    width: 1.87rem;
   }
   .call-us {
     padding-bottom: 0.6rem;
@@ -962,9 +984,6 @@
     padding: 10px;
     width: 90px !important;
     box-shadow: 0px 5px 30px black;
-  }
-  .all_products {
-    max-height: 200px;
   }
   .total-header-section {
     border: none;
@@ -1013,7 +1032,7 @@
     content: " ";
     position: absolute;
     top: -15px;
-    left: 2rem;
+    left: 5rem;
     border: 10px solid transparent;
     border-bottom-color: #fff;
   }
@@ -1038,7 +1057,7 @@
   }
 }
 
-/* @media (max-width: 400px) {
+@media (max-width: 320px) {
   .navbar-top {
     padding-top: 0.5rem;
   }
@@ -1080,7 +1099,7 @@
   }
   .call-us {
     padding-bottom: 0.6rem;
-     
+    /* left: -1rem; */
   }
 
   .downdown .downdown-menu {
@@ -1159,6 +1178,6 @@
     font-size: 8px !important;
     padding: 3px 3px 3px 10px;
   }
-} */
+}
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */

@@ -1,21 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const catchAsync = require("../utils/catchAysnc");
-
+const userController = require("./../controllers/userController");
 //FIXME:
 const User = require("../models/userModel");
 
 // for admin
-router.get(
-  "/login",
-  catchAsync(async function(req, res, next) {
-    await User.create({
-      username: "uzair;moon",
-      password: "jjhkhj",
-    });
-    res.status(200).json({
-      status: "Ho gya",
-    });
-  })
-); // admin login
+// router.post("/signUp", userController.signUp);
+router.post("/login", userController.login); // admin login
 module.exports = router;

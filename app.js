@@ -10,7 +10,7 @@ const helmet = require("helmet");
 const mongoSanitize = require("express-mongo-sanitize");
 const xssClean = require("xss-clean");
 const hpp = require("hpp");
-
+const cookieParser = require("cookie-parser");
 
 //Providing a static path
 // app.use(express.static(path.join(__dirname, "public")));
@@ -22,17 +22,18 @@ app.use(helmet());
 if (process.env.NODE_ENV == "development") app.use(morgan("dev"));
 //In order to access req.body
 app.use(express.json({ limit: "10kb" }));
+app.use(cookieParser());
 
 //Attach request time
 app.use(function(req, res, next) {
-  req.requestTime = new Date();
-  next();
+    req.requestTime = new Date();
+    next();
 });
 //Limit the number of requests
 const limiter = rateLimit({
-  max: 100,
-  windowMs: 60 * 60 * 1000,
-  message: "Too many request sent! Please try again after 1 hour",
+    max: 100,
+    windowMs: 60 * 60 * 1000,
+    message: "Too many request sent! Please try again after 1 hour",
 });
 app.use("/api", limiter);
 //Adding sanitization  for Nosql injection
@@ -66,9 +67,9 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/product", productRouter);
 
 app.all("*", function(req, res, next) {
-  next(
-    new AppError(`Couldn't find ${req.originalUrl} url on the server!`, 404)
-  );
+    next(
+        new AppError(`Couldn't find ${req.originalUrl} url on the server!`, 404)
+    );
 });
 
 app.use(globalErrorHandler);
