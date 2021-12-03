@@ -1,175 +1,185 @@
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: "lato", "sans-serif";
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "lato", "sans-serif";
 }
+
 :root {
-  --var-gradient: linear-gradient(
-    29deg,
-    rgba(85, 198, 230, 1) 00%,
-    rgba(24, 217, 133, 1) 46%
-  );
+    --var-gradient: linear-gradient( 29deg, rgba(85, 198, 230, 1) 00%, rgba(24, 217, 133, 1) 46%);
 }
+
 .logo_login {
-  width: 26rem;
-  margin-top: 3.5rem;
-  margin-bottom: 3rem;
+    width: 12rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3rem;
 }
+
 .logo_div {
-  text-align: center;
+    text-align: center;
 }
 
 .polygon {
-  clip-path: polygon(0 0, 100% 0, 100% 42%, 0 71%);
-  background: var(--var-gradient);
-  color: white;
-  height: 19rem;
+    clip-path: polygon(0 0, 100% 0, 100% 42%, 0 71%);
+    background: var(--var-gradient);
+    color: white;
+    height: 10rem;
 }
+
 .login_text {
-  font-size: 3rem;
-  font-weight: 700;
-  padding-top: 4.7rem;
-  padding-left: 2.3rem;
-  letter-spacing: 2px;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-left: 2.3rem;
+    letter-spacing: 2px;
 }
+
 .login_card {
-  justify-content: center;
-  height: 43rem;
-  border: 1px solid rgb(186, 186, 186);
-  width: 42%;
-  margin-top: 4rem;
-  margin-bottom: 6rem;
+    justify-content: center;
+    height: 30rem;
+    border: 1px solid rgb(186, 186, 186);
+    width: 25rem;
+    /* margin-top: 1rem; */
+    margin-bottom: 4rem;
 }
 
 .login_username {
-  color: rgb(155, 155, 155);
+    color: rgb(155, 155, 155);
 }
+
 .login_password {
-  margin-top: 1.2rem;
-  color: rgb(155, 155, 155);
+    margin-top: 1.2rem;
+    color: rgb(155, 155, 155);
 }
+
 .username_input {
-  border-radius: 8px;
-  border: none;
-  border: 1px solid rgb(155, 155, 155);
-  width: 24rem;
-  height: 2.5rem;
-  padding-left: 0.8rem;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid rgb(155, 155, 155);
+    width: 22rem;
+    height: 2rem;
+    padding-left: 0.8rem;
 }
+
 .password_input {
-  border: none;
-  border: 1px solid rgb(155, 155, 155);
-  width: 24rem;
-  height: 2.5rem;
-  border-radius: 8px;
-  padding-left: 0.8rem;
+    border: none;
+    border: 1px solid rgb(155, 155, 155);
+    width: 22rem;
+    height: 2rem;
+    border-radius: 8px;
+    padding-left: 0.8rem;
 }
+
 .username_input:focus {
-  padding-left: 0.8rem;
-  outline: none;
+    padding-left: 0.8rem;
+    outline: none;
 }
+
 .password_input:focus {
-  padding-left: 0.8rem;
-  outline: none;
+    padding-left: 0.8rem;
+    outline: none;
 }
 
 .login_btn {
-  color: white;
-  background: var(--var-gradient);
-  border: none;
-  border-radius: 8px;
-  width: 24rem;
-  height: 2.5rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
+    color: white;
+    background: var(--var-gradient);
+    border: none;
+    border-radius: 8px;
+    width: 22rem;
+    height: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 .login_info {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
-.login_btn:focus {
-  outline: none;
-  border: none;
-}
-.login_btn:hover {
-  font-weight: 700;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+.login_btn:focus {
+    outline: none;
+    border: none;
+}
+
+.login_btn:hover {
+    font-weight: 700;
+}
+
+
 /* Footer    ------------------------ */
+
 .footer_icon {
-  width: 60px;
+    width: 60px;
 }
 
 .column {
-  margin-top: 4rem;
+    margin-top: 4rem;
 }
 
 #social {
-  margin-top: 1.6rem;
+    margin-top: 1.6rem;
 }
 
 #social .svg-inline--fa {
-  margin-right: 1.2rem;
-  font-size: 1.3rem;
+    margin-right: 1.2rem;
+    font-size: 1.3rem;
 }
 
 #social .svg-inline--fa.fa-youtube:hover {
-  color: #ff0000;
+    color: #ff0000;
 }
 
 #social .svg-inline--fa.fa-instagram:hover {
-  color: #c13584;
+    color: #c13584;
 }
 
 #social .svg-inline--fa.fa-facebook:hover {
-  color: #4267b2;
+    color: #4267b2;
 }
 
 #social .svg-inline--fa.fa-twitter:hover {
-  color: #1da1f2;
+    color: #1da1f2;
 }
 
 .footer_text {
-  margin-top: 1.6rem;
-  margin-bottom: 1rem;
-  font-size: 18px;
-  word-spacing: 0.6rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1rem;
+    font-size: 18px;
+    word-spacing: 0.6rem;
 }
 
 .lines {
-  border: 0.5px solid rgb(223, 215, 215);
-  margin-left: auto;
-  margin-right: auto;
+    border: 0.5px solid rgb(223, 215, 215);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer_links,
 .footer_simple_links {
-  display: block;
-  margin-top: 1rem;
+    display: block;
+    margin-top: 1rem;
 }
 
 .footer_simple_links:hover {
-  cursor: default;
+    cursor: default;
 }
 
 .footer_links:hover {
-  color: #1eeaad;
+    color: #1eeaad;
 }
 
 .fumn_logo {
-  width: 80px;
-  margin-left: 10px;
+    width: 80px;
+    margin-left: 10px;
 }
 
 .copy_rights {
-  font-size: 12px;
+    font-size: 12px;
 }
 
 footer .container-fluid {
-  padding-bottom: 4.5rem;
+    padding-bottom: 4.5rem;
 }
 
 #social .svg-inline--fa,
@@ -177,194 +187,202 @@ footer .container-fluid {
 .footer_links,
 .footer_simple_links,
 .footer_simple_links:hover {
-  color: rgb(223, 215, 215);
+    color: rgb(223, 215, 215);
 }
+
+
 /* Media Queries------------------------------------ */
+
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 
+
 /* >>>>>>>>>>>>>>>>>>>>Large Devices */
-@media (min-width: 1200px) {
-}
+
+@media (min-width: 1200px) {}
+
 
 /* >>>>>>>>>>>>>>>>>>>>Medium Devices */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .logo_login {
-    width: 22rem;
-  }
-  .login_text {
-    font-size: 2.8rem;
-    font-weight: 700;
-    padding-top: 3.8rem;
-    padding-left: 2.3rem;
-    letter-spacing: 2px;
-  }
-  .login_username {
-    font-size: 13px;
-  }
-  .login_password {
-    font-size: 13px;
-  }
-  .username_input {
-    width: 16rem;
-    height: 2rem;
-    padding-left: 0.8rem;
-  }
-  .password_input {
-    width: 16rem;
-    height: 2rem;
-    border-radius: 8px;
-    padding-left: 0.8rem;
-  }
-  .polygon {
-    height: 15rem;
-  }
 
-  .login_card {
-    height: 36rem;
-    width: 26rem;
-  }
-  .login_btn {
-    width: 16rem;
-    height: 2.5rem;
-  }
-  .login_btn {
-    font-size: 13px;
-    letter-spacing: 1px;
-  }
+@media (min-width: 992px) and (max-width: 1199px) {
+    .logo_login {
+        width: 22rem;
+    }
+    .login_text {
+        font-size: 2.8rem;
+        font-weight: 700;
+        padding-top: 3.8rem;
+        padding-left: 2.3rem;
+        letter-spacing: 2px;
+    }
+    .login_username {
+        font-size: 13px;
+    }
+    .login_password {
+        font-size: 13px;
+    }
+    .username_input {
+        width: 16rem;
+        height: 2rem;
+        padding-left: 0.8rem;
+    }
+    .password_input {
+        width: 16rem;
+        height: 2rem;
+        border-radius: 8px;
+        padding-left: 0.8rem;
+    }
+    .polygon {
+        height: 15rem;
+    }
+    .login_card {
+        height: 36rem;
+        width: 26rem;
+    }
+    .login_btn {
+        width: 16rem;
+        height: 2.5rem;
+    }
+    .login_btn {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
 }
+
 
 /* >>>>>>>>>>>>>>>>>>>>Small Devices */
-@media (min-width: 768px) and (max-width: 991px) {
-  .logo_login {
-    width: 20rem;
-  }
-  .login_text {
-    font-size: 2.2rem;
-    font-weight: 700;
-    padding-top: 3.2rem;
-    padding-left: 2.3rem;
-    letter-spacing: 2px;
-  }
-  .login_username {
-    font-size: 12px;
-  }
-  .login_password {
-    font-size: 12px;
-  }
-  .username_input {
-    width: 15rem;
-    height: 1.7rem;
-    padding-left: 0.8rem;
-  }
-  .password_input {
-    width: 15rem;
-    height: 1.7rem;
-    border-radius: 8px;
-    padding-left: 0.8rem;
-  }
-  .polygon {
-    height: 13rem;
-  }
 
-  .login_card {
-    height: 32rem;
-    width: 25rem;
-  }
-  .login_btn {
-    width: 15rem;
-    height: 2.5rem;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
+@media (min-width: 768px) and (max-width: 991px) {
+    .logo_login {
+        width: 20rem;
+    }
+    .login_text {
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding-top: 3.2rem;
+        padding-left: 2.3rem;
+        letter-spacing: 2px;
+    }
+    .login_username {
+        font-size: 12px;
+    }
+    .login_password {
+        font-size: 12px;
+    }
+    .username_input {
+        width: 15rem;
+        height: 1.7rem;
+        padding-left: 0.8rem;
+    }
+    .password_input {
+        width: 15rem;
+        height: 1.7rem;
+        border-radius: 8px;
+        padding-left: 0.8rem;
+    }
+    .polygon {
+        height: 13rem;
+    }
+    .login_card {
+        height: 32rem;
+        width: 25rem;
+    }
+    .login_btn {
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
 }
+
 
 /* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
-@media (min-width: 576px) and (max-width: 767px) {
-  .logo_login {
-    width: 16rem;
-  }
-  .login_text {
-    font-size: 2.2rem;
-    font-weight: 700;
-    padding-top: 3.2rem;
-    padding-left: 2.3rem;
-    letter-spacing: 2px;
-  }
-  .login_username {
-    font-size: 12px;
-  }
-  .login_password {
-    font-size: 12px;
-  }
-  .username_input {
-    width: 15rem;
-    height: 1.7rem;
-    padding-left: 0.8rem;
-  }
-  .password_input {
-    width: 15rem;
-    height: 1.7rem;
-    border-radius: 8px;
-    padding-left: 0.8rem;
-  }
-  .polygon {
-    height: 13rem;
-  }
 
-  .login_card {
-    height: 31.5rem;
-    width: 24rem;
-  }
-  .login_btn {
-    width: 15rem;
-    height: 2.5rem;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
+@media (min-width: 576px) and (max-width: 767px) {
+    .logo_login {
+        width: 16rem;
+    }
+    .login_text {
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding-top: 3.2rem;
+        padding-left: 2.3rem;
+        letter-spacing: 2px;
+    }
+    .login_username {
+        font-size: 12px;
+    }
+    .login_password {
+        font-size: 12px;
+    }
+    .username_input {
+        width: 15rem;
+        height: 1.7rem;
+        padding-left: 0.8rem;
+    }
+    .password_input {
+        width: 15rem;
+        height: 1.7rem;
+        border-radius: 8px;
+        padding-left: 0.8rem;
+    }
+    .polygon {
+        height: 13rem;
+    }
+    .login_card {
+        height: 31.5rem;
+        width: 24rem;
+    }
+    .login_btn {
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
 }
 
-/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
-@media (max-width: 575px) {
-  .logo_login {
-    width: 14rem;
-  }
-  .login_text {
-    font-size: 2.2rem;
-    font-weight: 700;
-    padding-top: 2rem;
-    padding-left: 2.3rem;
-    letter-spacing: 2px;
-  }
-  .login_username {
-    font-size: 12px;
-  }
-  .login_password {
-    font-size: 12px;
-  }
-  .username_input {
-    width: 15rem;
-    height: 1.7rem;
-    padding-left: 0.8rem;
-  }
-  .password_input {
-    width: 15rem;
-    height: 1.7rem;
-    border-radius: 8px;
-    padding-left: 0.8rem;
-  }
-  .polygon {
-    height: 11rem;
-  }
 
-  .login_card {
-    height: 30rem;
-    width: 20rem;
-  }
-  .login_btn {
-    width: 15rem;
-    height: 2.5rem;
-    font-size: 12px;
-    letter-spacing: 1px;
-  }
+/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+
+@media (max-width: 575px) {
+    .logo_login {
+        width: 14rem;
+    }
+    .login_text {
+        font-size: 2.2rem;
+        font-weight: 700;
+        padding-top: 2rem;
+        padding-left: 2.3rem;
+        letter-spacing: 2px;
+    }
+    .login_username {
+        font-size: 12px;
+    }
+    .login_password {
+        font-size: 12px;
+    }
+    .username_input {
+        width: 15rem;
+        height: 1.7rem;
+        padding-left: 0.8rem;
+    }
+    .password_input {
+        width: 15rem;
+        height: 1.7rem;
+        border-radius: 8px;
+        padding-left: 0.8rem;
+    }
+    .polygon {
+        height: 11rem;
+    }
+    .login_card {
+        height: 30rem;
+        width: 20rem;
+    }
+    .login_btn {
+        width: 15rem;
+        height: 2.5rem;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
 }
