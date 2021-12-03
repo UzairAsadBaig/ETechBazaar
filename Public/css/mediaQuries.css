@@ -738,7 +738,8 @@
     height: 1.7rem;
     width: 27rem;
   }
-  .search_btn {
+  .search_btn,
+  .search_btn:focus {
     padding: 0.05rem 0.5rem 0.15rem 0.5rem;
     height: 1.77rem;
   }
@@ -821,7 +822,8 @@
     height: 1.5rem;
     width: 20rem;
   }
-  .search_btn {
+  .search_btn,
+  .search_btn:focus {
     padding: 0.1rem 0.5rem 0rem 0.5rem;
     height: 1.6rem;
     font-size: 12px;
@@ -912,7 +914,7 @@
 
 /* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
 
-@media (min-width: 400px) and (max-width: 767px) {
+@media (min-width: 576px) and (max-width: 767px) {
   .navbar-top {
     padding-top: 0.5rem;
   }
@@ -930,7 +932,8 @@
     height: 1.2rem;
     width: 14rem;
   }
-  .search_btn {
+  .search_btn,
+  .search_btn:focus {
     padding: 0.1rem 0.3rem 0rem 0.3rem;
     height: 1.2rem;
     margin-left: -0.5rem;
@@ -1038,49 +1041,51 @@
   }
 }
 
-/* @media (max-width: 400px) {
+@media (max-width: 575px) {
   .navbar-top {
     padding-top: 0.5rem;
   }
   .logo {
-    width: 3rem;
+    width: 5rem;
   }
   .search_bar {
-    font-size: 7px;
+    font-size: 10px;
   }
   .search_bar input,
   .search_bar input:focus {
     padding: 0.1rem 0.5rem;
-    margin-top: 0px;
-    margin-left: 10px;
-    height: 0.9rem;
-    width: 7rem;
+    margin-top: 0.1rem;
+    margin-left: 0.9rem;
+    height: 1.3rem;
+    width: 47vw;
   }
-  .search_btn {
-    padding: 0rem 0.2rem 0rem 0.2rem;
-    height: 0.9rem;
+  .search_btn,
+  .search_btn:focus {
+    padding: 0.17rem 0.4rem 0rem 0.4rem;
+    height: 1.3rem;
     margin-left: -0.5rem;
     font-size: 8px;
   }
 
   .nav_category {
-    padding-left: 0;
-    margin-left: -0.58rem;
-    font-size: 6px;
+    font-size: 10px;
     margin-top: 0.6rem;
+    text-align: right;
   }
 
   .downdown {
-    padding-left: 0.52rem;
     padding-top: 0.6rem;
-    font-size: 6px;
+    padding-left: 0;
+    font-size: 10px;
+    text-align: center;
   }
   .call-us img {
-    width: 1.77rem;
+    width: 2.8rem;
   }
   .call-us {
-    padding-bottom: 0.6rem;
-     
+    padding-top: 0.2rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
   }
 
   .downdown .downdown-menu {
@@ -1136,7 +1141,8 @@
     content: " ";
     position: absolute;
     top: -15px;
-    left: 6rem;
+    left: 1.5rem;
+    right: 100vw;
     border: 10px solid transparent;
     border-bottom-color: #fff;
   }
@@ -1145,11 +1151,12 @@
     content: " ";
     position: absolute;
     top: -16px;
-    left: auto;
+    right: 10vw;
   }
 
   .category_dropdown_menu {
-    width: 60px !important;
+    min-width: 110px !important;
+    width: 110px;
     max-height: fit-content;
     margin-right: 0rem;
     margin-top: 0.5rem;
@@ -1159,6 +1166,16 @@
     font-size: 8px !important;
     padding: 3px 3px 3px 10px;
   }
-} */
+
+  .border-b {
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+  }
+  .navbar-top {
+    padding-top: 2px;
+  }
+  .all_products {
+    max-height: 12rem;
+  }
+}
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>"MEDIA QUERIES"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
