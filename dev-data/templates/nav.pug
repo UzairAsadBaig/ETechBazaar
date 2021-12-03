@@ -1,0 +1,68 @@
+.container-fluid
+    nav.fixed-top.navbar-top
+        //-  <nav class="navbar"> 
+        .row
+            //-  Navbar Brand Start 
+            .col-4.col-sm-2
+                //  Brand 
+                a(href="index.html")
+                    img.logo.navbar-brand(src="./img/logo.png" alt="image not found")
+            //-  Navbar Brand End 
+            //-  Search Bar Start
+            .col-8.col-sm-6
+                //-  Navbar links 
+                .navbar-nav
+                    span.nav-item
+                        span.search_bar.navbar-text
+                            input.search_input(type="text" placeholder="Search in EtechBazaar")
+                        button.search_btn
+                            i.fa.fa-search(aria-hidden="true")
+            //-  Search Bar End
+            //-  Categories Start 
+            .col-4.col-sm-1.nav-left-col.fixedelement.border-b
+                .nav_link.nav_category.dropdown
+                    a.dropdown-toggle.dropdown_toggle-btn#dropdownMenuButton(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false").
+
+                        Categories
+
+                    .dropdown-menu.dropdown-menu-right.category_dropdown_menu(aria-labelledby="dropdownMenuButton")
+                        a.dropdown-item.category_dropdown_item(target="_blank" href="./pages/categories.html") Action
+            //-  Categories End 
+            //-  Cart Start 
+            .col-4.col-sm-2.nav-left-col.fixedelement.border-b
+                .dropdown.downdown
+                    button.btn-cart(type="button" data-toggle="dropdown")
+                        i.fa.fa-shopping-cart(aria-hidden="true")
+                        |  Cart
+
+                        span.badge.badge-pill.badge-danger 3
+                    .dropdown-menu.downdown-menu
+                        .row.total-header-section
+                            .col-4
+                                i.fa.fa-shopping-cart(aria-hidden="true")
+                                span.badge.badge-pill.badge-danger 3
+                            .col-8.total-section.text-right
+                                p
+                                    | Total: 
+                                    span.price $2,978.24
+                        .all_products
+                            .row.cart-detail
+                                .col-lg-4.col-sm-4.col-4.cart-detail-img
+                                    img(src="https://static.toiimg.com/thumb/msid-55980052,width-640,resizemode-4/55980052.jpg")
+                                .col-lg-8.col-sm-8.col-8.cart-detail-product
+                                    p Lenovo DSC-RX10M.
+                                    span.price $445.78
+                                    span.count Quantity:01
+                        .row
+                            .col-lg-12.col-sm-12.col-12.text-center.checkout
+                                button.btn.btn-primary.btn-block.checkout_btn(data-toggle="modal" data-target="#staticBackdrop").
+
+                                    Finalize Order
+
+                                //-  <button type="button" class="btn checkout_btn" data-toggle="modal" data-target="#staticBackdrop">Checkout</button> 
+                                //-  Cart End 
+                                //-  Call us now start 
+                                .col-4.col-sm-1.call-us.nav-left-col.fixedelement.border-b
+                                    a(href="tel:+923045937445")
+                                        img(src="./img/phone1.png" alt="Call us")
+                                //-  Call us now end
