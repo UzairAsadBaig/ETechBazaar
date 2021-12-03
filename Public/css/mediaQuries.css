@@ -165,10 +165,20 @@
     margin-left: 0.2rem;
   }
   .carousel_img {
-    height: 70vh;
+    height: 40vh;
   }
   .carousel-inner {
-    max-height: 70vh;
+    max-height: 40vh;
+    }
+
+    .dots {
+      height: 0.5rem !important;
+      width: 0.5rem !important;
+    }
+
+    .svg-inline--fa.fa-chevron-left,
+    .svg-inline--fa.fa-chevron-right {
+      font-size: 1.2em;
   }
   /********* CARD *********/
   .card_tile {
@@ -740,8 +750,8 @@
   }
   .search_btn,
   .search_btn:focus {
-    padding: 0.05rem 0.5rem 0.15rem 0.5rem;
-    height: 1.77rem;
+    padding: 0rem 0.5rem 0.1rem 0.5rem;
+    height: 1.68rem;
   }
 
   .nav_category {
@@ -824,8 +834,8 @@
   }
   .search_btn,
   .search_btn:focus {
-    padding: 0.1rem 0.5rem 0rem 0.5rem;
-    height: 1.6rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    height: 1.46rem;
     font-size: 12px;
   }
 
@@ -934,7 +944,7 @@
   }
   .search_btn,
   .search_btn:focus {
-    padding: 0.1rem 0.3rem 0rem 0.3rem;
+    padding: 0rem 0.3rem 0rem 0.3rem;
     height: 1.2rem;
     margin-left: -0.5rem;
     font-size: 7px;
@@ -1061,7 +1071,7 @@
   }
   .search_btn,
   .search_btn:focus {
-    padding: 0.17rem 0.4rem 0rem 0.4rem;
+    padding: 0.12rem 0.4rem 0rem 0.4rem;
     height: 1.3rem;
     margin-left: -0.5rem;
     font-size: 8px;
