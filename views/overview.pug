@@ -1,0 +1,47 @@
+extends base 
+include _mainHead
+include _subHead
+include _productCard
+
+block Content
+    #my-carousel.carousel.slide.carousel-fade(data-ride="carousel", data-interval="6000")
+      ol.carousel-indicators
+        li.active.dots(data-target="#my-carousel", data-slide-to="0", aria-current="location")
+        li.dots(data-target="#my-carousel", data-slide-to="1")
+        li.dots(data-target="#my-carousel", data-slide-to="2")
+      // *----------------- Image Carousel -----------------------
+      .carousel-inner#car-in
+        .carousel-item.active
+          img.w-100.carousel_img(src="./img/carousel_img1.jpg", alt)
+        .carousel-item
+          img.w-100.carousel_img(src="./img/carousel_img2.jpg", alt)
+        .carousel-item
+          img.w-100.carousel_img(src="./img/carousel_img3.jpg", alt)
+      // * Previous & Next Buttons 
+      a.carousel-control-prev(href="#my-carousel", data-slide="prev", role="button")
+        span.fas.fa-chevron-left.fa-2x(aria-hidden="true")
+        span.sr-only Previous
+      a.carousel-control-next(href="#my-carousel", data-slide="next", role="button")
+        span.fas.fa-chevron-right.fa-2x(aria-hidden="true")
+        span.sr-only Next
+
+    +mainHead("New","Arrivals")
+    .row
+        each i in [0,1,2,3,4,5,6,7]
+         -const index= allProducts.length-i-1
+         +productCard(allProducts[index])
+    
+    +mainHead("All","Categories")
+    
+    section.slider
+        each category in categories
+            -if(allProducts.some(e => e.category==category)) 
+                +subHead(category)
+            -const filtered=allProducts.filter(e => e.category==category )
+                .owl-carousel.owl-theme
+                    each prod in filtered
+                        .item
+                            .col-3
+                                +productCard(prod)
+
+    +mainHead("About","Us")
