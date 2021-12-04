@@ -1,7 +1,6 @@
 //Dependencies
 const path = require("path");
 const express = require(`express`);
-const app = express();
 const morgan = require("morgan");
 const AppError = require("./utils/appError");
 const globalErrorHandler = require("./controllers/errorController");
@@ -12,8 +11,21 @@ const xssClean = require("xss-clean");
 const hpp = require("hpp");
 const cookieParser = require("cookie-parser");
 
+//Routers
+const viewRouter = require("./routers/viewRouter");
+const orderRouter = require("./routers/orderRouter");
+const userRouter = require("./routers/userRouter");
+const productRouter = require("./routers/productRouter");
+
+const app = express();
+
+// Defining Template Engine
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
+app.use("/", viewRouter);
+
 //Providing a static path
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Global Middleware
 //Add security
@@ -26,14 +38,14 @@ app.use(cookieParser());
 
 //Attach request time
 app.use(function(req, res, next) {
-    req.requestTime = new Date();
-    next();
+  req.requestTime = new Date();
+  next();
 });
 //Limit the number of requests
 const limiter = rateLimit({
-    max: 100,
-    windowMs: 60 * 60 * 1000,
-    message: "Too many request sent! Please try again after 1 hour",
+  max: 100,
+  windowMs: 60 * 60 * 1000,
+  message: "Too many request sent! Please try again after 1 hour",
 });
 app.use("/api", limiter);
 //Adding sanitization  for Nosql injection
@@ -56,20 +68,16 @@ app.use(xssClean());
 //   })
 // );
 
-//Routers
-const orderRouter = require("./routers/orderRouter");
-const userRouter = require("./routers/userRouter");
-const productRouter = require("./routers/productRouter");
-
 //Mounting our middlewares
+
 app.use("/api/v1/order", orderRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/product", productRouter);
 
 app.all("*", function(req, res, next) {
-    next(
-        new AppError(`Couldn't find ${req.originalUrl} url on the server!`, 404)
-    );
+  next(
+    new AppError(`Couldn't find ${req.originalUrl} url on the server!`, 404)
+  );
 });
 
 app.use(globalErrorHandler);
