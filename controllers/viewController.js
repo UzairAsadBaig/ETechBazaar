@@ -2,11 +2,6 @@ const Product = require("../models/productModel");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
-<<<<<<< Updated upstream
-exports.getOverview = catchAsync(async (req, res, next) => {
-  //   console.log("hello");
-  res.status(200).render("base");
-=======
 const categories = [
   "Drones & Accessories",
   "Laptops & Accessories",
@@ -27,5 +22,33 @@ exports.getOverview = catchAsync(async (req, res, next) => {
     allProducts,
     categories,
   });
->>>>>>> Stashed changes
+
 });
+
+
+
+exports.getProduct=catchAsync( async ( req, res, next ) => {
+
+  const doc=await Product.findOne( req.params );
+
+  if ( !doc ) return next( new AppError( "No Product Found!", 404 ) );
+  const name=doc.name;
+  const category=doc.category;
+  const relatedItems=await Product.find( { category } );
+  const rI = relatedItems.filter(el=>el.name != doc.name)
+
+  const words=name.split( " " );
+
+  for ( let i=0; i<words.length; i++ ) {
+    words[ i ]=words[ i ][ 0 ].toUpperCase()+words[ i ].substr( 1 );
+  }
+  doc.name=words.join( ' ' );
+
+  res.status( 200 ).render( 'product', {
+    product: doc,
+    relatedItems: rI,
+    categories,
+  } );
+
+
+} )

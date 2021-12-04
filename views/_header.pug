@@ -5,8 +5,8 @@
             //-  Navbar Brand Start 
             .col-4.col-sm-2
                 //-  Brand 
-                a(href="index.html")
-                    img.logo.navbar-brand(src="./img/logo.png" alt="image not found")
+                a(href="/")
+                    img.logo.navbar-brand(src="/img/logo.png" alt="image not found")
             //-  Navbar Brand End 
             //-  Search Bar Start
             .col-8.col-sm-6
@@ -26,7 +26,8 @@
                         Categories
 
                     .dropdown-menu.dropdown-menu-right.category_dropdown_menu(aria-labelledby="dropdownMenuButton")
-                        a.dropdown-item.category_dropdown_item(target="_blank" href="./pages/categories.html") Action
+                        each cat in categories
+                            a.dropdown-item.category_dropdown_item(href=`/categories/${cat.toLowerCase()}`)=`${cat}`
             //-  Categories End 
             //-  Cart Start 
             .col-4.col-sm-2.nav-left-col.fixedelement.border-b
@@ -64,5 +65,5 @@
                                 //-  Call us now start 
             .col-4.col-sm-1.call-us.nav-left-col.fixedelement.border-b
                 a(href="tel:+923045937445")
-                    img(src="./img/phone1.png" alt="Call us")
+                    img(src="/img/phone1.png" alt="Call us")
                 //-  Call us now end

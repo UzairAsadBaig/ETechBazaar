@@ -1,11 +1,11 @@
 mixin productCard(product)
-  .col-lg-3.col-md-4col-6
+  .col-lg-3.col-md-4.col-6
         a.card.card_tile(href=`/product/${product.slug}`)
             .card_header
                 .ribbon.ribbon-top-right
                     span=product.condition
                 .card_picture
-                    img(src=`./img/products/${product.images[0]}`)
+                    img(src=`/img/products/${product.images[0]}`)
                 .card_description
                     h3.card_item_name=product.name
                     //- p.model_version=product.model

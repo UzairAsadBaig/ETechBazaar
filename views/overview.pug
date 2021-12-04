@@ -9,7 +9,7 @@ block Content
         li.active.dots(data-target="#my-carousel", data-slide-to="0", aria-current="location")
         li.dots(data-target="#my-carousel", data-slide-to="1")
         li.dots(data-target="#my-carousel", data-slide-to="2")
-      // *----------------- Image Carousel -----------------------
+      //- *----------------- Image Carousel -----------------------
       .carousel-inner#car-in
         .carousel-item.active
           img.w-100.carousel_img(src="./img/carousel_img1.jpg", alt)
@@ -17,7 +17,7 @@ block Content
           img.w-100.carousel_img(src="./img/carousel_img2.jpg", alt)
         .carousel-item
           img.w-100.carousel_img(src="./img/carousel_img3.jpg", alt)
-      // * Previous & Next Buttons 
+      //- * Previous & Next Buttons 
       a.carousel-control-prev(href="#my-carousel", data-slide="prev", role="button")
         span.fas.fa-chevron-left.fa-2x(aria-hidden="true")
         span.sr-only Previous
@@ -45,3 +45,20 @@ block Content
                                 +productCard(prod)
 
     +mainHead("About","Us")
+    
+    section.about_admin
+      .container
+        .row
+          .col-md-9.col-12.description_sec
+            p.description_text.rotate--text Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellendus reprehenderit, aperiam sed quis non vitae nemo quidem accusamus mollitia maiores doloremque porro omnis explicabo rem, fugiat voluptates eligendi eos.Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati repellendus reprehenderit, aperiam sed quis non vitae nemo quidem accusamus mollitia maiores doloremque porro omnis explicabo rem, fugiat voluptates eligendi eosquidem accusamus mollitia maiores doloremque porro omnis explicabo rem, fugiat voluptates eligendi eos. 
+            
+          .col-md-3.col-12
+            .row
+              .ml-auto.col-md-12.col-6.text-center.text-md-right.o1
+                img.img-fluid.owner_img(src="/img/user-5.jpg", alt)
+                p.owner_name.rotate Ahmad Hassan
+              .ml-auto.col-md-12.col-6.text-center.text-md-right.o2
+                img.img-fluid.owner_img(src="/img/user-14.jpg", alt)
+                p.owner_name.rotate Umer Hassan
+    section.section-map
+      #map

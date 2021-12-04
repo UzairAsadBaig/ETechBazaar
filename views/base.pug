@@ -21,14 +21,15 @@ html(lang="en")
       link(href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css", rel="stylesheet")
       
       //-// TODO:------------- Custom Personalize css  ------------
-      link(rel="stylesheet", href="css/style.css")
-      link(rel="stylesheet", href="css/mediaQuries.css")
+      block CSS
+      link(rel="stylesheet", href="/css/style.css")
+      link(rel="stylesheet", href="/css/mediaQuries.css")
       script(src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js")
       link(href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css", rel="stylesheet")
       title
 
       //-// TODO:------ Adding icon of Max size of (100 X 100) in Tab bar 
-      link(rel="shortcut icon", href="./img/favicon.png")
+      link(rel="shortcut icon", href="/img/favicon.png")
       link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css", integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==", crossorigin="anonymous", referrerpolicy="no-referrer")
       link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css", integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==", crossorigin="anonymous", referrerpolicy="no-referrer")
     
@@ -39,11 +40,8 @@ html(lang="en")
       include _header
 
       //-********** CONTENT 
-<<<<<<< Updated upstream
-      block content 
-=======
+
       block Content 
->>>>>>> Stashed changes
         h1 Hello!
         h1 Hello!
         h1 Hello!
@@ -107,7 +105,7 @@ html(lang="en")
                     items: 2,
                   },
                   376: {
-                    items: 1.8,
+                    items: 2,
                   },
                   400: {
                     items: 2,
