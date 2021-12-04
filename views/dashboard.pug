@@ -1,0 +1,126 @@
+extends base
+block CSS
+    link(rel="stylesheet" href="/css/admin.css")
+block Content
+    .container-fluid
+        .panel-logo
+            img(src="../img/logo.png" alt="NA")
+        .admin-panel
+            .row.tabbed
+                //  Create --------------------------
+                .col-12.tabbed-body.tab1.activeTab
+                    .row
+                        .col-6
+                            .row
+                                .col-12
+                                    h3.admin-panel-heading Product Details
+                                .col-12.product-detail-box#product-name-box
+                                    input#product-name(type="text" placeholder="name")
+                                .col-12.product-detail-box#product-category-box
+                                    input(list="categories" name="category" placeholder="Category")
+                                    datalist#categories
+                                        each cat in categories 
+                                            option(value=`${cat}`)
+                                .col-12.product-detail-box#product-model-box
+                                    input#product-model(type="text" placeholder="model")
+                                .col-12.product-detail-box#product-brand-box
+                                    input#product-brand(type="text" placeholder="brand")
+                                .col-12.product-detail-box#product-price-box
+                                    input#product-price(type="text" placeholder="price")
+                                .col-12.product-detail-box#product-warranty-box
+                                    input#product-warranty(type="Number" placeholder="Warranty")
+                                .col-12.instock-text
+                                    | In stock
+
+                                    input#instcok(type="checkbox" name="instock")
+                                .col-12.used-text
+                                    | Used
+
+                                    input#used(type="checkbox" name="used")
+                                .col-12.product-detail-box
+                                    h3.admin-panel-heading Description
+                                .col-12#product-description-box
+                                    textarea#product-description
+                        .col-6.form-h
+                            form(method="post" action="#")
+                                .form-group.files.color
+                                    h3.admin-panel-heading Upload Image
+                                    input.form-control#upload-image(type="file", multiple)
+                        .col-12#create-submit-box
+                            button.product-submit#create-submit(type="submit").
+
+                                Submit
+
+                //  Update --------------------------
+                .col-12.tabbed-body.tab2
+                    .row
+                        .col-12.admin-search-box
+                            span.admin-search-bar
+                                input.admin-search-input(type="text" placeholder="Search by ID")
+                            button.admin-search-button(type="submit")
+                                i.fa.fa-search.search-icon-admin(aria-hidden="true")
+                    .row
+                        .col-6
+                            .row
+                                .col-12
+                                    h3.admin-panel-heading Product Details
+                                .col-12.product-detail-box#product-name-box
+                                    input#product-name(type="text" placeholder="name")
+                                .col-12.product-detail-box#product-category-box
+                                    input(list="categories" name="category" placeholder="Category")
+                                    datalist#categories
+                                        option(value="Chrome")
+                                        option(value="Firefox")
+                                .col-12.product-detail-box#product-model-box
+                                    input#product-model(type="text" placeholder="model")
+                                .col-12.product-detail-box#product-brand-box
+                                    input#product-brand(type="text" placeholder="brand")
+                                .col-12.product-detail-box#product-price-box
+                                    input#product-price(type="text" placeholder="price")
+                                .col-12.product-detail-box#product-warranty-box
+                                    input#product-warranty(type="Number" placeholder="Warranty")
+                                .col-12.instock-text
+                                    | In stock
+
+                                    input#instcok(type="checkbox" name="instock")
+                                .col-12.used-text
+                                    | Used
+
+                                    input#used(type="checkbox" name="used")
+                                .col-12.product-detail-box
+                                    h3.admin-panel-heading Description
+                                .col-12#product-description-box
+                                    textarea#product-description
+                        .col-6
+                            form(method="post" action="#")
+                                .form-group.files.color
+                                    h3.admin-panel-heading Upload Image
+                                    input.form-control#upload-image(type="file", multiple)
+                        .col-12#update-submit-box
+                            button.product-submit#update-submit(type="submit").
+
+                                Submit
+
+                //  delete --------------------------
+                .col-12.tabbed-body.tab3
+                    .row
+                        .col-12.admin-search-box
+                            span.admin-search-bar
+                                input.admin-search-input(type="text" placeholder="Search by ID")
+                            button.admin-search-button(type="submit")
+                                i.fa.fa-search(aria-hidden="true")
+                        .col-12#delete-submit-box
+                            button.product-submit#delete-submit(type="submit").
+
+                                Delete
+
+            //  <div class="row"> 
+            .col-12.buttons
+                button.btns.btn1.activeBtn(num="1").
+
+                    Create
+
+                button.btns.btn2(num="2") Update
+                button.btns.btn3(num="3").
+
+                    Delete

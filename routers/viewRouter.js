@@ -4,7 +4,9 @@ const viewController = require("../controllers/viewController");
 
 const router = express.Router();
 
-router.get( "/", viewController.getOverview );
-router.get( "/product/:slug", viewController.getProduct );
+router.get("/", viewController.getOverview);
+router.get("/product/:slug", viewController.getProduct);
+router.get("/admin/login", viewController.login);
+router.get("/admin/dashboard", viewController.dashboard);
 
 module.exports = router;

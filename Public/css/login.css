@@ -9,6 +9,10 @@
     --var-gradient: linear-gradient( 29deg, rgba(85, 198, 230, 1) 00%, rgba(24, 217, 133, 1) 46%);
 }
 
+.navbar-hide {
+    display: none;
+}
+
 .logo_login {
     width: 12rem;
     margin-top: 3.5rem;

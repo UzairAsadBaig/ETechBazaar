@@ -1,0 +1,20 @@
+extends base
+block CSS 
+    link(rel="stylesheet" href="/css/login.css")
+block Content
+    .container-fluid
+        .logo_div
+            img.logo_login(src="../img/logo.png", alt)
+        .login_card.mx-auto
+            .polygon.mx-auto
+                h1.login_text Login
+            .login_info
+                .login_username
+                    p Username
+                    input.username_input(type="text")
+                .login_password
+                    p Password
+                    input.password_input(type="password")
+                .login_login
+                    a(href="./admin.html" target="_blank")
+                        button.login_btn(type="submit") Login
