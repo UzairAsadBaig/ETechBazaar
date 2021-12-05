@@ -1,0 +1,16 @@
+extends base
+include _productCard
+include _mainHead
+include _subHead
+
+block CSS 
+    link(rel="stylesheet" href="/css/categories.css")
+block Content 
+    br
+    br
+    br
+    br
+    +subHead(products[0].category)
+    .row
+        each prod in products
+            +productCard(prod)

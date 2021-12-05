@@ -8,8 +8,8 @@ mixin productCard(product)
                     img(src=`/img/products/${product.images[0]}`)
                 .card_description
                     h3.card_item_name=product.name
-                    //- p.model_version=product.model
-                    p.model_version -50 to 110°C W1209 Digital Thermostat Temperature
+                    p.model_version=product.model
+                    //- p.model_version -50 to 110°C W1209 Digital Thermostat Temperature
                     
                     button.btn.btn-outline-light.card_btn(type="button") Add to cart
                     

@@ -1,14 +1,16 @@
 extends base
-//- include _subHead
-include _mainHead
+include _subHead
 include _productCard
 
 
 
 
 block Content 
-  
-  +mainHead("Search Results",key)
+  br
+  br
+  br
+  br
+  +subHead(`Search Results :${key}`)
   .row.my-5
     each prod in products 
       +productCard(prod)

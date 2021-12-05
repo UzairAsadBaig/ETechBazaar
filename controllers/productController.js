@@ -3,17 +3,11 @@ const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
 // ******************** Search Product
-exports.searchProduct = function(req, res,next) {
-    console.log(req.params.name);
-    Product.search( req.params.name ).then( ( data ) => {
-        req.products=data;
-        // res.status(200).json({
-        //     results: data.length,
-        //     Data: data,
-        // } )
+exports.searchProduct = function(req, res, next) {
+    Product.search(req.params.name).then((data) => {
+        req.products = data;
         next();
-    }
-    );
+    });
 };
 
 // ******************** Create Product

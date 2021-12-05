@@ -56,26 +56,36 @@ exports.getProduct = catchAsync(async(req, res, next) => {
         relatedItems: rI,
         categories,
     });
-} );
+});
 
-
-exports.getAllRelatedProducts = catchAsync(async ( req, res, next ) => {
-
-    if ( req.products.length===0 ) {
-        res.status( 404 ).render( 'error', {
+exports.getAllRelatedProducts = catchAsync(async(req, res, next) => {
+    if (req.products.length === 0) {
+        res.status(404).render("error", {
             status: 404,
             message: "No product found",
-            categories
-        })
-    }
-
-    else {
-        res.status( 200 ).render( 'search', {
+            categories,
+        });
+    } else {
+        res.status(200).render("search", {
             products: req.products,
             key: req.params.name,
-            categories
-        } )
+            categories,
+        });
     }
-    
+});
 
-})
+exports.getCategory = catchAsync(async(req, res, next) => {
+    const products = await Product.find(req.params);
+    if (products.length === 0) {
+        res.status(404).render("error", {
+            status: 404,
+            message: "No Product found",
+            categories,
+        });
+    } else {
+        res.status(200).render("categories", {
+            categories,
+            products,
+        });
+    }
+});

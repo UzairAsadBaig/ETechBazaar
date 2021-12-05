@@ -8,8 +8,8 @@ router.get("/", viewController.getOverview);
 router.get("/product/:slug", viewController.getProduct);
 router.get("/admin/login", viewController.login);
 router.get("/admin/dashboard", viewController.dashboard);
-router.get( "/search/:name", productController.searchProduct,viewController.getAllRelatedProducts )
-
+router.get("/search/:name", productController.searchProduct, viewController.getAllRelatedProducts)
+router.get("/categories/:category", viewController.getCategory);
 
 
 module.exports = router;
