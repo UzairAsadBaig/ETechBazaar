@@ -1,0 +1,14 @@
+extends base
+//- include _subHead
+include _mainHead
+include _productCard
+
+
+
+
+block Content 
+  
+  +mainHead("Search Results",key)
+  .row.my-5
+    each prod in products 
+      +productCard(prod)

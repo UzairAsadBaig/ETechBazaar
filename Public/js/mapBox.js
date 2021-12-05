@@ -4,7 +4,7 @@
 mapboxgl.accessToken='pk.eyJ1IjoibXV6YW1pbDA3IiwiYSI6ImNrdWgwemg1YTByZTIyb3J1bTkwZ2xhNmoifQ.s6wy8ILJvNh7YMhG0toiDA';
 
 
-const map=new mapboxgl.Map( {
+const map = new mapboxgl.Map( {
   container: 'map', // container ID
   style: 'mapbox://styles/muzamil07/ckuhyqgah4lm717pmp4ek9es2', // style URL
   center: [ 74.3818244, 31.5793448 ], // starting position
@@ -18,17 +18,21 @@ const el=document.createElement( 'div' );
 el.className='marker';
 
 // Add marker to map
-new mapboxgl.Marker( {
-  element: el,
-  anchor: 'bottom' // bottom of image will point to exact gps location
-} ).setLngLat( [ 74.3818244, 31.5793448 ] )
-  .addTo( map )
-
-
-// Add a Popup
-new mapboxgl.Popup( {
-  offset: 30
-} ).setLngLat( [ 74.3818244, 31.5793448 ] ).setHTML( `<p>Security Lab</p>` ).addTo( map )
+window.addEventListener( 'load', function () {
+  
+  new mapboxgl.Marker( {
+    element: el,
+    anchor: 'bottom' // bottom of image will point to exact gps location
+  } ).setLngLat( [ 74.3818244, 31.5793448 ] )
+    .addTo( map )
+  
+  
+  // Add a Popup
+  new mapboxgl.Popup( {
+    offset: 30
+  } ).setLngLat( [ 74.3818244, 31.5793448 ] ).setHTML( `<p>Security Lab</p>` ).addTo( map )
+  
+})
 
 
 map.on( 'click', function () {

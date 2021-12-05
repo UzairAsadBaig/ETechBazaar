@@ -1,0 +1,9 @@
+extends base
+
+block Content 
+  #notfound
+    .notfound
+      .notfound-404
+        h1 Oops!
+        h2=`${status} - ${message}`
+      a(href="/") Go TO Homepage
