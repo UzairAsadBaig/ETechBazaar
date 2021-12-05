@@ -35,7 +35,7 @@ const errDevelopment = function (err, res) {
   });
 };
 
-// Development Error
+//Production Error
 const errProduction = function (err, res) {
   if (err.isOperational === true) {
     res.status(err.statusCode).json({
@@ -44,7 +44,7 @@ const errProduction = function (err, res) {
     });
   } else {
     //! 1)Log the actual error details
-    console.error(err);
+    // console.error(err);
     //? 2)Hide the error details on response
     res.status(500).json({
       status: 'error',

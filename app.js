@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, "public")));
 //Add security
 app.use(helmet());
 //Development mode logging
-if (process.env.NODE_ENV == "development") app.use(morgan("dev"));
+if (process.env.NODE_ENV === "development") app.use(morgan("dev"));
 //In order to access req.body
 app.use(express.json({ limit: "10kb" }));
 app.use(cookieParser());

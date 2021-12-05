@@ -7,7 +7,9 @@
 
 
 /* Color Variables--------------------*/
-
+html{
+    overflow-x: hidden;
+}
 :root {
     --var-gradient: linear-gradient( 29deg, rgba(85, 198, 230, 1) 00%, rgba(24, 217, 133, 1) 46%);
     --section-rotate: 9vw;

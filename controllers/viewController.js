@@ -38,7 +38,8 @@ exports.dashboard = catchAsync(async(req, res, next) => {
 exports.getProduct = catchAsync(async(req, res, next) => {
     const doc = await Product.findOne(req.params);
 
-    if (!doc) return next(new AppError("No Product Found!", 404));
+    if ( !doc ) return next( new AppError( "No Product Found!", 404 ) );
+    
     const name = doc.name;
     const category = doc.category;
     const relatedItems = await Product.find({ category });

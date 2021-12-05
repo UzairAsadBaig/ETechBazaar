@@ -77,11 +77,12 @@ block Content
             Description
             
         .description_text=`${product.description}`
+    
+  section.slider
     - if (relatedItems.length>0)
-        br
-        br
-        +subHead("Related Items")
 
+        +subHead("Related Items")
+        
         .owl-carousel.owl-theme
             each prod in relatedItems
                 .item
