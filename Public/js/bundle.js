@@ -141,12 +141,27 @@ const $39d4c3131b6ecffc$export$fe860b7907da3595 = function() {
 };
 
 
+const $4e8e46b799e1b079$var$searchBtn = document.querySelector(".search_btn");
+const $4e8e46b799e1b079$var$searchInp = document.querySelector(".search_input");
+const $4e8e46b799e1b079$var$hitUrl = async (e)=>{
+    e.preventDefault();
+    location.assign(`/search/${$4e8e46b799e1b079$var$searchInp.value}`);
+};
+const $4e8e46b799e1b079$export$d76128d007d19019 = ()=>{
+    $4e8e46b799e1b079$var$searchBtn.addEventListener("click", $4e8e46b799e1b079$var$hitUrl);
+    $4e8e46b799e1b079$var$searchInp.addEventListener("keypress", function(e) {
+        if (e.key == "Enter") $4e8e46b799e1b079$var$hitUrl(e);
+    });
+};
+
+
 "use strict";
 $ff8827465dcd95b3$export$76802abe1e130b06();
 $39d4c3131b6ecffc$export$fe860b7907da3595();
 $548257a41dc4b3aa$export$77e42a852d45f198();
 $fe408d53a7288e3e$export$e33a4f6b06312f34();
 $c1d64eae7b370874$export$d260071aaae01165();
+$4e8e46b799e1b079$export$d76128d007d19019();
 
 
 //# sourceMappingURL=bundle.js.map

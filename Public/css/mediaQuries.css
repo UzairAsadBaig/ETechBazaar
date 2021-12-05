@@ -1099,21 +1099,21 @@
     font-size: 8px;
   }
   .nav_category {
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 0.6rem;
     text-align: right;
   }
   .downdown {
     padding-top: 0.6rem;
     padding-left: 0;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
   }
   .call-us img {
-    width: 2.8rem;
+    width: 3rem;
   }
   .call-us {
-    padding-top: 0.2rem;
+    padding-top: 0.3rem;
     padding-bottom: 0.5rem;
     text-align: center;
   }
@@ -1305,8 +1305,29 @@
   }
 }
 
-/* >>>>>>>>>>>>>>>>>>>>Small Devices */
+/* >>>>>>>>>>>>>>>>>>>>Error page */
+@media only screen and (max-width: 767px) {
+  .notfound .notfound-404 h1 {
+    font-size: 148px;
+  }
+}
 
-/* >>>>>>>>>>>>>>>>>>>>Extra Small Devices */
-
-/* >>>>>>>>>>>>>>>>>>>>Extra-Extra Small Devices */
+@media only screen and (max-width: 480px) {
+  .notfound .notfound-404 {
+    height: 148px;
+    margin: 0px auto 10px;
+  }
+  .notfound .notfound-404 h1 {
+    font-size: 86px;
+  }
+  .notfound .notfound-404 h2 {
+    font-size: 16px;
+  }
+  .notfound a {
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+  #notfound {
+    height: 80vh;
+  }
+}

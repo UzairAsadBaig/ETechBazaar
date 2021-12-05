@@ -10,7 +10,8 @@ block Content
   br
   br
   br
-  +subHead(`Search Results :${key}`)
+  br
+  +subHead(`Search Results : '${key}'`)
   .row.my-5
     each prod in products 
       +productCard(prod)
