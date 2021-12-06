@@ -16,32 +16,42 @@ const $c1d64eae7b370874$var$productInstockU = document.querySelector("#instock-u
 const $c1d64eae7b370874$var$productUsedU = document.querySelector("#used-u");
 const $c1d64eae7b370874$var$productDescriptionU = document.querySelector("#product-description-u");
 const $c1d64eae7b370874$var$searchNfill = async function() {
-    const res = await axios({
-        method: "GET",
-        url: `/api/v1/product/${$c1d64eae7b370874$var$adminSearchUInp.value}`
-    });
-    if (res.data.status == "success") {
-        const product = res.data.product;
-        $c1d64eae7b370874$var$productNameU.value = product.name;
-        $c1d64eae7b370874$var$productCategoryU.value = product.category;
-        $c1d64eae7b370874$var$productModelU.value = product.model;
-        $c1d64eae7b370874$var$productBrandU.value = product.brand;
-        $c1d64eae7b370874$var$productColorU.value = product.color;
-        $c1d64eae7b370874$var$productPriceU.value = product.price;
-        $c1d64eae7b370874$var$productInstockU.checked = product.instock;
-        $c1d64eae7b370874$var$productUsedU.checked = product.condition == "new" ? false : true;
-        $c1d64eae7b370874$var$productDescriptionU.value = product.description;
-    } else alert("Wrong ID, please try again!");
+    try {
+        const res = await axios({
+            method: "GET",
+            url: `/api/v1/product/${$c1d64eae7b370874$var$adminSearchUInp.value}`
+        });
+        if (res.data.status == "success") {
+            const product = res.data.product;
+            $c1d64eae7b370874$var$productNameU.value = product.name;
+            $c1d64eae7b370874$var$productCategoryU.value = product.category;
+            $c1d64eae7b370874$var$productModelU.value = product.model;
+            $c1d64eae7b370874$var$productBrandU.value = product.brand;
+            $c1d64eae7b370874$var$productColorU.value = product.color;
+            $c1d64eae7b370874$var$productPriceU.value = product.price;
+            $c1d64eae7b370874$var$productInstockU.checked = product.instock;
+            $c1d64eae7b370874$var$productUsedU.checked = product.condition == "new" ? false : true;
+            $c1d64eae7b370874$var$productDescriptionU.value = product.description;
+        } else alert("Wrong ID, please try again!");
+    } catch (e) {
+        alert("Wrong ID, please try again!");
+        $c1d64eae7b370874$var$adminSearchUInp.value = "";
+    }
 };
 const $c1d64eae7b370874$var$searchNdelete = async function() {
-    const res = await axios({
-        method: "DELETE",
-        url: `/api/v1/product/${$c1d64eae7b370874$var$adminSearchDInp.value}`
-    });
-    if (res.status == "204") {
-        alert("Successfully deleted");
-        $c1d64eae7b370874$var$adminSearchDInp.value = "";
-    } else {
+    try {
+        const res = await axios({
+            method: "DELETE",
+            url: `/api/v1/product/${$c1d64eae7b370874$var$adminSearchDInp.value}`
+        });
+        if (res.status == "204") {
+            alert("Successfully deleted");
+            $c1d64eae7b370874$var$adminSearchDInp.value = "";
+        } else {
+            alert("Wrong ID, please try again!");
+            $c1d64eae7b370874$var$adminSearchDInp.value = "";
+        }
+    } catch (e) {
         alert("Wrong ID, please try again!");
         $c1d64eae7b370874$var$adminSearchDInp.value = "";
     }

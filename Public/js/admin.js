@@ -19,36 +19,46 @@ const productUsedU = document.querySelector("#used-u");
 const productDescriptionU = document.querySelector("#product-description-u");
 
 const searchNfill = async function() {
-  const res = await axios({
-    method: "GET",
-    url: `/api/v1/product/${adminSearchUInp.value}`,
-  });
+  try {
+    const res = await axios({
+      method: "GET",
+      url: `/api/v1/product/${adminSearchUInp.value}`,
+    });
 
-  if (res.data.status == "success") {
-    const product = res.data.product;
-    productNameU.value = product.name;
-    productCategoryU.value = product.category;
-    productModelU.value = product.model;
-    productBrandU.value = product.brand;
-    productColorU.value = product.color;
-    productPriceU.value = product.price;
-    productInstockU.checked = product.instock;
-    productUsedU.checked = product.condition == "new" ? false : true;
-    productDescriptionU.value = product.description;
-  } else {
+    if (res.data.status == "success") {
+      const product = res.data.product;
+      productNameU.value = product.name;
+      productCategoryU.value = product.category;
+      productModelU.value = product.model;
+      productBrandU.value = product.brand;
+      productColorU.value = product.color;
+      productPriceU.value = product.price;
+      productInstockU.checked = product.instock;
+      productUsedU.checked = product.condition == "new" ? false : true;
+      productDescriptionU.value = product.description;
+    } else {
+      alert("Wrong ID, please try again!");
+    }
+  } catch (e) {
     alert("Wrong ID, please try again!");
+    adminSearchUInp.value = "";
   }
 };
 
 const searchNdelete = async function() {
-  const res = await axios({
-    method: "DELETE",
-    url: `/api/v1/product/${adminSearchDInp.value}`,
-  });
-  if (res.status == "204") {
-    alert("Successfully deleted");
-    adminSearchDInp.value = "";
-  } else {
+  try {
+    const res = await axios({
+      method: "DELETE",
+      url: `/api/v1/product/${adminSearchDInp.value}`,
+    });
+    if (res.status == "204") {
+      alert("Successfully deleted");
+      adminSearchDInp.value = "";
+    } else {
+      alert("Wrong ID, please try again!");
+      adminSearchDInp.value = "";
+    }
+  } catch (e) {
     alert("Wrong ID, please try again!");
     adminSearchDInp.value = "";
   }
