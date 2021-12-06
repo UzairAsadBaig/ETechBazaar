@@ -1316,6 +1316,13 @@
         font-size: 0.2rem;
         padding-left: 0 !important;
     }
+    .btn4 {
+        position: absolute;
+        margin-top: 0.1rem;
+    }
+    .table_entries {
+        max-height: 30rem !important;
+    }
 }
 
 

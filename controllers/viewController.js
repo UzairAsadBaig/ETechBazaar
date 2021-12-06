@@ -1,4 +1,5 @@
 const Product = require("../models/productModel");
+const Order = require("../models/orderModel");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
 
@@ -30,16 +31,18 @@ exports.login = catchAsync(async(req, res, next) => {
     });
 });
 exports.dashboard = catchAsync(async(req, res, next) => {
+    const orders = await Order.find();
     res.status(200).render("dashboard", {
         categories,
+        orders,
     });
 });
 
 exports.getProduct = catchAsync(async(req, res, next) => {
     const doc = await Product.findOne(req.params);
 
-    if ( !doc ) return next( new AppError( "No Product Found!", 404 ) );
-    
+    if (!doc) return next(new AppError("No Product Found!", 404));
+
     const name = doc.name;
     const category = doc.category;
     const relatedItems = await Product.find({ category });
@@ -89,4 +92,11 @@ exports.getCategory = catchAsync(async(req, res, next) => {
             products,
         });
     }
+});
+exports.oneOrderInfo = catchAsync(async(req, res, next) => {
+    const order = await Order.findById(req.params.id);
+    res.status(200).render("orderItem", {
+        categories,
+        products: order.products,
+    });
 });

@@ -1,0 +1,25 @@
+extends base
+block CSS
+    link(rel="stylesheet" href="/css/admin.css")
+block Content
+    .col-12
+        .row
+            table
+                thead
+                    tr
+                        th Product No
+                        th Name
+                        th Price
+                        th Model
+                        th Color
+                        th Condition
+                tbody
+                - let i=1
+                each product in products 
+                    tr
+                        td(data-column="Product No" style="text-align:center")= i++
+                        td(data-column="Name")= product.name
+                        td(data-column="Price")= product.price 
+                        td(data-column="Model")= product.model 
+                        td(data-column="Color")= product.color 
+                        td(data-column="Condition")= product.condition 

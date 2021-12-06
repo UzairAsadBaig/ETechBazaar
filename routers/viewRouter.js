@@ -19,5 +19,5 @@ router.get(
     viewController.getAllRelatedProducts
 );
 router.get("/categories/:category", viewController.getCategory);
-
+router.get("/order/:id", viewController.oneOrderInfo);
 module.exports = router;

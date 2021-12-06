@@ -1,154 +1,133 @@
 extends base
 block CSS
-    link(rel="stylesheet" href="/css/admin.css")
+  link(rel="stylesheet" href="/css/admin.css")
 block Content 
   .container-fluid
-        .panel-logo
-          img(src="../img/logo.png", alt="NA")
-        .admin-panel
-          .row.tabbed
-            //  Create --------------------------
-            form.col-12.tabbed-body.tab1.activeTab
+    .panel-logo
+      img(src="../img/logo.png" alt="NA")
+    .admin-panel
+      .row.tabbed
+        //  Create --------------------------
+        form.col-12.tabbed-body.tab1.activeTab
+          .row
+            .col-6
               .row
-                .col-6
-                  .row
-                    .col-12
-                      h3.admin-panel-heading Product Details
-                    .col-12.product-detail-box#product-name-box
-                      input#product-name-c(type="text", placeholder="name")
-                    .col-12.product-detail-box#product-category-box
-                      input#product-category-c(type="text", placeholder="category")
-                    .col-12.product-detail-box#product-model-box
-                      input#product-model-c(type="text", placeholder="model")
-                    .col-12.product-detail-box#product-brand-box
-                      input#product-brand-c(type="text", placeholder="brand")
-                    .col-12.product-detail-box#product-price-box
-                      input#product-price-c(type="text", placeholder="price")
-                    .col-12.product-detail-box#product-warranty-box
-                      input#product-color-c(type="text", placeholder="color")
-                    .col-12.instock-text
-                      | In stock
+                .col-12
+                  h3.admin-panel-heading Product Details
+                .col-12.product-detail-box#product-name-box
+                  input#product-name-c(type="text" placeholder="name")
+                .col-12.product-detail-box#product-category-box
+                  input#product-category-c(type="text" placeholder="category")
+                .col-12.product-detail-box#product-model-box
+                  input#product-model-c(type="text" placeholder="model")
+                .col-12.product-detail-box#product-brand-box
+                  input#product-brand-c(type="text" placeholder="brand")
+                .col-12.product-detail-box#product-price-box
+                  input#product-price-c(type="text" placeholder="price")
+                .col-12.product-detail-box#product-warranty-box
+                  input#product-color-c(type="text" placeholder="color")
+                .col-12.instock-text
+                  | In stock
 
-                      input#instcok-c(type="checkbox", name="instock")
-                    .col-12.used-text
-                      | Used
+                  input#instcok-c(type="checkbox" name="instock")
+                .col-12.used-text
+                  | Used
 
-                      input#used-c(type="checkbox", name="used")
-                    .col-12.product-detail-box
-                      h3.admin-panel-heading Description
-                    .col-12#product-description-box
-                      textarea#product-description
-                .col-6
-                  div(method="post", action="#")
-                    .form-group.files.color
-                      h3.admin-panel-heading Upload Image
-                      input.form-control#upload-image(type="file", multiple)
-                .col-12#create-submit-box
-                  button.product-submit#create-submit(type="submit") Submit
-            //  Update --------------------------
-            form.col-12.tabbed-body.tab2
+                  input#used-c(type="checkbox" name="used")
+                .col-12.product-detail-box
+                  h3.admin-panel-heading Description
+                .col-12#product-description-box
+                  textarea#product-description
+            .col-6
+              div(method="post" action="#")
+                .form-group.files.color
+                  h3.admin-panel-heading Upload Image
+                  input.form-control#upload-image(type="file", multiple)
+            .col-12#create-submit-box
+              button.product-submit#create-submit(type="submit") Submit
+        //  Update --------------------------
+        form.col-12.tabbed-body.tab2
+          .row
+            .col-12.admin-search-box
+              span.admin-search-bar
+                input.admin-search-input.admin-search-update-input(type="text" placeholder="Search by ID")
+              button.admin-search-button.admin-search-update-button(type="submit")
+                i.fa.fa-search(aria-hidden="true")
+          .row
+            .col-6
               .row
-                .col-12.admin-search-box
-                  span.admin-search-bar
-                    input.admin-search-input.admin-search-update-input(type="text", placeholder="Search by ID")
-                  button.admin-search-button.admin-search-update-button(type="submit")
-                    i.fa.fa-search(aria-hidden="true")
-              .row
-                .col-6
-                  .row
-                    .col-12
-                      h3.admin-panel-heading Product Details
-                    .col-12.product-detail-box#product-name-box
-                      input#product-name-u(type="text", placeholder="name")
-                    .col-12.product-detail-box#product-category-box
-                      input#product-category-u(type="text", placeholder="category")
-                    .col-12.product-detail-box#product-model-box
-                      input#product-model-u(type="text", placeholder="model")
-                    .col-12.product-detail-box#product-brand-box
-                      input#product-brand-u(type="text", placeholder="brand")
-                    .col-12.product-detail-box#product-price-box
-                      input#product-price-u(type="text", placeholder="price")
-                    .col-12.product-detail-box#product-warranty-box
-                      input#product-color-u(type="text", placeholder="color")
-                    .col-12.instock-text
-                      | In stock
+                .col-12
+                  h3.admin-panel-heading Product Details
+                .col-12.product-detail-box#product-name-box
+                  input#product-name-u(type="text" placeholder="name")
+                .col-12.product-detail-box#product-category-box
+                  input#product-category-u(type="text" placeholder="category")
+                .col-12.product-detail-box#product-model-box
+                  input#product-model-u(type="text" placeholder="model")
+                .col-12.product-detail-box#product-brand-box
+                  input#product-brand-u(type="text" placeholder="brand")
+                .col-12.product-detail-box#product-price-box
+                  input#product-price-u(type="text" placeholder="price")
+                .col-12.product-detail-box#product-warranty-box
+                  input#product-color-u(type="text" placeholder="color")
+                .col-12.instock-text
+                  | In stock
 
-                      input#instock-u(type="checkbox", name="instock")
-                    .col-12.used-text
-                      | Used
+                  input#instock-u(type="checkbox" name="instock")
+                .col-12.used-text
+                  | Used
 
-                      input#used-u(type="checkbox", name="used")
-                    .col-12.product-detail-box
-                      h3.admin-panel-heading Description
-                    .col-12#product-description-box
-                      textarea#product-description-u
-                .col-6
-                  form(method="post", action="#")
-                    .form-group.files.color
-                      h3.admin-panel-heading Upload Image
-                      input.form-control#upload-image(type="file", multiple)
-                .col-12#update-submit-box
-                  button.product-submit#update-submit(type="submit") Submit
-            //  delete --------------------------
-            form.col-12.tabbed-body.tab3
-              .row
-                .col-12.admin-search-box
-                  span.admin-search-bar
-                    input.admin-search-input.admin-search-delete-input(type="text", placeholder="Search by ID")
-                .col-12#delete-submit-box
-                  button.product-submit#delete-submit.admin-search-delete-button(type="submit") Delete
-            //  orders 
-            form.col-12.tabbed-body.tab4
-              .row(style="max-height: 100vh; overflow-y: scroll; position: absolute;")
-                table
-                  thead
-                    tr
-                      th ID
-                      th Name
-                      th Phone
-                      th Address
-                  tbody
-                    tr
-                      td(data-column="ID")
-                        a(href) 61a9eaf4e5f827a8a101a16c
-                      td(data-column="Name") Uzair
-                      td(data-column="Phone") 03219313342
-                      td(data-column="Address") Lahore
-                    tr
-                      td(data-column="ID")
-                        a(href) 61a9eaf4e5f827a8a101a16c
-                      td(data-column="Name") Numan
-                      td(data-column="Phone") 03121112113
-                      td(data-column="Address") Karachi
-                    tr
-                      td(data-column="ID")
-                        a(href) 61a9eaf4e5f827a8a101a16c
-                      td(data-column="Name") Faseeh
-                      td(data-column="Phone") 03111122333
-                      td(data-column="Address") China
-                    tr
-                      td(data-column="ID")
-                        a(href) 61a9eaf4e5f827a8a101a16c
-                      td(data-column="Name") Muzammil
-                      td(data-column="Phone") 03131133131
-                      td(data-column="Address") Russia
-                    tr
-                      td(data-column="ID")
-                        a(href) 61a9eaf4e5f827a8a101a16c
-                      td(data-column="Name") Saad
-                      td(data-column="Phone") 0441111331
-                      td(data-column="Address") Lahore
-          // --------------orders ------------------------
-          .col-12.buttons
-            button.btns.btn1.activeBtn(num="1").
+                  input#used-u(type="checkbox" name="used")
+                .col-12.product-detail-box
+                  h3.admin-panel-heading Description
+                .col-12#product-description-box
+                  textarea#product-description-u
+            .col-6
+              form(method="post" action="#")
+                .form-group.files.color
+                  h3.admin-panel-heading Upload Image
+                  input.form-control#upload-image(type="file", multiple)
+            .col-12#update-submit-box
+              button.product-submit#update-submit(type="submit") Submit
+        //  delete --------------------------
+        form.col-12.tabbed-body.tab3
+          .row
+            .col-12.admin-search-box
+              span.admin-search-bar
+                input.admin-search-input.admin-search-delete-input(type="text" placeholder="Search by ID")
+            .col-12#delete-submit-box
+              button.product-submit#delete-submit.admin-search-delete-button(type="submit") Delete
+        //  orders 
+        .col-12.tabbed-body.tab4
+          .row(style="max-height: 100vh; overflow-y: scroll; position: absolute;").table_entries
+            table
+              thead
+                tr
+                  th ID
+                  th Name
+                  th Phone
+                  th Address
+                  th Total Price 
+              tbody
+              each order in orders 
+                tr
+                  td(data-column="ID")
+                    a(href=`/order/${order._id}`).orderId= order._id
+                  td(data-column="Name")= order.name 
+                  td(data-column="Phone")= order.phone 
+                  td(data-column="Address")= order.address 
+                  td(data-column="Total Price")= order.totalPrice  
+      // --------------orders ------------------------
+      .col-12.buttons
+        button.btns.btn1.activeBtn(num="1").
 
-              Create
+          Create
 
-            button.btns.btn2(num="2") Update
-            button.btns.btn3(num="3").
+        button.btns.btn2(num="2") Update
+        button.btns.btn3(num="3").
 
-              Delete
+          Delete
 
-            button.btns.btn4(num="4").
+        button.btns.btn4(num="4").
 
-              Orders
+          Orders

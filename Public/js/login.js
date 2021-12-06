@@ -18,7 +18,6 @@ const login = async(username, password) => {
             }, 500);
         }
     } catch (err) {
-        console.log(err.response.data);
         alert(err.response.data.message);
     }
 };
@@ -28,6 +27,12 @@ export const loginEvent = () => {
         loginBtn.addEventListener("click", (e) => {
             e.preventDefault();
             login(usernameInp.value, passwordInp.value);
+        });
+        passwordInp.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                e.preventDefault();
+                login(usernameInp.value, passwordInp.value);
+            }
         });
     }
 };

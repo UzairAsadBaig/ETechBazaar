@@ -127,15 +127,22 @@ const $0934852f44418050$var$login = async (username, password)=>{
             }, 500);
         }
     } catch (err) {
-        console.log(err.response.data);
         alert(err.response.data.message);
     }
 };
 const $0934852f44418050$export$77164d99f6e997a1 = ()=>{
-    if ($0934852f44418050$var$loginBtn) $0934852f44418050$var$loginBtn.addEventListener("click", (e)=>{
-        e.preventDefault();
-        $0934852f44418050$var$login($0934852f44418050$var$usernameInp.value, $0934852f44418050$var$passwordInp.value);
-    });
+    if ($0934852f44418050$var$loginBtn) {
+        $0934852f44418050$var$loginBtn.addEventListener("click", (e)=>{
+            e.preventDefault();
+            $0934852f44418050$var$login($0934852f44418050$var$usernameInp.value, $0934852f44418050$var$passwordInp.value);
+        });
+        $0934852f44418050$var$passwordInp.addEventListener("keypress", (e)=>{
+            if (e.key === "Enter") {
+                e.preventDefault();
+                $0934852f44418050$var$login($0934852f44418050$var$usernameInp.value, $0934852f44418050$var$passwordInp.value);
+            }
+        });
+    }
 };
 
 
