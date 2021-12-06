@@ -60,8 +60,8 @@ exports.protect = catchAsync(async(req, res, next) => {
         req.headers.authorization.startsWith("Bearer")
     ) {
         token = req.headers.authorization.split(" ")[1];
-    } else if (req.cookies.jwt) {
-        token = req.cookies.jwt;
+    } else if (req.headers.cookie.split("=")[1]) {
+        token = req.headers.cookie.split("=")[1];
     }
     if (!token) {
         return next(new AppError("your are not login! Login to get access!"), 401);
@@ -69,7 +69,6 @@ exports.protect = catchAsync(async(req, res, next) => {
     // verification token
     const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
-    // Check if the user exits
     const freshUser = await User.findById(decoded.id);
     if (!freshUser) {
         return next(

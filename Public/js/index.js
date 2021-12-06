@@ -2,6 +2,7 @@
 
 import { ManageAdminTabedMenu } from "./admin";
 import { hideNavAuto } from "./hideNav";
+import { loginEvent } from "./login";
 import { setMap } from "./mapBox";
 import { loadCarouselContent } from "./owlcarosuel";
 import { prodQuant } from "./product";
@@ -18,3 +19,5 @@ setMap();
 ManageAdminTabedMenu();
 
 search();
+
+loginEvent();

@@ -31,6 +31,38 @@ const $ff8827465dcd95b3$export$76802abe1e130b06 = function() {
 };
 
 
+const $0934852f44418050$var$usernameInp = document.querySelector(".username_input");
+const $0934852f44418050$var$passwordInp = document.querySelector(".password_input");
+const $0934852f44418050$var$loginBtn = document.querySelector(".login_btn");
+const $0934852f44418050$var$login = async (username, password)=>{
+    try {
+        const res = await axios({
+            method: "POST",
+            url: "/api/v1/user/login",
+            data: {
+                username: username,
+                password: password
+            }
+        });
+        if (res.data.status === "success") {
+            alert("Logged In Successfully!");
+            window.setTimeout(()=>{
+                location.assign("/admin/dashboard");
+            }, 500);
+        }
+    } catch (err) {
+        console.log(err.response.data);
+        alert(err.response.data.message);
+    }
+};
+const $0934852f44418050$export$77164d99f6e997a1 = ()=>{
+    if ($0934852f44418050$var$loginBtn) $0934852f44418050$var$loginBtn.addEventListener("click", (e)=>{
+        e.preventDefault();
+        $0934852f44418050$var$login($0934852f44418050$var$usernameInp.value, $0934852f44418050$var$passwordInp.value);
+    });
+};
+
+
 'use strict';
 const $fe408d53a7288e3e$var$MapSection = document.querySelector("#map");
 const $fe408d53a7288e3e$export$e33a4f6b06312f34 = function() {
@@ -162,6 +194,7 @@ $548257a41dc4b3aa$export$77e42a852d45f198();
 $fe408d53a7288e3e$export$e33a4f6b06312f34();
 $c1d64eae7b370874$export$d260071aaae01165();
 $4e8e46b799e1b079$export$d76128d007d19019();
+$0934852f44418050$export$77164d99f6e997a1();
 
 
 //# sourceMappingURL=bundle.js.map
