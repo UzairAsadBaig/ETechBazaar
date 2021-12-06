@@ -2,6 +2,50 @@
 //-----------------------------------------------DOM Elements
 const $c1d64eae7b370874$var$buttons = document.querySelector(".buttons");
 const $c1d64eae7b370874$var$adminBody = document.querySelectorAll(".tabbed-body");
+const $c1d64eae7b370874$var$adminSearchUBtn = document.querySelector(".admin-search-update-button");
+const $c1d64eae7b370874$var$adminSearchUInp = document.querySelector(".admin-search-update-input");
+const $c1d64eae7b370874$var$adminSearchDBtn = document.querySelector(".admin-search-delete-button");
+const $c1d64eae7b370874$var$adminSearchDInp = document.querySelector(".admin-search-delete-input");
+const $c1d64eae7b370874$var$productNameU = document.querySelector("#product-name-u");
+const $c1d64eae7b370874$var$productCategoryU = document.querySelector("#product-category-u");
+const $c1d64eae7b370874$var$productModelU = document.querySelector("#product-model-u");
+const $c1d64eae7b370874$var$productBrandU = document.querySelector("#product-brand-u");
+const $c1d64eae7b370874$var$productColorU = document.querySelector("#product-color-u");
+const $c1d64eae7b370874$var$productPriceU = document.querySelector("#product-price-u");
+const $c1d64eae7b370874$var$productInstockU = document.querySelector("#instock-u");
+const $c1d64eae7b370874$var$productUsedU = document.querySelector("#used-u");
+const $c1d64eae7b370874$var$productDescriptionU = document.querySelector("#product-description-u");
+const $c1d64eae7b370874$var$searchNfill = async function() {
+    const res = await axios({
+        method: "GET",
+        url: `/api/v1/product/${$c1d64eae7b370874$var$adminSearchUInp.value}`
+    });
+    if (res.data.status == "success") {
+        const product = res.data.product;
+        $c1d64eae7b370874$var$productNameU.value = product.name;
+        $c1d64eae7b370874$var$productCategoryU.value = product.category;
+        $c1d64eae7b370874$var$productModelU.value = product.model;
+        $c1d64eae7b370874$var$productBrandU.value = product.brand;
+        $c1d64eae7b370874$var$productColorU.value = product.color;
+        $c1d64eae7b370874$var$productPriceU.value = product.price;
+        $c1d64eae7b370874$var$productInstockU.checked = product.instock;
+        $c1d64eae7b370874$var$productUsedU.checked = product.condition == "new" ? false : true;
+        $c1d64eae7b370874$var$productDescriptionU.value = product.description;
+    } else alert("Wrong ID, please try again!");
+};
+const $c1d64eae7b370874$var$searchNdelete = async function() {
+    const res = await axios({
+        method: "DELETE",
+        url: `/api/v1/product/${$c1d64eae7b370874$var$adminSearchDInp.value}`
+    });
+    if (res.status == "204") {
+        alert("Successfully deleted");
+        $c1d64eae7b370874$var$adminSearchDInp.value = "";
+    } else {
+        alert("Wrong ID, please try again!");
+        $c1d64eae7b370874$var$adminSearchDInp.value = "";
+    }
+};
 const $c1d64eae7b370874$export$d260071aaae01165 = function() {
     //Tabbed Containers
     if ($c1d64eae7b370874$var$buttons) $c1d64eae7b370874$var$buttons.addEventListener("click", function(event) {
@@ -16,6 +60,28 @@ const $c1d64eae7b370874$export$d260071aaae01165 = function() {
             document.querySelector(`.tab${btn.getAttribute("num")}`).classList.add("activeTab");
         }
     });
+    //Update
+    if ($c1d64eae7b370874$var$adminSearchUBtn) {
+        $c1d64eae7b370874$var$adminSearchUBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            $c1d64eae7b370874$var$searchNfill();
+        });
+        $c1d64eae7b370874$var$adminSearchUBtn.addEventListener("keypress", function(e) {
+            e.preventDefault();
+            if (e.key == "Enter") $c1d64eae7b370874$var$searchNfill();
+        });
+    }
+    if ($c1d64eae7b370874$var$adminSearchDBtn) {
+        console.log($c1d64eae7b370874$var$adminSearchDBtn);
+        $c1d64eae7b370874$var$adminSearchDBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            $c1d64eae7b370874$var$searchNdelete();
+        });
+        $c1d64eae7b370874$var$adminSearchDBtn.addEventListener("keypress", function(e) {
+            e.preventDefault();
+            if (e.key == "Enter") $c1d64eae7b370874$var$searchNdelete();
+        });
+    }
 };
 
 

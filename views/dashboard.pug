@@ -8,50 +8,50 @@ block Content
         .admin-panel
           .row.tabbed
             //  Create --------------------------
-            .col-12.tabbed-body.tab1.activeTab
+            form.col-12.tabbed-body.tab1.activeTab
               .row
                 .col-6
                   .row
                     .col-12
                       h3.admin-panel-heading Product Details
                     .col-12.product-detail-box#product-name-box
-                      input#product-name(type="text", placeholder="name")
+                      input#product-name-c(type="text", placeholder="name")
                     .col-12.product-detail-box#product-category-box
-                      input(type="text", placeholder="category")
+                      input#product-category-c(type="text", placeholder="category")
                     .col-12.product-detail-box#product-model-box
-                      input#product-model(type="text", placeholder="model")
+                      input#product-model-c(type="text", placeholder="model")
                     .col-12.product-detail-box#product-brand-box
-                      input#product-brand(type="text", placeholder="brand")
+                      input#product-brand-c(type="text", placeholder="brand")
                     .col-12.product-detail-box#product-price-box
-                      input#product-price(type="text", placeholder="price")
+                      input#product-price-c(type="text", placeholder="price")
                     .col-12.product-detail-box#product-warranty-box
-                      input#product-warranty(type="Number", placeholder="Warranty")
+                      input#product-color-c(type="text", placeholder="color")
                     .col-12.instock-text
                       | In stock
 
-                      input#instcok(type="checkbox", name="instock")
+                      input#instcok-c(type="checkbox", name="instock")
                     .col-12.used-text
                       | Used
 
-                      input#used(type="checkbox", name="used")
+                      input#used-c(type="checkbox", name="used")
                     .col-12.product-detail-box
                       h3.admin-panel-heading Description
                     .col-12#product-description-box
                       textarea#product-description
                 .col-6
-                  form(method="post", action="#")
+                  div(method="post", action="#")
                     .form-group.files.color
                       h3.admin-panel-heading Upload Image
                       input.form-control#upload-image(type="file", multiple)
                 .col-12#create-submit-box
                   button.product-submit#create-submit(type="submit") Submit
             //  Update --------------------------
-            .col-12.tabbed-body.tab2
+            form.col-12.tabbed-body.tab2
               .row
                 .col-12.admin-search-box
                   span.admin-search-bar
-                    input.admin-search-input(type="text", placeholder="Search by ID")
-                  button.admin-search-button(type="submit")
+                    input.admin-search-input.admin-search-update-input(type="text", placeholder="Search by ID")
+                  button.admin-search-button.admin-search-update-button(type="submit")
                     i.fa.fa-search(aria-hidden="true")
               .row
                 .col-6
@@ -59,29 +59,29 @@ block Content
                     .col-12
                       h3.admin-panel-heading Product Details
                     .col-12.product-detail-box#product-name-box
-                      input#product-name(type="text", placeholder="name")
+                      input#product-name-u(type="text", placeholder="name")
                     .col-12.product-detail-box#product-category-box
-                      input(type="text", placeholder="category")
+                      input#product-category-u(type="text", placeholder="category")
                     .col-12.product-detail-box#product-model-box
-                      input#product-model(type="text", placeholder="model")
+                      input#product-model-u(type="text", placeholder="model")
                     .col-12.product-detail-box#product-brand-box
-                      input#product-brand(type="text", placeholder="brand")
+                      input#product-brand-u(type="text", placeholder="brand")
                     .col-12.product-detail-box#product-price-box
-                      input#product-price(type="text", placeholder="price")
+                      input#product-price-u(type="text", placeholder="price")
                     .col-12.product-detail-box#product-warranty-box
-                      input#product-warranty(type="Number", placeholder="Warranty")
+                      input#product-color-u(type="text", placeholder="color")
                     .col-12.instock-text
                       | In stock
 
-                      input#instcok(type="checkbox", name="instock")
+                      input#instock-u(type="checkbox", name="instock")
                     .col-12.used-text
                       | Used
 
-                      input#used(type="checkbox", name="used")
+                      input#used-u(type="checkbox", name="used")
                     .col-12.product-detail-box
                       h3.admin-panel-heading Description
                     .col-12#product-description-box
-                      textarea#product-description
+                      textarea#product-description-u
                 .col-6
                   form(method="post", action="#")
                     .form-group.files.color
@@ -90,17 +90,15 @@ block Content
                 .col-12#update-submit-box
                   button.product-submit#update-submit(type="submit") Submit
             //  delete --------------------------
-            .col-12.tabbed-body.tab3
+            form.col-12.tabbed-body.tab3
               .row
                 .col-12.admin-search-box
                   span.admin-search-bar
-                    input.admin-search-input(type="text", placeholder="Search by ID")
-                  button.admin-search-button(type="submit")
-                    i.fa.fa-search(aria-hidden="true")
+                    input.admin-search-input.admin-search-delete-input(type="text", placeholder="Search by ID")
                 .col-12#delete-submit-box
-                  button.product-submit#delete-submit(type="submit") Delete
+                  button.product-submit#delete-submit.admin-search-delete-button(type="submit") Delete
             //  orders 
-            .col-12.tabbed-body.tab4
+            form.col-12.tabbed-body.tab4
               .row(style="max-height: 100vh; overflow-y: scroll; position: absolute;")
                 table
                   thead

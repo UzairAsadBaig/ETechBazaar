@@ -99,7 +99,7 @@
 89E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\core-js\features\math\signbit.js121436361000000000 0
 74E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\lines-and-columns132815341739727680 1
 64E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\hideNav.js132831894351634108 0
-53E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js132832620156227702 1
+53E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js132832735498783093 1
 83E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\@parcel\optimizer-htmlnano132815341711310369 1
 79E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\ajv\lib\dotjs\oneOf.js121436361000000000 0
 94E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\msgpackr\tests\test-compatibility.cjs121436361000000000 0
@@ -140,7 +140,7 @@
 75E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\tar-fs\.travis.yml121436361000000000 0
 76E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\lodash\dropWhile.js121436361000000000 0
 93E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\mongodb\lib\operations\rename.js.map121436361000000000 0
-63E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\views\dashboard.pug132831894354264622 0
+63E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\views\dashboard.pug132832734147677208 0
 88E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\es-abstract\2019\SecFromTime.js121436361000000000 0
 52E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\dev-data132830103069349608 1
 91E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\core-js\features\array\iterator.js121436361000000000 0
@@ -237,7 +237,7 @@
 97E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\core-js\internals\array-last-index-of.js121436361000000000 0
 104E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\uncss\node_modules\postcss-selector-parser\dist132815341542208917 1
 107E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\mongodb\src\operations\estimated_document_count.ts121436361000000000 0
-63E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\bundle.js132832620156008295 0
+63E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\bundle.js132832735498683377 0
 103E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\console-browserify\test\static\test-adapter.js121436361000000000 0
 85E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\postcss\lib\declaration.d.ts121436361000000000 0
 79E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\yaml\browser\schema.js121436361000000000 0
@@ -288,7 +288,7 @@
 94E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\mongodb\src\operations\remove_user.ts121436361000000000 0
 63E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\cssesc132815341748066597 1
 88E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\nan\nan_converters_pre_43_inl.h131637928500000000 0
-62E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\admin.js132831894351600966 0
+62E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\admin.js132832735497277134 0
 79E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\http-signature\LICENSE131480975920000000 0
 91E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\utility-types\dist\mapped-types.js121436361000000000 0
 127E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\postcss-modules-scope\node_modules\source-map\dist\source-map.debug.js131511695990000000 0
@@ -542,7 +542,7 @@
 63E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\md5.js132815341719434924 1
 89E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\es-abstract\2019\ObjectCreate.js121436361000000000 0
 88E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\xss-filters\dist\xss-filters.js130826403050000000 0
-67E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\pages\admin.html132832611702570720 0
+67E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\pages\admin.html132832634043021690 0
 114E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\postcss-modules-values\node_modules\ansi-styles\readme.md131628273600000000 0
 101E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\caniuse-lite\data\features\css-namespaces.js121436361000000000 0
 79E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\util-deprecate\node.js130614195410000000 0
@@ -575,7 +575,7 @@
 83E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\mongodb\lib\explain.js.map121436361000000000 0
 65E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\htmlnano132815341711579622 1
 78E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\resolve\.eslintignore121436361000000000 0
-67E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\bundle.js.map132832620156217730 0
+67E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\Public\js\bundle.js.map132832735498753294 0
 87E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\@babel\template\lib\builder.js121012626000000000 0
 119E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\lmdb-store\dependencies\lmdb-data-v1\libraries\liblmdb\tooltag121436361000000000 0
 74E:\FUMN\Projects\eTechBazaar\E-Tech-Bazaar-\node_modules\lodash\shuffle.js121436361000000000 0
