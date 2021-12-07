@@ -1,3 +1,97 @@
+'use strict';
+const $c5a2f6f6c926e271$export$ed1e85c4022b4965 = function() {
+    const totalPrice = document.querySelector('.total_price');
+    const cartBadge = document.querySelectorAll('.cart_badge');
+    const cartProducts = document.querySelectorAll('.cart-detail');
+    let price, quantity, totalBill = 0, noOfprod = 0;
+    cartProducts.forEach((cp)=>{
+        price = parseFloat(cp.querySelector(".prod_price").textContent);
+        quantity = Number(cp.querySelector(".quantity").textContent);
+        totalBill += price * quantity;
+        noOfprod += quantity;
+    });
+    totalPrice.textContent = totalBill.toFixed(1);
+    cartBadge[0].textContent = noOfprod;
+    cartBadge[1].textContent = noOfprod;
+};
+
+
+'use strict';
+const $dd050f2a708f92b1$export$4fd4be8835a439d2 = function(id, price, name, imgSrc, category, color, model, qn = 1) {
+    category = category.split(' ').join('_');
+    let cartVal = `<div class="row cart-detail" data-price=${price} data-id=${id} data-category=${category} data-color=${color} data-name=${name} data-model=${model}>
+       <div class="col-lg-4 col-sm-4 col-4 cart-detail-img"><img src=${imgSrc} /></div>
+       <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+        <p>${name}</p><span class="price">Rs.<span class="prod_price">${price}</span></span><br /><a type="button" class="cart_incdec dec"> - </a><span class="count">Quantity: <span class="quantity">01</span></span><a type="button" class="cart_incdec inc"> + </a>
+       </div>
+    </div>`;
+    const cartProds = document.querySelector('.all_products');
+    if (cartProds.querySelector(`[data-id="${id}"]`)) {
+        const quant = Number(cartProds.querySelector(`[data-id="${id}"]`).querySelector('.quantity').textContent);
+        cartProds.querySelector(`[data-id="${id}"]`).querySelector('.quantity').textContent = ('0' + (quant + qn)).slice(-2);
+        let p = Number(new DOMParser().parseFromString(localStorage.getItem(id + "_product"), 'text/html').body.querySelector('.quantity').textContent);
+        let newQ = p + qn;
+        cartVal = `<div class="row cart-detail" data-price=${price} data-id=${id} data-category=${category} data-color=${color} data-name=${name} data-model=${model}>
+       <div class="col-lg-4 col-sm-4 col-4 cart-detail-img"><img src=${imgSrc} /></div>
+       <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+        <p>${name}</p><span class="price">Rs.<span class="prod_price">${price}</span></span><br /><a type="button" class="cart_incdec dec"> - </a><span class="count">Quantity: <span class="quantity">${('0' + newQ).slice(-2)}</span></span><a type="button" class="cart_incdec inc"> + </a>
+       </div>
+    </div>`;
+        localStorage.setItem(id + "_product", cartVal);
+    } else {
+        cartProds.insertAdjacentHTML('afterbegin', cartVal);
+        localStorage.setItem(id + "_product", cartVal);
+    }
+};
+const $dd050f2a708f92b1$var$body = document.querySelector('body');
+const $dd050f2a708f92b1$export$e68c847c0bceb7d5 = function() {
+    for(let i = 0; i < localStorage.length; i++){
+        let key = localStorage.key(i);
+        if (key.includes("_product")) {
+            // console.log( localStorage.getItem( key ) );
+            let newcartVal = localStorage.getItem(key);
+            document.querySelector('.all_products').insertAdjacentHTML('afterbegin', newcartVal);
+        }
+    }
+};
+const $dd050f2a708f92b1$export$90355ad74bbdd792 = function() {
+    $dd050f2a708f92b1$var$body.addEventListener('click', function(e) {
+        if (e.target.classList.contains('add_to_cart')) {
+            let name, price, quantity, id, imgSrc;
+            e.preventDefault();
+            const card = e.target.closest('.card');
+            id = card.dataset.id;
+            let category = card.dataset.category;
+            let color = card.dataset.color;
+            let model = card.dataset.model;
+            name = card.querySelector('.card_item_name').textContent;
+            price = card.querySelector('.card_price').textContent.split('.')[1];
+            imgSrc = card.querySelector('img').getAttribute('src');
+            $dd050f2a708f92b1$export$4fd4be8835a439d2(id, price, name, imgSrc, category, color, model);
+            console.log("if ", id, price, name, imgSrc, category, color, model);
+            $c5a2f6f6c926e271$export$ed1e85c4022b4965();
+        } else if (e.target.classList.contains("add_to_card")) {
+            let name, price, quantity, id, imgSrc;
+            const card = e.target.closest('.product_info_box');
+            console.log(card);
+            id = card.dataset.id;
+            let category = card.dataset.category;
+            let color = card.dataset.color;
+            let model = card.dataset.model;
+            name = card.querySelector('.product_heading').textContent;
+            price = card.querySelector('.product_price').textContent.split('.')[1];
+            imgSrc = document.querySelector('.product_img').getAttribute('src');
+            let qn = Number(document.querySelector('.quantity_val').textContent);
+            console.log(qn);
+            $dd050f2a708f92b1$export$4fd4be8835a439d2(id, price, name, imgSrc, category, color, model, qn);
+            console.log("elif ", id, price, name, imgSrc, category, color, model, qn);
+            $c5a2f6f6c926e271$export$ed1e85c4022b4965();
+        }
+    });
+};
+
+
+
 "use strict";
 //-----------------------------------------------DOM Elements
 const $c1d64eae7b370874$var$buttons = document.querySelector(".buttons");
@@ -270,7 +364,137 @@ const $4e8e46b799e1b079$export$d76128d007d19019 = ()=>{
 };
 
 
+
+
 "use strict";
+const $ccfd3742a44b4cad$export$5ab6ca14213248e2 = function() {
+    const allProd = document.querySelector(".all_products");
+    allProd.addEventListener('click', function(e) {
+        e.stopPropagation();
+        // console.log( e.target );
+        if (e.target.classList.contains('cart_incdec')) {
+            const quant = e.target.closest('.cart-detail').querySelector('.quantity');
+            // console.log( quant );
+            if (e.target.classList.contains('inc')) {
+                // console.log( "inc" );
+                quant.textContent = ('0' + (Number(quant.textContent) + 1)).slice(-2);
+                $c5a2f6f6c926e271$export$ed1e85c4022b4965();
+                localStorage.setItem(quant.closest('.cart-detail').dataset.id + "_product", quant.closest('.cart-detail').outerHTML);
+            }
+            if (e.target.classList.contains('dec')) // console.log( "dec" );
+            {
+                if (Number(quant.textContent) !== 0) {
+                    quant.textContent = ('0' + (Number(quant.textContent) - 1)).slice(-2);
+                    localStorage.setItem(quant.closest('.cart-detail').dataset.id + "_product", quant.closest('.cart-detail').outerHTML);
+                    $c5a2f6f6c926e271$export$ed1e85c4022b4965();
+                    if (Number(quant.textContent) === 0) {
+                        console.log("removing");
+                        localStorage.removeItem(quant.closest('.cart-detail').dataset.id + "_product");
+                        quant.closest('.cart-detail').remove();
+                        $c5a2f6f6c926e271$export$ed1e85c4022b4965();
+                        $dd050f2a708f92b1$export$e68c847c0bceb7d5();
+                    }
+                }
+            }
+        }
+    });
+};
+
+
+const $aa8862ee2d4f0269$var$orderForm = document.querySelector('.submit_order_form');
+const $aa8862ee2d4f0269$var$emptyCart = function() {
+    for(let i = 0; i < localStorage.length; i++){
+        let key = localStorage.key(i);
+        if (key.includes("_product")) localStorage.removeItem(key);
+    }
+};
+const $aa8862ee2d4f0269$var$SubmitOrderForm = async function(name, phone, address, totalPrice, products) {
+    try {
+        const res = await axios({
+            method: "POST",
+            url: '/api/v1/order',
+            data: {
+                name: name,
+                phone: phone,
+                address: address,
+                totalPrice: totalPrice,
+                products: products
+            }
+        });
+        if (res.data.status === "success") {
+            $aa8862ee2d4f0269$var$emptyCart();
+            location.assign('/');
+        }
+    } catch (error) {
+    // alert(error)
+    }
+};
+const $aa8862ee2d4f0269$export$863cb804d4b72252 = ()=>{
+    if ($aa8862ee2d4f0269$var$orderForm) $aa8862ee2d4f0269$var$orderForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.querySelector('#user-name').value;
+        const phone = document.querySelector('#user-phoneNo').value;
+        const address = document.querySelector('#user-address').value;
+        const cartDrop = document.querySelector('.cart_drop');
+        const Prods = Array.from(cartDrop.querySelectorAll('.cart-detail'));
+        const totalPrice = Number(cartDrop.querySelector('.total_price').textContent);
+        console.log(Prods);
+        const allProds = Prods.map((el)=>{
+            return {
+                name: el.dataset.name,
+                price: el.dataset.price,
+                model: el.dataset.model,
+                category: el.dataset.category.split('_').join(' '),
+                color: el.dataset.color,
+                quantity: Number(el.querySelector('.quantity').textContent)
+            };
+        });
+        // console.log( allProds );
+        $aa8862ee2d4f0269$var$SubmitOrderForm(name, phone, address, totalPrice, allProds);
+        console.log(name, phone, address, totalPrice, allProds);
+    });
+};
+
+
+const $b2f827db00661ae3$var$createProd = async function(formData) {
+    try {
+        const res = await axios({
+            method: "POST",
+            url: "/api/v1/product",
+            data: formData
+        });
+        if (res.data.status === "success") alert("Data Uploaded Successfully!");
+    } catch (error) {
+        alert("400 Error, please try again");
+    }
+};
+const $b2f827db00661ae3$var$createProductForm = document.querySelector('.create_product_form');
+const $b2f827db00661ae3$export$d40c6b4758c18eff = function() {
+    if ($b2f827db00661ae3$var$createProductForm) $b2f827db00661ae3$var$createProductForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = new FormData();
+        const select = $b2f827db00661ae3$var$createProductForm.querySelector('#product-category-c');
+        const condition = $b2f827db00661ae3$var$createProductForm.querySelector('#used-c').checked ? "used" : "new";
+        form.append('name', $b2f827db00661ae3$var$createProductForm.querySelector('#product-name-c').value);
+        form.append('category', select.options[select.selectedIndex].value);
+        form.append('model', $b2f827db00661ae3$var$createProductForm.querySelector('#product-model-c').value);
+        form.append('brand', $b2f827db00661ae3$var$createProductForm.querySelector('#product-brand-c').value);
+        form.append('color', $b2f827db00661ae3$var$createProductForm.querySelector('#product-color-c').value);
+        form.append('price', Number($b2f827db00661ae3$var$createProductForm.querySelector('#product-price-c').value));
+        form.append('instock', $b2f827db00661ae3$var$createProductForm.querySelector('#instcok-c').checked);
+        form.append('condition', condition);
+        form.append('description', $b2f827db00661ae3$var$createProductForm.querySelector('#product-description').value);
+        form.append('images', $b2f827db00661ae3$var$createProductForm.querySelector('#upload-image').files[0]);
+        $b2f827db00661ae3$var$createProd(form);
+    });
+};
+
+
+"use strict";
+window.addEventListener('load', function() {
+    $dd050f2a708f92b1$export$e68c847c0bceb7d5();
+    $c5a2f6f6c926e271$export$ed1e85c4022b4965();
+});
 $ff8827465dcd95b3$export$76802abe1e130b06();
 $39d4c3131b6ecffc$export$fe860b7907da3595();
 $548257a41dc4b3aa$export$77e42a852d45f198();
@@ -278,6 +502,11 @@ $fe408d53a7288e3e$export$e33a4f6b06312f34();
 $c1d64eae7b370874$export$d260071aaae01165();
 $4e8e46b799e1b079$export$d76128d007d19019();
 $0934852f44418050$export$77164d99f6e997a1();
+$c5a2f6f6c926e271$export$ed1e85c4022b4965();
+$dd050f2a708f92b1$export$90355ad74bbdd792();
+$ccfd3742a44b4cad$export$5ab6ca14213248e2();
+$aa8862ee2d4f0269$export$863cb804d4b72252();
+$b2f827db00661ae3$export$d40c6b4758c18eff();
 
 
 //# sourceMappingURL=bundle.js.map

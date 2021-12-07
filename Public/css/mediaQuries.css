@@ -960,6 +960,11 @@
     .navbar-top {
         padding-top: 0.5rem;
     }
+
+    .cart_incdec {
+        font-size: 16px;
+
+    }
     .logo {
         width: 4.5rem;
     }
@@ -1081,6 +1086,11 @@
         padding-top: 0.5rem;
         padding-right: 0;
         max-width: 100vw;
+    }
+
+    .cart_incdec {
+        font-size: 14px;
+
     }
     .navbar-top .row {
         max-width: 100vw;

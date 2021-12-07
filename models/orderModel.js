@@ -21,7 +21,7 @@ const orderSchema=new mongoose.Schema( {
     type: Date,
     default: Date.now()
   },
-
+  totalPrice:Number,
   //**************** Embeded ************************** 
   products: [
     {
@@ -31,8 +31,9 @@ const orderSchema=new mongoose.Schema( {
       category: String,
       brand: String,
       color: String,
-      images: [ String ],
-      condition: String
+      condition: String,
+      quantity:Number
+
     }
   ]
 

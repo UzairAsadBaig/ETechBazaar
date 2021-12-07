@@ -40,6 +40,29 @@ html(lang="en")
     include _header
 
     //-********** CONTENT 
+    .modal.fade#staticBackdrop(data-backdrop="static", data-keyboard="false", tabindex="-1", aria-labelledby="staticBackdropLabel", aria-hidden="true")
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          .modal-header
+            .section_heading.section_heading--modal
+              span.text_grad To
+              span.tilt_grad.tilt_grad--modal Proceed
+            button.close(type="button", data-dismiss="modal", aria-label="Close")
+              span(aria-hidden="true") ×
+          .modal-body
+            form.submit_order_form(action)
+              .form-group
+                label.col-form-label.user_name.user_info_input_headings(for="user-name") Name:
+                input.form-control.modal_input_field#user-name(type="text" required name='name')
+              .form-group
+                label.col-form-label.user_phoneNo.user_info_input_headings(for="user-phoneNo" ) Phone No:
+                input.form-control.modal_input_field#user-phoneNo(type="tel" required name='phone')
+              .form-group
+                label.col-form-label.user_address.user_info_input_headings(for="user-address") Address:
+                input.form-control.modal_input_field#user-address(type="text" required name='address')
+              .text-center
+                button.btn.submit_form(type="submit") Submit  
+
 
     block Content 
       h1 Hello!

@@ -1,6 +1,53 @@
 const Product = require("../models/productModel");
 const AppError = require("../utils/appError");
 const catchAsync = require("../utils/catchAsync");
+const multer=require( 'multer' );
+const sharp=require( 'sharp' );
+
+
+
+
+
+// *************** Image uploading and processing
+const multerStorage=multer.memoryStorage();
+
+const multerFilter=( req, file, cb ) => {
+    if ( file.mimetype.startsWith( 'image' ) ) {
+        req.file=file;
+        cb( null, true )
+    }
+    else {
+        cb( new AppError( "Only image file can be uploaded", 400 ), false );
+    }
+}
+
+const upload=multer( {
+    storage: multerStorage,
+    fileFilter:multerFilter,
+});
+
+
+exports.uploadProductImage = upload.single( 'images' );
+exports.resizeProductImage=( req, res, next ) => {
+    
+    if ( !req.file ) return next(new AppError("Please select image for product!",400));
+
+    req.file.filename=`product-${Date.now()}.jpeg`;
+
+    sharp( req.file.buffer )
+        .resize( 1200, 800 )
+        .toFormat( 'jpeg' )
+        .jpeg( { quality: 90 } )
+        .toFile( `Public/img/products/${req.file.filename}` );
+
+    next();
+
+}
+
+
+
+
+
 
 // ******************** Search Product
 exports.searchProduct = function(req, res, next) {
@@ -11,7 +58,10 @@ exports.searchProduct = function(req, res, next) {
 };
 
 // ******************** Create Product
-exports.createProduct = catchAsync(async function(req, res) {
+exports.createProduct=catchAsync( async function ( req, res ) {
+    req.body.images=[ `${req.file.filename}` ];
+
+    console.log( req.body );
     const newDoc = await Product.create(req.body);
     res.status(200).json({
         status: "success",

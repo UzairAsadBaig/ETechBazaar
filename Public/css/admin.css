@@ -53,7 +53,8 @@ footer {
     margin-top: 1.5rem;
 }
 
-.product-detail-box input {
+.product-detail-box input,
+.product-detail-box select {
     width: 70%;
     height: 2.5rem;
     font-size: 1rem;

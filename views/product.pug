@@ -12,7 +12,7 @@ block Content
       .image_box.col-lg-7.col-12
         img.product_img.w-100.img-fluid(src=`/./../img/products/${product.images[0]}`, alt, srcset)
       //- // !---------------------------- Product Info Box ---------------------------------
-      .col-lg-5.col-12.product_info_box
+      .col-lg-5.col-12.product_info_box(data-id=`${product._id}` data-category=`${product.category.replace("&","&amp;")}` data-color=`${product.color}` data-model=`${product.model}`)
         .product_info
           h3.text-center.pt-4.product_heading=`${product.name}`
           .row
@@ -44,7 +44,7 @@ block Content
 
             //- // !---------------------------- Product Specs values ---------------------------------
             .product_specs_values.col-6
-              p.product_spec_val.product_price=`${product.price} Rs` 
+              p.product_spec_val.product_price=`Rs.${product.price}` 
               p.product_spec_val.product_model=`${product.model}`
               p.product_spec_val.product_brand=`${product.brand}`
               p.product_spec_val.product_color=`${product.color}`
@@ -60,9 +60,7 @@ block Content
               span.text-white.font-weight-bold.quantity_val 1
               span.product_increase.ml-4 +
             .text-center.pt-3
-              button.btn.btn-outline-light.card_btn.add_to_card(type="button").
-                
-                Buy now
+              
                 
               button.btn.btn-outline-light.card_btn.add_to_card(type="button").
                 

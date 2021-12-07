@@ -867,3 +867,16 @@ footer .container-fluid {
   color: white;
   background: #211b19;
 }
+.cart_incdec {
+  font-size: 18px;
+  /* text-align: center; */
+
+}
+
+.dec {
+  margin-right: 5px;
+}
+
+.inc {
+  margin-left: 5px;
+}

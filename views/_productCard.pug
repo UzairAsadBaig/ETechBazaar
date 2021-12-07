@@ -1,6 +1,6 @@
 mixin productCard(product)
   .col-lg-3.col-md-4.col-6
-        a.card.card_tile(href=`/product/${product.slug}`)
+        a.card.card_tile(href=`/product/${product.slug}` data-id=`${product._id}` data-category=`${product.category}` data-color=`${product.color}` data-model=`${product.model}` )
             .card_header
                 .ribbon.ribbon-top-right
                     span=product.condition
@@ -11,6 +11,6 @@ mixin productCard(product)
                     p.model_version=product.model
                     //- p.model_version -50 to 110°C W1209 Digital Thermostat Temperature
                     
-                    button.btn.btn-outline-light.card_btn(type="button") Add to cart
+                    button.btn.btn-outline-light.card_btn.add_to_cart(type="button") Add to cart
                     
-                    p.card_price=`${product.price+'Rs'}`
+                    p.card_price=`Rs.${product.price}`
