@@ -6,4 +6,4 @@ block Content
       .notfound-404
         h1 Oops!
         h2=`${status} - ${message}`
-      a(href="/") Go TO Homepage
+      a(href=`${link}`)= `Go TO ${pageName} page`

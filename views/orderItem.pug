@@ -13,6 +13,7 @@ block Content
                         th Model
                         th Color
                         th Condition
+                        th Quantity 
                 tbody
                 - let i=1
                 each product in products 
@@ -23,3 +24,4 @@ block Content
                         td(data-column="Model")= product.model 
                         td(data-column="Color")= product.color 
                         td(data-column="Condition")= product.condition 
+                        td(data-column="Quantity")= product.quantity 

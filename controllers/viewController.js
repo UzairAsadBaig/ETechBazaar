@@ -30,13 +30,25 @@ exports.login = catchAsync(async(req, res, next) => {
         categories,
     });
 });
+
 exports.dashboard = catchAsync(async(req, res, next) => {
     const orders = await Order.find();
-    res.status(200).render("dashboard", {
-        categories,
-        orders,
-    });
+    if (!req.headers.cookie) {
+        res.status(401).render("error", {
+            message: "You are not logged in ! Please Login!",
+            status: 401,
+            link: "/admin/login",
+            pageName: "Login",
+            categories,
+        });
+    } else {
+        res.status(200).render("dashboard", {
+            categories,
+            orders,
+        });
+    }
 });
+
 
 exports.getProduct = catchAsync(async(req, res, next) => {
     const doc = await Product.findOne(req.params);
@@ -67,6 +79,8 @@ exports.getAllRelatedProducts = catchAsync(async(req, res, next) => {
         res.status(404).render("error", {
             status: 404,
             message: "No product found",
+            link: "/",
+            pageName: "Home",
             categories,
         });
     } else {
@@ -84,6 +98,8 @@ exports.getCategory = catchAsync(async(req, res, next) => {
         res.status(404).render("error", {
             status: 404,
             message: "No Product found",
+            link: "/",
+            pageName: "Home",
             categories,
         });
     } else {

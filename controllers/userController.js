@@ -60,22 +60,16 @@ exports.protect = catchAsync(async(req, res, next) => {
         req.headers.authorization.startsWith("Bearer")
     ) {
         token = req.headers.authorization.split(" ")[1];
-    } else if (req.headers.cookie.split("=")[1]) {
+    } else if (req.headers.cookie) {
         token = req.headers.cookie.split("=")[1];
     }
     if (!token) {
-        return next(new AppError("your are not login! Login to get access!"), 401);
+        return next();
     }
     // verification token
     const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
 
     const freshUser = await User.findById(decoded.id);
-    if (!freshUser) {
-        return next(
-            new AppError("The user belong to this ID no longer exist!"),
-            401
-        );
-    }
 
     // Grant Access to protected route
     req.user = freshUser;

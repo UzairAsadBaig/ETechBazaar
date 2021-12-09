@@ -21,7 +21,7 @@ block Content
                   select#product-category-c(name="category")
                     each cat in categories
                       option(value=`${cat}`)=`${cat}`
-                  
+
                 .col-12.product-detail-box#product-model-box
                   input#product-model-c(type="text" placeholder="model" name="model" required)
                 .col-12.product-detail-box#product-brand-box
@@ -46,7 +46,7 @@ block Content
               div()
                 .form-group.files.color
                   h3.admin-panel-heading Upload Image
-                  input.form-control#upload-image-c(type="file",accept="image/*" ,name="images" required)
+                  input.form-control#upload-image-c(type="file" accept="image/*" ,name="images" required)
             .col-12#create-submit-box
               button.product-submit#create-submit(type="submit") Submit
         //  Update --------------------------
@@ -94,7 +94,7 @@ block Content
               form( action="#")
                 .form-group.files.color
                   h3.admin-panel-heading Upload Image
-                  input.form-control#upload-image-u(type="file",accept="image/*" ,name="images")
+                  input.form-control#upload-image-u(type="file" accept="image/*" ,name="images")
             .col-12#update-submit-box
               button.product-submit#update-submit(type="submit") Submit
         //  delete --------------------------
@@ -117,7 +117,7 @@ block Content
                   th Address
                   th Total Price 
               tbody
-              each order in orders 
+              each order in orders.reverse() 
                 tr
                   td(data-column="ID")
                     a(href=`/order/${order._id}`).orderId= order._id
