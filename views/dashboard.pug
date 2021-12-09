@@ -33,7 +33,7 @@ block Content
                 .col-12.instock-text
                   | In stock
 
-                  input#instcok-c(type="checkbox" name="instock")
+                  input#instock-c(type="checkbox" name="instock")
                 .col-12.used-text
                   | Used
 
@@ -41,16 +41,16 @@ block Content
                 .col-12.product-detail-box
                   h3.admin-panel-heading Description
                 .col-12#product-description-box
-                  textarea#product-description
+                  textarea#product-description-c
             .col-6
               div()
                 .form-group.files.color
                   h3.admin-panel-heading Upload Image
-                  input.form-control#upload-image(type="file",accept="image/*" ,name="images" required)
+                  input.form-control#upload-image-c(type="file",accept="image/*" ,name="images" required)
             .col-12#create-submit-box
               button.product-submit#create-submit(type="submit") Submit
         //  Update --------------------------
-        form.col-12.tabbed-body.tab2
+        form.col-12.tabbed-body.tab2.update_product_form
           .row
             .col-12.admin-search-box
               span.admin-search-bar
@@ -91,10 +91,10 @@ block Content
                 .col-12#product-description-box
                   textarea#product-description-u
             .col-6
-              form(method="post" action="#")
+              form( action="#")
                 .form-group.files.color
                   h3.admin-panel-heading Upload Image
-                  input.form-control#upload-image(type="file", multiple)
+                  input.form-control#upload-image-u(type="file",accept="image/*" ,name="images")
             .col-12#update-submit-box
               button.product-submit#update-submit(type="submit") Submit
         //  delete --------------------------

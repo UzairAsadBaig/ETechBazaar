@@ -109,6 +109,7 @@ const $c1d64eae7b370874$var$productPriceU = document.querySelector("#product-pri
 const $c1d64eae7b370874$var$productInstockU = document.querySelector("#instock-u");
 const $c1d64eae7b370874$var$productUsedU = document.querySelector("#used-u");
 const $c1d64eae7b370874$var$productDescriptionU = document.querySelector("#product-description-u");
+// const productImageU = document.querySelector("#upload-image-u");
 const $c1d64eae7b370874$var$searchNfill = async function() {
     try {
         const res = await axios({
@@ -126,6 +127,7 @@ const $c1d64eae7b370874$var$searchNfill = async function() {
             $c1d64eae7b370874$var$productInstockU.checked = product.instock;
             $c1d64eae7b370874$var$productUsedU.checked = product.condition == "new" ? false : true;
             $c1d64eae7b370874$var$productDescriptionU.value = product.description;
+        // console.log(productImageU.files);
         } else alert("Wrong ID, please try again!");
     } catch (e) {
         alert("Wrong ID, please try again!");
@@ -175,15 +177,17 @@ const $c1d64eae7b370874$export$d260071aaae01165 = function() {
             if (e.key == "Enter") $c1d64eae7b370874$var$searchNfill();
         });
     }
+    //Delete
     if ($c1d64eae7b370874$var$adminSearchDBtn) {
-        console.log($c1d64eae7b370874$var$adminSearchDBtn);
         $c1d64eae7b370874$var$adminSearchDBtn.addEventListener("click", function(e) {
             e.preventDefault();
-            $c1d64eae7b370874$var$searchNdelete();
+            if (confirm("Do you really want to delete")) $c1d64eae7b370874$var$searchNdelete();
         });
         $c1d64eae7b370874$var$adminSearchDBtn.addEventListener("keypress", function(e) {
             e.preventDefault();
-            if (e.key == "Enter") $c1d64eae7b370874$var$searchNdelete();
+            if (e.key == "Enter") {
+                if (confirm("Do you really want to delete")) $c1d64eae7b370874$var$searchNdelete();
+            }
         });
     }
 };
@@ -456,42 +460,46 @@ const $aa8862ee2d4f0269$export$863cb804d4b72252 = ()=>{
 };
 
 
-const $b2f827db00661ae3$var$createProd = async function(formData) {
+const $70b22ab0475c8013$var$createProd = async function(formData, type, id) {
     try {
+        const method = type == "c" ? "POST" : "PATCH";
         const res = await axios({
-            method: "POST",
-            url: "/api/v1/product",
+            method: method,
+            url: id == "" ? `/api/v1/product` : `/api/v1/product/${id}`,
             data: formData
         });
-        if (res.data.status === "success") alert("Data Uploaded Successfully!");
+        if (res.data.status === `success`) alert(id == "" ? `Data Uploaded Successfully!` : `Data Updated Successfully!`);
     } catch (error) {
-        alert("400 Error, please try again");
+        alert(`400 Error, please try again`);
     }
 };
-const $b2f827db00661ae3$var$createProductForm = document.querySelector('.create_product_form');
-const $b2f827db00661ae3$export$d40c6b4758c18eff = function() {
-    if ($b2f827db00661ae3$var$createProductForm) $b2f827db00661ae3$var$createProductForm.addEventListener('submit', function(e) {
+const $70b22ab0475c8013$var$createProductForm = document.querySelector(`.create_product_form`);
+const $70b22ab0475c8013$var$updateProductForm = document.querySelector(`.update_product_form`);
+const $70b22ab0475c8013$var$id = document.querySelector(`.admin-search-update-input`);
+const $70b22ab0475c8013$export$ddba1df951bccd8b = function(type) {
+    const formType = type == "c" ? $70b22ab0475c8013$var$createProductForm : $70b22ab0475c8013$var$updateProductForm;
+    if (formType) formType.addEventListener(`submit`, function(e) {
         e.preventDefault();
         const form = new FormData();
-        const select = $b2f827db00661ae3$var$createProductForm.querySelector('#product-category-c');
-        const condition = $b2f827db00661ae3$var$createProductForm.querySelector('#used-c').checked ? "used" : "new";
-        form.append('name', $b2f827db00661ae3$var$createProductForm.querySelector('#product-name-c').value);
-        form.append('category', select.options[select.selectedIndex].value);
-        form.append('model', $b2f827db00661ae3$var$createProductForm.querySelector('#product-model-c').value);
-        form.append('brand', $b2f827db00661ae3$var$createProductForm.querySelector('#product-brand-c').value);
-        form.append('color', $b2f827db00661ae3$var$createProductForm.querySelector('#product-color-c').value);
-        form.append('price', Number($b2f827db00661ae3$var$createProductForm.querySelector('#product-price-c').value));
-        form.append('instock', $b2f827db00661ae3$var$createProductForm.querySelector('#instcok-c').checked);
-        form.append('condition', condition);
-        form.append('description', $b2f827db00661ae3$var$createProductForm.querySelector('#product-description').value);
-        form.append('images', $b2f827db00661ae3$var$createProductForm.querySelector('#upload-image').files[0]);
-        $b2f827db00661ae3$var$createProd(form);
+        const select = formType.querySelector(`#product-category-${type}`);
+        const condition = formType.querySelector(`#used-${type}`).checked ? `used` : `new`;
+        form.append(`name`, formType.querySelector(`#product-name-${type}`).value);
+        form.append(`category`, select.options[select.selectedIndex].value);
+        form.append(`model`, formType.querySelector(`#product-model-${type}`).value);
+        form.append(`brand`, formType.querySelector(`#product-brand-${type}`).value);
+        form.append(`color`, formType.querySelector(`#product-color-${type}`).value);
+        form.append(`price`, Number(formType.querySelector(`#product-price-${type}`).value));
+        form.append(`instock`, formType.querySelector(`#instock-${type}`).checked);
+        form.append(`condition`, condition);
+        form.append(`description`, formType.querySelector(`#product-description-${type}`).value);
+        if (formType.querySelector(`#upload-image-${type}`).files[0]) form.append(`images`, formType.querySelector(`#upload-image-${type}`).files[0]);
+        $70b22ab0475c8013$var$createProd(form, type, $70b22ab0475c8013$var$id.value);
     });
 };
 
 
 "use strict";
-window.addEventListener('load', function() {
+window.addEventListener("load", function() {
     $dd050f2a708f92b1$export$e68c847c0bceb7d5();
     $c5a2f6f6c926e271$export$ed1e85c4022b4965();
 });
@@ -506,7 +514,8 @@ $c5a2f6f6c926e271$export$ed1e85c4022b4965();
 $dd050f2a708f92b1$export$90355ad74bbdd792();
 $ccfd3742a44b4cad$export$5ab6ca14213248e2();
 $aa8862ee2d4f0269$export$863cb804d4b72252();
-$b2f827db00661ae3$export$d40c6b4758c18eff();
+$70b22ab0475c8013$export$ddba1df951bccd8b("c");
+$70b22ab0475c8013$export$ddba1df951bccd8b("u");
 
 
 //# sourceMappingURL=bundle.js.map

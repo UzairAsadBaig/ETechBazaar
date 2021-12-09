@@ -11,11 +11,20 @@ router.get("/search/:name", productController.searchProduct); // search products
 
 // // for admin
 
-router.post( "/", userController.protect,
+router.post(
+  "/",
+  userController.protect,
   productController.uploadProductImage,
   productController.resizeProductImage,
-  productController.createProduct ); // add product by admin
-router.patch("/:id", userController.protect, productController.updateProduct); // update product by admin based on id
+  productController.createProduct
+); // add product by admin
+router.patch(
+  "/:id",
+  userController.protect,
+  productController.uploadProductImage,
+  productController.resizeProductImageU,
+  productController.updateProduct
+); // update product by admin based on id
 router.delete("/:id", userController.protect, productController.deleteProduct); //delete product by admin based on id
 
 module.exports = router;

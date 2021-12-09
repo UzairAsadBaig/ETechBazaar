@@ -17,6 +17,7 @@ const productPriceU = document.querySelector("#product-price-u");
 const productInstockU = document.querySelector("#instock-u");
 const productUsedU = document.querySelector("#used-u");
 const productDescriptionU = document.querySelector("#product-description-u");
+// const productImageU = document.querySelector("#upload-image-u");
 
 const searchNfill = async function() {
   try {
@@ -36,6 +37,7 @@ const searchNfill = async function() {
       productInstockU.checked = product.instock;
       productUsedU.checked = product.condition == "new" ? false : true;
       productDescriptionU.value = product.description;
+      // console.log(productImageU.files);
     } else {
       alert("Wrong ID, please try again!");
     }
@@ -95,15 +97,16 @@ export const ManageAdminTabedMenu = function() {
     });
   }
 
+  //Delete
   if (adminSearchDBtn) {
-    console.log(adminSearchDBtn);
     adminSearchDBtn.addEventListener("click", function(e) {
       e.preventDefault();
-      searchNdelete();
+      if (confirm("Do you really want to delete")) searchNdelete();
     });
     adminSearchDBtn.addEventListener("keypress", function(e) {
       e.preventDefault();
-      if (e.key == "Enter") searchNdelete();
+      if (e.key == "Enter")
+        if (confirm("Do you really want to delete")) searchNdelete();
     });
   }
 };
