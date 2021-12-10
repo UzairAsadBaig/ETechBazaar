@@ -12,7 +12,7 @@ block Content
       .image_box.col-lg-7.col-12
         img.product_img.w-100.img-fluid(src=`/./../img/products/${product.images[0]}`, alt, srcset)
       //- // !---------------------------- Product Info Box ---------------------------------
-      .col-lg-5.col-12.product_info_box(data-id=`${product._id}` data-category=`${product.category.replace("&","&amp;")}` data-color=`${product.color}` data-model=`${product.model}`)
+      .col-lg-5.col-12.product_info_box(data-id=`${product._id}` data-category=`${product.category.replace("&","&amp;")}` data-color=`${product.color}` data-model=`${product.model}` data-condition=`${product.condition}`)
         .product_info
           h3.text-center.pt-4.product_heading=`${product.name}`
           .row
@@ -75,6 +75,7 @@ block Content
             Description
             
         .description_text=`${product.description}`
+    p.pt-2.text-white=`${product._id}`    
     
   section.slider
     - if (relatedItems.length>0)

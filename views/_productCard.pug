@@ -1,6 +1,6 @@
 mixin productCard(product)
   .col-lg-3.col-md-4.col-6
-        a.card.card_tile(href=`/product/${product.slug}` data-id=`${product._id}` data-category=`${product.category}` data-color=`${product.color}` data-model=`${product.model}` )
+        a.card.card_tile(href=`/product/${product.slug}` data-id=`${product._id}` data-category=`${product.category}` data-color=`${product.color}` data-model=`${product.model}` data-condition = `${product.condition}`)
             .card_header
                 .ribbon.ribbon-top-right
                     span=product.condition
