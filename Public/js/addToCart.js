@@ -17,7 +17,7 @@ export const goToCart = function(
   let cartVal = `<div class="row cart-detail" data-price=${price} data-id=${id} data-category=${category} data-color=${color} data-name=${name} data-model=${model} data-condition=${condition}>
        <div class="col-lg-4 col-sm-4 col-4 cart-detail-img"><img src=${imgSrc} /></div>
        <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
-        <p>${name}</p><span class="price">Rs.<span class="prod_price">${price}</span></span><br /><a type="button" class="cart_incdec dec"> - </a><span class="count">Quantity: <span class="quantity">${qn}</span></span><a type="button" class="cart_incdec inc"> + </a>
+        <p>${name}</p><span class="price">Rs.<span class="prod_price">${price}</span></span><br /><a type="button" class="cart_incdec dec"> - </a><span class="count">Quantity: <span class="quantity">${("0"+qn).slice( -2 )}</span></span><a type="button" class="cart_incdec inc"> + </a>
        </div>
     </div>`;
 

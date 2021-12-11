@@ -72,6 +72,14 @@ export const createAndUploadProductByAdmin = function(type) {
         );
       }
 
+
+      select.options[ select.selectedIndex ].value=select.options[ 0 ].value;
+      formType.querySelector( `#used-${type}` ).checked=formType.querySelector( `#instock-${type}` ).checked=false;
+
+      formType.querySelector( `#product-name-${type}` ).value=formType.querySelector( `#product-model-${type}` ).value=formType.querySelector( `#product-brand-${type}` ).value=formType.querySelector( `#product-color-${type}` ).value=formType.querySelector( `#product-price-${type}` ).value=formType.querySelector( `#product-description-${type}` ).value="";
+
+      formType.querySelector( `#upload-image-${type}` ).value="";
+
       createProd(form, type, id.value);
     });
   }

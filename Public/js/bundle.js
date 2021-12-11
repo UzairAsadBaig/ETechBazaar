@@ -22,7 +22,7 @@ const $dd050f2a708f92b1$export$4fd4be8835a439d2 = function(id, price, name, imgS
     let cartVal = `<div class="row cart-detail" data-price=${price} data-id=${id} data-category=${category} data-color=${color} data-name=${name} data-model=${model} data-condition=${condition}>
        <div class="col-lg-4 col-sm-4 col-4 cart-detail-img"><img src=${imgSrc} /></div>
        <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
-        <p>${name}</p><span class="price">Rs.<span class="prod_price">${price}</span></span><br /><a type="button" class="cart_incdec dec"> - </a><span class="count">Quantity: <span class="quantity">${qn}</span></span><a type="button" class="cart_incdec inc"> + </a>
+        <p>${name}</p><span class="price">Rs.<span class="prod_price">${price}</span></span><br /><a type="button" class="cart_incdec dec"> - </a><span class="count">Quantity: <span class="quantity">${("0" + qn).slice(-2)}</span></span><a type="button" class="cart_incdec inc"> + </a>
        </div>
     </div>`;
     const cartProds = document.querySelector(".all_products");
@@ -398,10 +398,8 @@ const $ccfd3742a44b4cad$export$5ab6ca14213248e2 = function() {
 
 const $aa8862ee2d4f0269$var$orderForm = document.querySelector(".submit_order_form");
 const $aa8862ee2d4f0269$var$emptyCart = function() {
-    for(let i = 0; i < localStorage.length; i++){
-        let key = localStorage.key(i);
-        if (key.includes("_product")) localStorage.removeItem(key);
-    }
+    localStorage.clear();
+    location.assign("/");
 };
 const $aa8862ee2d4f0269$var$SubmitOrderForm = async function(name, phone, address, totalPrice, products) {
     try {
@@ -417,10 +415,11 @@ const $aa8862ee2d4f0269$var$SubmitOrderForm = async function(name, phone, addres
             }
         });
         if (res.data.status === "success") {
+            alert("Order has been submitted successfully");
             $aa8862ee2d4f0269$var$emptyCart();
-            location.assign("/");
         }
     } catch (error) {
+        alert("Error! please try again later");
     // alert(error)
     }
 };
@@ -482,6 +481,10 @@ const $70b22ab0475c8013$export$ddba1df951bccd8b = function(type) {
         form.append(`condition`, condition);
         form.append(`description`, formType.querySelector(`#product-description-${type}`).value);
         if (formType.querySelector(`#upload-image-${type}`).files[0]) form.append(`images`, formType.querySelector(`#upload-image-${type}`).files[0]);
+        select.options[select.selectedIndex].value = select.options[0].value;
+        formType.querySelector(`#used-${type}`).checked = formType.querySelector(`#instock-${type}`).checked = false;
+        formType.querySelector(`#product-name-${type}`).value = formType.querySelector(`#product-model-${type}`).value = formType.querySelector(`#product-brand-${type}`).value = formType.querySelector(`#product-color-${type}`).value = formType.querySelector(`#product-price-${type}`).value = formType.querySelector(`#product-description-${type}`).value = "";
+        formType.querySelector(`#upload-image-${type}`).value = "";
         $70b22ab0475c8013$var$createProd(form, type, $70b22ab0475c8013$var$id.value);
     });
 };

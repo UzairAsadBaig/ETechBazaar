@@ -1,13 +1,12 @@
 const orderForm = document.querySelector(".submit_order_form");
 
 const emptyCart = function() {
-  for (let i = 0; i < localStorage.length; i++) {
-    let key = localStorage.key(i);
-    if (key.includes("_product")) {
-      localStorage.removeItem(key);
-    }
-  }
+  localStorage.clear();
+  location.assign( "/" );
 };
+
+
+
 const SubmitOrderForm = async function(
   name,
   phone,
@@ -28,11 +27,13 @@ const SubmitOrderForm = async function(
       },
     });
 
-    if (res.data.status === "success") {
+    if ( res.data.status==="success" ) {
+      alert( "Order has been submitted successfully" );
       emptyCart();
-      location.assign("/");
+      
     }
-  } catch (error) {
+  } catch ( error ) {
+    alert( "Error! please try again later" );
     // alert(error)
   }
 };
